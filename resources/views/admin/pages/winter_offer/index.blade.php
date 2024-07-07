@@ -25,7 +25,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h2>Laravel 9 CRUD (Create, Read, Update and Delete)</h2>
+                        <h2>Winter Offer List</h2>
                     </div>
                     <div class="card-body">
                         <a href="{{ url('admin/winter/create') }}" class="btn btn-success btn-sm" title="Add New Winter">
