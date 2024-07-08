@@ -29,11 +29,11 @@
                         <h2>User Contact List</h2>
                     </div>
                     <div class="card-body">
-                        <a href="{{ url('/usercontact/create') }}" class="btn btn-success btn-sm" title="Add New UserContact">
+                        {{-- <a href="{{ url('/usercontact/create') }}" class="btn btn-success btn-sm" title="Add New UserContact">
                             Add New
-                        </a>
-                        <br/>
-                        <br/>
+                        </a> --}}
+                        {{-- <br/>
+                        <br/> --}}
                         <div class="table-responsive">
                             <table class="table">
                                 <thead>
