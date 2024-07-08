@@ -9,7 +9,7 @@
         <meta content="Laravel E-Commerce Application with Multi-Authentication" name="description" />
         <meta content="Ferdinalaxewall" name="author" />
         <!-- App favicon -->
-        <link rel="shortcut icon" href="{{ asset('/admin/assets/images/favicon.ico') }}">
+        <link rel="shortcut icon" href="{{ asset('/admin/assets/images/Dream.png') }}">
 
         <!-- jquery.vectormap css -->
         <link href="{{ asset('/admin/assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css') }}" rel="stylesheet" type="text/css" />
