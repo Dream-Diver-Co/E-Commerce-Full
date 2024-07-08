@@ -14,11 +14,11 @@
 
                 <a href="{{ route('admin.dashboard') }}" class="logo logo-light">
                     <span class="logo-sm">
-                        <img src="{{ asset('admin/assets/images/Dream.png') }}" alt="logo-sm-light" height="22">
+                        <img class="admin-logo-sm" src="{{ asset('admin/assets/images/Dream.png') }}" alt="logo-sm-light" height="22">
                     </span>
                     <span class="logo-lg">
 
-                        <img src="{{ asset('admin/assets/images/Dream1.png') }}" alt="logo-light" style="width: 240px; height:66px;" height="20">
+                        <img class="admin-logo" src="{{ asset('admin/assets/images/Dream1.png') }}" alt="logo-light" height="20">
                     </span>
                 </a>
             </div>

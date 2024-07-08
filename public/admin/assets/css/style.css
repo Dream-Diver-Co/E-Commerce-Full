@@ -4,3 +4,18 @@ label.required::after{
     display: inline-block;
     margin-left: 5px;
 }
+
+.admin-logo {
+    height: 66px;
+    width: 240px;
+}
+
+.admin-logo-sm {
+    height: 67px;
+    width: 70px;
+}
+
+.navbar-brand-box {
+    padding: 0 0rem;
+}
+
