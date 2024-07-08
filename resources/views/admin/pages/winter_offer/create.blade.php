@@ -22,23 +22,19 @@
 <!-- end page title -->
 
 <div class="card" style="margin:20px;">
-  <div class="card-header">Create New Winter</div>
+  <div class="card-header">Create New Winter Offer</div>
   <div class="card-body">
-
       <form action="{{ url('admin/winter') }}" method="post" enctype="multipart/form-data">
         @csrf
         <label>Title</label></br>
         <input type="text" name="title" id="title" class="form-control"></br>
-        <label>SubTitle</label></br>
+        <label>Subtitle</label></br>
         <input type="text" name="subtitle" id="subtitle" class="form-control"></br>
         <label>Image</label></br>
         <input type="file" name="image" id="image" class="form-control"></br>
         <input type="submit" value="Save" class="btn btn-success"></br>
     </form>
-
   </div>
 </div>
 
-
 @endsection
-

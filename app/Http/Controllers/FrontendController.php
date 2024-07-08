@@ -17,6 +17,7 @@ class FrontendController extends Controller
         return view('frontend.index', compact('heroes', 'summers','winters'));
     }
 
+
     public function about()
     {
         return view('frontend.page.about');

@@ -525,16 +525,19 @@
             @endforeach
         </div>
         <div class="col-md-6">
-            @foreach($winters as $key => $item)
+            @if($winters->isNotEmpty())
+                @php
+                    $item = $winters->first();
+                @endphp
                 <div class="product-offer mb-30" style="height: 300px;">
-                    <img class="img-fluid" src="{{ asset('storage/'. $item->image) }}" alt="">
+                    <img class="img-fluid" src="{{ asset('storage/' . $item->image) }}" alt="">
                     <div class="offer-text">
                         <h6 class="text-white text-uppercase">{{ $item->subtitle }}</h6>
                         <h3 class="text-white mb-3">{{ $item->title }}</h3>
                         <a href="{{ route('offer') }}" class="btn btn-primary">Shop Now</a>
                     </div>
                 </div>
-            @endforeach
+            @endif
         </div>
     </div>
 </div>
