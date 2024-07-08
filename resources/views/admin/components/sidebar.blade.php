@@ -73,8 +73,8 @@
                     <ul class="sub-menu" aria-expanded="true">
                         <li><a href="javascript: void(0);" class="has-arrow">User Contact</a>
                             <ul class="sub-menu" aria-expanded="true">
-                                <li><a href="{{ route('usercontact.create')}}">create</a></li>
-                                <li><a href="{{ route('usercontact.index')}}">index</a></li>
+                                {{-- <li><a href="{{ route('usercontact.create')}}">create</a></li> --}}
+                                <li><a href="{{ route('usercontact.index')}}">User Contact List</a></li>
                             </ul>
                         </li>
 

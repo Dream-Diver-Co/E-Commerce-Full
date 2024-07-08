@@ -27,7 +27,7 @@ class UserContactController extends Controller
             $input['image'] = $path;
         }
         UserContact::create($input);
-        return redirect('admin/usercontact')->with('flash_message', 'UserContact Added!');
+        return redirect()->back()->with('flash_message', 'UserContact Added!');
     }
 
     public function show($id)
