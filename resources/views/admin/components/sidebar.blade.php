@@ -67,6 +67,28 @@
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-share-line"></i>
+                        <span>Contact</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="true">
+                        <li><a href="javascript: void(0);" class="has-arrow">User Contact</a>
+                            <ul class="sub-menu" aria-expanded="true">
+                                <li><a href="{{ route('usercontact.create')}}">create</a></li>
+                                <li><a href="{{ route('usercontact.index')}}">index</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript: void(0);" class="has-arrow">Admin Contact</a>
+                            <ul class="sub-menu" aria-expanded="true">
+                                <li><a href="javascript: void(0);">Level 2.1</a></li>
+                                <li><a href="javascript: void(0);">Level 2.2</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-mail-send-line"></i>
                         <span>Email</span>
                     </a>

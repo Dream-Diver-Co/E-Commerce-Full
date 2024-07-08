@@ -8,6 +8,7 @@ use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\HeroController;
 use App\Http\Controllers\SummerController;
 use App\Http\Controllers\WinterController;
+use App\Http\Controllers\UserContactController;
 
 
 /*
@@ -93,6 +94,7 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
         Route::resource("/hero", HeroController::class);
         Route::resource('/summer', SummerController::class);
         Route::resource('winter', WinterController::class);
+        Route::resource('usercontact', UserContactController::class);
     });
 });
 
