@@ -2,64 +2,66 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Admincontact;
 use Illuminate\Http\Request;
+use App\Models\Admincontact;
 
 class AdmincontactController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        //
+        $admincontacts = Admincontact::all();
+        return view('admin.pages.contact.admin_contact.index')->with('admincontacts', $admincontacts);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
-        //
+        return view('admin.pages.contact.admin_contact.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
-        //
+        $input = $request->all();
+
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+            $path = $file->store('images', 'public');
+            $input['image'] = $path;
+        }
+
+        Admincontact::create($input);
+        return redirect('admin/admincontact')->with('flash_message', 'Admincontact Added!');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Admincontact $admincontact)
+    public function show($id)
     {
-        //
+        $admincontact = Admincontact::find($id);
+        return view('admin.pages.contact.admin_contact.show')->with('admincontact', $admincontact);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Admincontact $admincontact)
+    public function edit($id)
     {
-        //
+        $admincontact = Admincontact::find($id);
+        return view('admin.pages.contact.admin_contact.edit')->with('admincontact', $admincontact);
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Admincontact $admincontact)
+    public function update(Request $request, $id)
     {
-        //
+        $admincontact = Admincontact::find($id);
+        $input = $request->all();
+
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+            $path = $file->store('images', 'public');
+            $input['image'] = $path;
+        }
+
+        $admincontact->update($input);
+        return redirect('admin/admincontact')->with('flash_message', 'Admincontact Updated!');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Admincontact $admincontact)
+    public function destroy($id)
     {
-        //
+        Admincontact::destroy($id);
+        return redirect('admin/admincontact')->with('flash_message', 'Admincontact deleted!');
     }
 }

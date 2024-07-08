@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Admincontact extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'map', 'address', 'email', 'phone', 
+    ];
 }

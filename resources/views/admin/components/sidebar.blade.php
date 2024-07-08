@@ -80,8 +80,8 @@
 
                         <li><a href="javascript: void(0);" class="has-arrow">Admin Contact</a>
                             <ul class="sub-menu" aria-expanded="true">
-                                <li><a href="javascript: void(0);">Level 2.1</a></li>
-                                <li><a href="javascript: void(0);">Level 2.2</a></li>
+                                <li><a href="{{ route('admincontact.create')}}">create</a></li>
+                                <li><a href="{{ route('admincontact.index')}}">index</a></li>
                             </ul>
                         </li>
                     </ul>

@@ -21,5 +21,28 @@
 </div>
 <!-- end page title -->
 
+<div class="card" style="margin:20px;">
+  <div class="card-header">Edit Admincontact</div>
+  <div class="card-body">
+
+      <form action="{{ url('admin/admincontact/' .$admincontact->id) }}" method="post" enctype="multipart/form-data">
+        {!! csrf_field() !!}
+        @method("PATCH")
+        <input type="hidden" name="id" id="id" value="{{$admincontact->id}}" id="id" />
+        <label>Map Location</label></br>
+        <input type="text" name="map" id="map" value="{{$admincontact->map}}" class="form-control"></br>
+        <label>Address</label></br>
+        <input type="text" name="address" id="address" value="{{$admincontact->address}}" class="form-control"></br>
+        <label>email</label></br>
+        <input type="text" name="email" id="email" value="{{$admincontact->email}}" class="form-control"></br>
+        <label>phone</label></br>
+        <input type="text" name="phone" id="phone" value="{{$admincontact->phone}}" class="form-control"></br>
+        <input type="submit" value="Update" class="btn btn-success"></br>
+    </form>
+
+  </div>
+</div>
+
+
 @endsection
 
