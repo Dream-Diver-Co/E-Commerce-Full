@@ -19,3 +19,8 @@ label.required::after{
     padding: 0 0rem;
 }
 
+.admin-index-img{
+    height: 30px;
+    width: 70px;
+}
+

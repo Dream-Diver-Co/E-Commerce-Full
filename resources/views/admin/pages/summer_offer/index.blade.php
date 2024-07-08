@@ -51,7 +51,7 @@
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $summer->title }}</td>
                                     <td>{{ $summer->subtitle }}</td>
-                                    <td><img src="{{ asset('storage/'. $summer->image) }}" alt="{{ $summer->title }}" width="100"></td>
+                                    <td><img class="admin-index-img" src="{{ asset('storage/'. $summer->image) }}" alt="{{ $summer->title }}" width="100"></td>
                                     <td>
                                         <a href="{{ url('admin/summer/' . $summer->id) }}" title="View Summer">
                                             <button class="btn btn-info btn-sm">

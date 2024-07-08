@@ -513,7 +513,10 @@
 <div class="container-fluid pt-5 pb-3">
     <div class="row px-xl-5">
         <div class="col-md-6">
-            @foreach($summers as $key => $summer)
+            @if($summers->isNotEmpty())
+                @php
+                    $summer = $summers->first();
+                @endphp
                 <div class="product-offer mb-30" style="height: 300px;">
                     <img class="img-fluid" src="{{ asset('storage/'. $summer->image) }}" alt="">
                     <div class="offer-text">
@@ -522,7 +525,7 @@
                         <a href="{{ route('offer') }}" class="btn btn-primary">Shop Now</a>
                     </div>
                 </div>
-            @endforeach
+            @endif
         </div>
         <div class="col-md-6">
             @if($winters->isNotEmpty())

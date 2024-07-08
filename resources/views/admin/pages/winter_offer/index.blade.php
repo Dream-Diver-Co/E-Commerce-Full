@@ -48,10 +48,9 @@
                                 @foreach($winters as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $item->mobile }}</td>
                                         <td>{{ $item->title }}</td>
                                         <td>{{ $item->subtitle }}</td>
-                                        <td><img src="{{ asset('storage/'. $item->image) }}" alt="{{ $item->title }}" width="100"></td>
+                                        <td><img class="admin-index-img" src="{{ asset('storage/'. $item->image) }}" alt="{{ $item->title }}" width="100"></td>
 
                                         <td>
                                             <a href="{{ url('admin/winter/' . $item->id) }}" title="View Winter"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>

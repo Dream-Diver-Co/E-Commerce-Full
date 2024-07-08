@@ -50,7 +50,7 @@
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $hero->title }}</td>
                                         <td>{{ $hero->description }}</td>
-                                        <td><img src="{{ asset('storage/'. $hero->image) }}" alt="{{ $hero->title }}" width="100"></td>
+                                        <td><img class="admin-index-img" src="{{ asset('storage/'. $hero->image) }}" alt="{{ $hero->title }}" width="100"></td>
                                         <td>
                                             <a href="{{ route('hero.show', ['hero' => $hero->id]) }}" title="View Hero" class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</a>
                                             <a href="{{ route('hero.edit', ['hero' => $hero->id]) }}" title="Edit Hero" class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</a>
