@@ -513,24 +513,28 @@
 <div class="container-fluid pt-5 pb-3">
     <div class="row px-xl-5">
         <div class="col-md-6">
-            <div class="product-offer mb-30" style="height: 300px;">
-                <img class="img-fluid" src="{{ asset('frontend/img/offer.gif') }}" alt="">
-                <div class="offer-text">
-                    <h6 class="text-white text-uppercase">Save 20%</h6>
-                    <h3 class="text-white mb-3">Summer Special Offer</h3>
-                    <a href="{{ route('offer') }}" class="btn btn-primary">Shop Now</a>
+            @foreach($summers as $key => $summer)
+                <div class="product-offer mb-30" style="height: 300px;">
+                    <img class="img-fluid" src="{{ asset('storage/'. $summer->image) }}" alt="">
+                    <div class="offer-text">
+                        <h6 class="text-white text-uppercase">{{ $summer->subtitle }}</h6>
+                        <h3 class="text-white mb-3">{{ $summer->title }}</h3>
+                        <a href="{{ route('offer') }}" class="btn btn-primary">Shop Now</a>
+                    </div>
                 </div>
-            </div>
+            @endforeach
         </div>
         <div class="col-md-6">
-            <div class="product-offer mb-30" style="height: 300px;">
-                <img class="img-fluid" src="{{ asset('frontend/img/offer5.gif') }}" alt="">
-                <div class="offer-text">
-                    <h6 class="text-white text-uppercase">Save 20%</h6>
-                    <h3 class="text-white mb-3">Winter Special Offer</h3>
-                    <a href="{{ route('offer') }}" class="btn btn-primary">Shop Now</a>
+            @foreach($winters as $key => $item)
+                <div class="product-offer mb-30" style="height: 300px;">
+                    <img class="img-fluid" src="{{ asset('storage/'. $item->image) }}" alt="">
+                    <div class="offer-text">
+                        <h6 class="text-white text-uppercase">{{ $item->subtitle }}</h6>
+                        <h3 class="text-white mb-3">{{ $item->title }}</h3>
+                        <a href="{{ route('offer') }}" class="btn btn-primary">Shop Now</a>
+                    </div>
                 </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </div>

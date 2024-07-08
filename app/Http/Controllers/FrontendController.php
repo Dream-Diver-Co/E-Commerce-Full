@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 use App\Models\Hero;
+use App\Models\Summer;
+use App\Models\Winter;
 
 use Illuminate\Http\Request;
 
@@ -9,9 +11,12 @@ class FrontendController extends Controller
 {
     public function index()
     {
+        $summers = Summer::all();
+        $winters = Winter::all();
         $heroes = Hero::all();
-        return view('frontend.index')->with('heroes', $heroes);
+        return view('frontend.index', compact('heroes', 'summers','winters'));
     }
+
     public function about()
     {
         return view('frontend.page.about');
