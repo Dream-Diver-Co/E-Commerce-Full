@@ -21,7 +21,7 @@
 </div>
 <!-- end page title -->
     <div class="container">
-        <div class="row" style="margin:20px;">
+        <div class="row">
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
