@@ -5,6 +5,7 @@ use App\Models\Hero;
 use App\Models\Summer;
 use App\Models\Winter;
 use App\Models\Admincontact;
+use App\Models\About;
 
 use Illuminate\Http\Request;
 
@@ -21,7 +22,8 @@ class FrontendController extends Controller
 
     public function about()
     {
-        return view('frontend.page.about');
+        $abouts = About::all();
+        return view('frontend.page.about', compact('abouts'));
     }
 
     public function contact()

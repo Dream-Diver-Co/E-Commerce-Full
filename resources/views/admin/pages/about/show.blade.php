@@ -23,18 +23,18 @@
 
 <div class="card">
   <div class="card-header">Abouts Page</div>
-  <div class="card-body">
+    <div class="card-body">
         <div class="card-body">
-        <h5 class="card-title">Title : {{ $abouts->title }}</h5>
-        <p class="card-text">Subtitle : {{ $abouts->subtitle }}</p>
-        <p class="card-text">Image : <img src="{{ asset('storage/' . $abouts->image) }}" alt="{{ $abouts->title }}" width="100"></p>
-        <p class="card-text">description : {{ $abouts->description }}</p>
-        <p class="card-text">behind : {{ $abouts->behind }}</p>
-        <p class="card-text">mission : {{ $abouts->mission }}</p>
-        <p class="card-text">service : {{ $abouts->service }}</p>
-  </div>
-    </hr>
-  </div>
+            <h5 class="card-title">Title : {{ $abouts->title }}</h5>
+            <p class="card-text">Subtitle : {{ $abouts->subtitle }}</p>
+            <p class="card-text">Image : <img src="{{ asset('storage/' . $abouts->image) }}" alt="{{ $abouts->title }}" width="100"></p>
+            <p class="card-text">description : {{ $abouts->description }}</p>
+            <p class="card-text">behind : {{ $abouts->behind }}</p>
+            <p class="card-text">mission : {{ $abouts->mission }}</p>
+            <p class="card-text">service : {{ $abouts->service }}</p>
+        </div>
+        </hr>
+    </div>
 </div>
 @endsection
 
