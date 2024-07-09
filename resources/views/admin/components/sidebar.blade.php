@@ -80,8 +80,8 @@
 
                         <li><a href="javascript: void(0);" class="has-arrow">Admin Contact</a>
                             <ul class="sub-menu" aria-expanded="true">
-                                <li><a href="{{ route('admincontact.create')}}">create</a></li>
-                                <li><a href="{{ route('admincontact.index')}}">index</a></li>
+                                <li><a href="{{ route('admincontact.create')}}">Admin Contact Add</a></li>
+                                <li><a href="{{ route('admincontact.index')}}">Admin Contact List</a></li>
                             </ul>
                         </li>
                     </ul>
