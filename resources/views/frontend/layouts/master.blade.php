@@ -26,6 +26,7 @@
     <!-- Customized Bootstrap Stylesheet -->
     <link href="{{ asset('frontend/css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('frontend/css/add-to-card.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('frontend/css/custom.css') }}">
 
 </head>
 
