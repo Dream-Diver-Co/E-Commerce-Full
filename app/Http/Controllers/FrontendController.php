@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Hero;
 use App\Models\Summer;
 use App\Models\Winter;
+use App\Models\Admincontact;
 
 use Illuminate\Http\Request;
 
@@ -25,9 +26,10 @@ class FrontendController extends Controller
 
     public function contact()
     {
-        return view('frontend.page.contact');
+        $admincontacts = Admincontact::all();
+        return view('frontend.page.contact', compact('admincontacts'));
     }
-    
+
 
     public function shop()
     {
