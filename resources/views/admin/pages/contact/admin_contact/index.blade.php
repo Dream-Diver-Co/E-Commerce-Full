@@ -49,13 +49,13 @@
                                 @foreach($admincontacts as $item)
                                     <tr>
                                         <td>
-                                            <a href="{{ url('admin/admincontact/' . $item->id) }}" title="View Admincontact"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
-                                            <a href="{{ url('admin/admincontact/' . $item->id . '/edit') }}" title="Edit Admincontact"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
+                                            <a href="{{ url('admin/admincontact/' . $item->id) }}" title="View Admincontact"><button class="btn btn-info btn-sm Admincontact-btn">View</button></a>
+                                            <a href="{{ url('admin/admincontact/' . $item->id . '/edit') }}" title="Edit Admincontact"><button class="btn btn-primary btn-sm Admincontact-btn"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
 
                                             <form method="POST" action="{{ url('admin/admincontact' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
                                                 {{ method_field('DELETE') }}
                                                 {{ csrf_field() }}
-                                                <button type="submit" class="btn btn-danger btn-sm" title="Delete Admincontact" onclick="return confirm('Confirm delete?')"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</button>
+                                                <button type="submit" class="btn btn-danger btn-sm Admincontact-btn" title="Delete Admincontact" onclick="return confirm('Confirm delete?')">Delete</button>
                                             </form>
                                         </td>
                                         <td>{{ $loop->iteration }}</td>

@@ -24,3 +24,9 @@ label.required::after{
     width: 70px;
 }
 
+.Admincontact-btn{
+    width: 55px;
+    height: 25px;
+    margin: 2px;
+}
+
