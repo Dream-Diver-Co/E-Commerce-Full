@@ -21,5 +21,32 @@
 </div>
 <!-- end page title -->
 
+
+<div class="card">
+  <div class="card-header">Edit About</div>
+  <div class="card-body">
+      <form action="{{ url('admin/about/' .$abouts->id) }}" method="post" enctype="multipart/form-data">
+        @csrf
+        @method('PATCH')
+        <input type="hidden" name="id" id="id" value="{{$abouts->id}}" />
+        <label>Title</label></br>
+        <input type="text" name="title" id="title" value="{{$abouts->title}}" class="form-control"></br>
+        <label>Subtitle</label></br>
+        <input type="text" name="subtitle" id="subtitle" value="{{$abouts->subtitle}}" class="form-control"></br>
+        <label>Image</label></br>
+        <input type="file" name="image" id="image" value="{{$abouts->image}}" class="form-control"></br>
+        <label>description</label></br>
+        <textarea name="description" id="description" value="{{$abouts->description}}" class="form-control" cols="30" rows="10"></textarea><br>
+        <label>behind</label></br>
+        <textarea name="behind" id="behind" class="form-control" value="{{$abouts->behind}}" cols="30" rows="10"></textarea><br>
+        <label>mission</label></br>
+        <textarea name="mission" id="mission" class="form-control" value="{{$abouts->mission}}" cols="30" rows="10"></textarea><br>
+        <label>service</label></br>
+        <textarea name="service" id="service" class="form-control" value="{{$abouts->service}}" cols="30" rows="10"></textarea><br>
+        <input type="submit" value="Update" class="btn btn-success"></br>
+    </form>
+  </div>
+</div>
+
 @endsection
 
