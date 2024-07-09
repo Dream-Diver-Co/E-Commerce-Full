@@ -36,13 +36,13 @@
         <label>Image</label></br>
         <input type="file" name="image" id="image" value="{{$abouts->image}}" class="form-control"></br>
         <label>description</label></br>
-        <textarea name="description" id="description" value="{{$abouts->description}}" class="form-control" cols="30" rows="10"></textarea><br>
+        <input name="description" id="description" value="{{$abouts->description}}" class="form-control" ><br>
         <label>behind</label></br>
-        <textarea name="behind" id="behind" class="form-control" value="{{$abouts->behind}}" cols="30" rows="10"></textarea><br>
+        <input name="behind" id="behind" class="form-control" value="{{$abouts->behind}}" ><br>
         <label>mission</label></br>
-        <textarea name="mission" id="mission" class="form-control" value="{{$abouts->mission}}" cols="30" rows="10"></textarea><br>
+        <input name="mission" id="mission" class="form-control" value="{{$abouts->mission}}" ><br>
         <label>service</label></br>
-        <textarea name="service" id="service" class="form-control" value="{{$abouts->service}}" cols="30" rows="10"></textarea><br>
+        <input name="service" id="service" class="form-control" value="{{$abouts->service}}" ><br>
         <input type="submit" value="Update" class="btn btn-success"></br>
     </form>
   </div>
