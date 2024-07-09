@@ -63,7 +63,7 @@
                 </div>
             </div>
             <div class="content-column col-lg-6 col-md-12 col-sm-12 order-2 bg-light">
-                <div class="inner-column">
+                <div class="inner-column" style="margin: 10px">
                     <div class="sec-title">
                         <span class="title">About </span>
                         <h2>Dream Shop is an e-commerce website</h2>
@@ -81,12 +81,9 @@
                         Electronics and Gadgets:
                         "Cutting-Edge Technology at Your Fingertips!"
                         "Upgrade Your Life with the Latest Gadgets!"
-                        "Innovative Electronics for Every Need!".</div>
-                  <div class="text">
-
-                  </div>
+                        "Innovative Electronics for Every Need!".</div><br>
                     <div class="btn-box">
-                        <a href="#" class="theme-btn btn-style-one">Contact Us</a>
+                        <a href="{{ route('contact')}}" class="btn btn-primary">Contact Us</a>
                     </div>
                 </div>
             </div>
