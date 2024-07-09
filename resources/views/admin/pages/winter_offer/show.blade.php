@@ -21,7 +21,7 @@
 </div>
 <!-- end page title -->
 
-<div class="card" style="margin:20px;">
+<div class="card">
   <div class="card-header">Winter Page</div>
   <div class="card-body">
         <div class="card-body">

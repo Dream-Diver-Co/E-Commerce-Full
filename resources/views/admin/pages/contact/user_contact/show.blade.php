@@ -21,7 +21,7 @@
 </div>
 <!-- end page title -->
 
-<div class="card" style="margin:20px;">
+<div class="card">
   <div class="card-header">UserContact Details</div>
   <div class="card-body">
     <h5 class="card-title">Name: {{ $usercontacts->name }}</h5>

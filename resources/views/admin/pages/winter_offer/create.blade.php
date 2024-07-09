@@ -21,7 +21,7 @@
 </div>
 <!-- end page title -->
 
-<div class="card" style="margin:20px;">
+<div class="card">
   <div class="card-header">Create New Winter Offer</div>
   <div class="card-body">
       <form action="{{ url('admin/winter') }}" method="post" enctype="multipart/form-data">

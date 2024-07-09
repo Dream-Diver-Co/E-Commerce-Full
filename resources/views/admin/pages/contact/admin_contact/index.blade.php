@@ -21,7 +21,7 @@
 </div>
 <!-- end page title -->
     <div class="container">
-        <div class="row" style="margin:20px;">
+        <div class="row">
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
@@ -48,12 +48,6 @@
                                 <tbody>
                                 @foreach($admincontacts as $item)
                                     <tr>
-                                        <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $item->map }}</td>
-                                        <td>{{ $item->address }}</td>
-                                        <td>{{ $item->email }}</td>
-                                        <td>{{ $item->phone }}</td>
-
                                         <td>
                                             <a href="{{ url('admin/admincontact/' . $item->id) }}" title="View Admincontact"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
                                             <a href="{{ url('admin/admincontact/' . $item->id . '/edit') }}" title="Edit Admincontact"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
@@ -64,6 +58,11 @@
                                                 <button type="submit" class="btn btn-danger btn-sm" title="Delete Admincontact" onclick="return confirm('Confirm delete?')"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</button>
                                             </form>
                                         </td>
+                                        <td>{{ $loop->iteration }}</td>
+                                        <td>{{ $item->map }}</td>
+                                        <td>{{ $item->address }}</td>
+                                        <td>{{ $item->email }}</td>
+                                        <td>{{ $item->phone }}</td>
                                     </tr>
                                 @endforeach
                                 </tbody>

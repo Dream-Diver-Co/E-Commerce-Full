@@ -21,7 +21,7 @@
 </div>
 <!-- end page title -->
 
-<div class="card" style="margin:20px;">
+<div class="card">
   <div class="card-header">Edit Summer</div>
   <div class="card-body">
 

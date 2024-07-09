@@ -22,7 +22,7 @@
 <!-- end page title -->
 
 
-<div class="card" style="margin:20px;">
+<div class="card">
   <div class="card-header">Create New Hero</div>
   <div class="card-body">
 

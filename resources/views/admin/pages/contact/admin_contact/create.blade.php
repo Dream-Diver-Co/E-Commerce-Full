@@ -21,14 +21,14 @@
 </div>
 <!-- end page title -->
 
-<div class="card" style="margin:20px;">
+<div class="card">
   <div class="card-header">Create New Admincontact</div>
   <div class="card-body">
 
       <form action="{{ url('admin/admincontact') }}" method="post" enctype="multipart/form-data">
         {!! csrf_field() !!}
         <label>Map Location (Embed a map)</label></br>
-        <input type="text" name="map" id="map" class="form-control" placeholder="Only ''https:URL'' "></br>
+        <input type="text" name="map" id="map" class="form-control" placeholder="Only ''https://URL'' "></br>
         <label>Address</label></br>
         <input type="text" name="address" id="address" class="form-control"></br>
         <label>email</label></br>
