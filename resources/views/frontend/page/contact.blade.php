@@ -64,7 +64,6 @@
                     $item = $admincontacts->first();
                 @endphp
                 <div class="bg-light p-30 mb-30">
-                    {{-- {{ $item->map }} --}}
                     <iframe class="contact-map" src="{{ $item->map }}">
                     </iframe>
                 </div>

@@ -27,8 +27,8 @@
 
       <form action="{{ url('admin/admincontact') }}" method="post" enctype="multipart/form-data">
         {!! csrf_field() !!}
-        <label>Map Location</label></br>
-        <input type="text" name="map" id="map" class="form-control" placeholder="Embed a map"></br>
+        <label>Map Location (Embed a map)</label></br>
+        <input type="text" name="map" id="map" class="form-control" placeholder="Only ''https:URL'' "></br>
         <label>Address</label></br>
         <input type="text" name="address" id="address" class="form-control"></br>
         <label>email</label></br>
@@ -42,4 +42,5 @@
 </div>
 
 @endsection
+
 
