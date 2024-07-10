@@ -6,6 +6,7 @@ use App\Models\Summer;
 use App\Models\Winter;
 use App\Models\Admincontact;
 use App\Models\About;
+use App\Models\Panjabi;
 
 use Illuminate\Http\Request;
 
@@ -86,7 +87,8 @@ class FrontendController extends Controller
 
     public function men_panjabi()
     {
-        return view('frontend.page.men_panjabi');
+        $panjabis = Panjabi::all();
+        return view('frontend.page.men_panjabi',compact('panjabis'));
     }
 
     public function men_polo()

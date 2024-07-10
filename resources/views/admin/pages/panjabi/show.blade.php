@@ -27,9 +27,9 @@
         <div class="card-body">
         <h5 class="card-title">Name: {{ $panjabis->name }}</h5>
         <p class="card-text">price: {{ $panjabis->price }}</p>
-        <p class="card-text">description_sm: {{ $panjabis->description_sm }}</p>
+        <p class="card-text">subtitle: {{ $panjabis->subtitle }}</p>
         <p class="card-text">Image: <img src="{{ asset('storage/' . $panjabis->image) }}" alt="{{ $panjabis->title }}" width="100"></p>
-        <p class="card-text">description_lg: {{ $panjabis->description_lg }}</p>
+        <p class="card-text">description: {{ $panjabis->description }}</p>
         <p class="card-text">information: {{ $panjabis->information }}</p>
   </div>
   </div>

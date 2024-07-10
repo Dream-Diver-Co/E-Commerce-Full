@@ -32,11 +32,11 @@
         <label>price</label><br>
         <input type="text" name="price" id="price" class="form-control"><br>
         <label>Small description </label><br>
-        <input type="text" name="description_sm " id="description_sm " class="form-control"><br>
+        <input type="text" name="subtitle " id="subtitle " class="form-control"><br>
         <label>image</label><br>
         <input type="file" name="image" id="image" class="form-control"><br>
-        <label>description_lg</label><br>
-        <textarea name="description_lg" id="description_lg" class="form-control" cols="30" rows="10"></textarea><br>
+        <label>description</label><br>
+        <textarea name="description" id="description" class="form-control" cols="30" rows="10"></textarea><br>
         <label>information</label><br>
         <textarea name="information" id="information" class="form-control" cols="30" rows="10"></textarea><br>
         <input type="submit" value="Save" class="btn btn-success"><br>

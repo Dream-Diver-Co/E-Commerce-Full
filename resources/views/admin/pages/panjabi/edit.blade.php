@@ -21,8 +21,6 @@
 </div>
 <!-- end page title -->
 
-@extends('panjabis.layout')
-@section('content')
 
 <div class="card" style="margin:20px;">
   <div class="card-header">Edit Panjabi</div>
@@ -36,12 +34,12 @@
         <input type="text" name="name" id="name" value="{{$panjabis->name}}" class="form-control"><br>
         <label>price</label><br>
         <input type="text" name="price" id="price" value="{{$panjabis->price}}" class="form-control"><br>
-        <label>description_sm</label><br>
-        <input type="text" name="description_sm" id="description_sm" value="{{$panjabis->description_sm}}" class="form-control"><br>
+        <label>subtitle</label><br>
+        <input type="text" name="subtitle" id="subtitle" value="{{$panjabis->subtitle}}" class="form-control"><br>
         <label>Image</label><br>
         <input type="file" name="image" id="image" class="form-control"><br>
-        <label>description_lg</label><br>
-        <input type="text" name="description_lg" id="description_lg" value="{{$panjabis->description_lg}}" class="form-control"><br>
+        <label>description</label><br>
+        <input type="text" name="description" id="description" value="{{$panjabis->description}}" class="form-control"><br>
         <label>information</label><br>
         <input type="text" name="information" id="information" value="{{$panjabis->information}}" class="form-control"><br>
         <input type="submit" value="Update" class="btn btn-success"><br>

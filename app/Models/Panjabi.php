@@ -10,5 +10,5 @@ class Panjabi extends Model
     use HasFactory;
     protected $table = 'panjabis';
     protected $primaryKey = 'id';
-    protected $fillable = ['name', 'price', 'description_lg', 'image', 'description_sm', 'information'];
+    protected $fillable = ['name', 'price', 'subtitle', 'description', 'information', 'image'];
 }

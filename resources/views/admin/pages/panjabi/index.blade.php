@@ -54,9 +54,9 @@
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $item->name }}</td>
                                         <td>{{ $item->price }}</td>
-                                        <td>{{ $item->description_sm }}</td>
+                                        <td>{{ $item->subtitle }}</td>
                                         <td><img src="{{ asset('storage/'. $item->image) }}" alt="{{ $item->title }}" width="100"></td>
-                                        <td>{{ $item->description_lg }}</td>
+                                        <td>{{ $item->description }}</td>
                                         <td>{{ $item->information }}</td>
 
                                         <td>

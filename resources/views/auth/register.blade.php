@@ -67,7 +67,7 @@
                                     <div class="login_footer form-group mb-50">
                                         <div class="chek-form">
                                             <div class="custome-checkbox">
-                                                <input class="form-check-input" type="checkbox" name="terms" id="exampleCheckbox12" value="yes" />
+                                                <input class="form-check-input" type="checkbox" name="terms" id="exampleCheckbox12" value="yes" required="" />
                                                 <label class="form-check-label" for="exampleCheckbox12"><span>I agree to terms &amp; Policy.</span></label>
                                                 @error('terms')
                                                 <div class="invalid-feedback">{{ $message }}</div>

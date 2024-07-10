@@ -22,21 +22,20 @@
     <div class="container-fluid">
         <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Panjabi Featured Products</span></h2>
         <div class="row px-xl-5">
-            @foreach($panjabis as $item)
             <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
                 <div class="product-item bg-light mb-4">
                     <div class="product-img position-relative overflow-hidden">
-                        <img class="img-fluid w-100" style="height: 300px; width: 300px;"  style="height: 300px; width: 300px;"   src="{{ asset('storage/'. $item->image) }}" alt="">
+                        <img class="img-fluid w-100" style="height: 300px; width: 300px;"  style="height: 300px; width: 300px;"   src="{{ asset('frontend/img/men/panjabi/Panjabi1.jpg') }}" alt="">
                         <div class="product-action">
-                            <a class="btn btn-outline-dark btn-square view-btn" data-name="{{ $item->name }}"  data-price="{{ $item->price }}" data-image="{{ asset('storage/'. $item->image) }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp"><i class="fa fa-eye"></i></a>
-                            {{-- <a class="btn btn-outline-dark btn-square product-heart-btn" data-name="Panjabi " data-price="459" data-image="{{ asset('frontend/img/men/panjabi/Panjabi1.jpg') }}" href="#"><i class="far fa-heart"></i></a> --}}
-                            {{-- <a class="btn btn-outline-dark btn-square add-btn add-to-cart-btn" data-name="Panjabi 1" data-price="459" data-image="{{ asset('frontend/img/men/panjabi/Panjabi1.jpg') }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp" ><i class="fa fa-shopping-cart"></i></a> --}}
+                            <a class="btn btn-outline-dark btn-square view-btn" data-name="Panjabi 1"  data-price="459" data-image="{{ asset('frontend/img/men/panjabi/Panjabi1.jpg') }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-outline-dark btn-square product-heart-btn" data-name="Panjabi " data-price="459" data-image="{{ asset('frontend/img/men/panjabi/Panjabi1.jpg') }}" href="#"><i class="far fa-heart"></i></a>
+                            <a class="btn btn-outline-dark btn-square add-btn add-to-cart-btn" data-name="Panjabi 1" data-price="459" data-image="{{ asset('frontend/img/men/panjabi/Panjabi1.jpg') }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp" ><i class="fa fa-shopping-cart"></i></a>
                         </div>
                     </div>
                     <div class="text-center py-4">
-                        <a class="h6 text-decoration-none text-truncate" href="">{{ $item->name }}</a>
+                        <a class="h6 text-decoration-none text-truncate" href="">Panjabi 1</a>
                         <div class="d-flex align-items-center justify-content-center mt-2">
-                            <h5>{{ $item->price }}</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
+                            <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
                         </div>
                         <div class="d-flex align-items-center justify-content-center mb-1">
                             <small class="fa fa-star text-primary mr-1"></small>
@@ -49,8 +48,7 @@
                     </div>
                 </div>
             </div>
-            @endforeach
-            {{-- <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
                 <div class="product-item bg-light mb-4">
                     <div class="product-img position-relative overflow-hidden">
                         <img class="img-fluid w-100" style="height: 300px; width: 300px;"  style="height: 300px; width: 300px;"   src="{{ asset('frontend/img/men/panjabi/Panjabi2.jpg') }}" alt="">
@@ -231,7 +229,7 @@
                         </div>
                     </div>
                 </div>
-            </div> --}}
+            </div>
         </div>
     </div>
     <!-- Products End -->
