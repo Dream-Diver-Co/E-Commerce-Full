@@ -11,6 +11,7 @@ use App\Http\Controllers\WinterController;
 use App\Http\Controllers\UserContactController;
 use App\Http\Controllers\AdmincontactController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\PanjabiController;
 
 
 
@@ -101,6 +102,7 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
         Route::resource('usercontact', UserContactController::class);
         Route::resource('admincontact', AdmincontactController::class);
         Route::resource('about', AboutController::class);
+        Route::resource('panjabi', PanjabiController::class);
     });
 });
 

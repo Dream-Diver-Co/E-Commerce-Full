@@ -21,5 +21,19 @@
 </div>
 <!-- end page title -->
 
+<div class="card" style="margin:20px;">
+  <div class="card-header">Panjabis Page</div>
+  <div class="card-body">
+        <div class="card-body">
+        <h5 class="card-title">Name: {{ $panjabis->name }}</h5>
+        <p class="card-text">price: {{ $panjabis->price }}</p>
+        <p class="card-text">description_sm: {{ $panjabis->description_sm }}</p>
+        <p class="card-text">Image: <img src="{{ asset('storage/' . $panjabis->image) }}" alt="{{ $panjabis->title }}" width="100"></p>
+        <p class="card-text">description_lg: {{ $panjabis->description_lg }}</p>
+        <p class="card-text">information: {{ $panjabis->information }}</p>
+  </div>
+  </div>
+</div>
 @endsection
+
 
