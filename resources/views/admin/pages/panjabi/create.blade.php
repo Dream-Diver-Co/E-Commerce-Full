@@ -32,7 +32,7 @@
         <label>price</label><br>
         <input type="text" name="price" id="price" class="form-control"><br>
         <label>Small description </label><br>
-        <input type="text" name="subtitle " id="subtitle " class="form-control"><br>
+        <input type="text" name="subtitle" id="subtitle" class="form-control"><br>
         <label>image</label><br>
         <input type="file" name="image" id="image" class="form-control"><br>
         <label>description</label><br>
