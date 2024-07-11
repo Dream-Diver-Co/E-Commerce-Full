@@ -33,13 +33,13 @@
         <label>Image</label></br>
         <input type="file" name="image" id="image" class="form-control"></br>
         <label>description</label></br>
-        <textarea name="description" id="description" class="form-control" cols="30" rows="10"></textarea><br>
+        <textarea name="description" id="description" class="form-control" cols="30" rows="0"></textarea><br>
         <label>behind</label></br>
-        <textarea name="behind" id="behind" class="form-control" cols="30" rows="10"></textarea><br>
+        <textarea name="behind" id="behind" class="form-control" cols="30" rows="0"></textarea><br>
         <label>mission</label></br>
-        <textarea name="mission" id="mission" class="form-control" cols="30" rows="10"></textarea><br>
+        <textarea name="mission" id="mission" class="form-control" cols="30" rows="0"></textarea><br>
         <label>service</label></br>
-        <textarea name="service" id="service" class="form-control" cols="30" rows="10"></textarea><br>
+        <textarea name="service" id="service" class="form-control" cols="30" rows="0"></textarea><br>
         <input type="submit" value="Save" class="btn btn-success"></br>
     </form>
   </div>

@@ -36,9 +36,9 @@
         <label>image</label><br>
         <input type="file" name="image" id="image" class="form-control"><br>
         <label>description</label><br>
-        <textarea name="description" id="description" class="form-control" cols="30" rows="10"></textarea><br>
+        <textarea name="description" id="description" class="form-control" cols="30" rows="0"></textarea><br>
         <label>information</label><br>
-        <textarea name="information" id="information" class="form-control" cols="30" rows="10"></textarea><br>
+        <textarea name="information" id="information" class="form-control" cols="30" rows="0"></textarea><br>
         <input type="submit" value="Save" class="btn btn-success"><br>
     </form>
 
