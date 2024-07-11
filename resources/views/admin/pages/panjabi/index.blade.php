@@ -22,7 +22,7 @@
 <!-- end page title -->
 
     <div class="container">
-        <div class="row" style="margin:20px;">
+        <div class="row">
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
@@ -55,7 +55,7 @@
                                         <td>{{ $item->name }}</td>
                                         <td>{{ $item->price }}</td>
                                         <td>{{ $item->subtitle }}</td>
-                                        <td><img src="{{ asset('storage/'. $item->image) }}" alt="{{ $item->title }}" width="100"></td>
+                                        <td><img class="admin-index-img" src="{{ asset('storage/'. $item->image) }}" alt="{{ $item->title }}" width="100"></td>
                                         <td>{{ $item->description }}</td>
                                         <td>{{ $item->information }}</td>
 
