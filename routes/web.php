@@ -12,6 +12,8 @@ use App\Http\Controllers\UserContactController;
 use App\Http\Controllers\AdmincontactController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\PanjabiController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CshirtController;
 
 
 
@@ -69,6 +71,9 @@ Route::get('/baby_strollers', [FrontendController::class, 'baby_strollers'])->na
 
 
 Route::get('/offer', [FrontendController::class, 'offer'])->name('offer');
+Route::get('/product_details/{id}', [FrontendController::class, 'product_details'])->name('product_details');
+
+
 
 
 
@@ -103,6 +108,7 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
         Route::resource('admincontact', AdmincontactController::class);
         Route::resource('about', AboutController::class);
         Route::resource('panjabi', PanjabiController::class);
+        Route::resource("/cshirt", CshirtController::class);
     });
 });
 

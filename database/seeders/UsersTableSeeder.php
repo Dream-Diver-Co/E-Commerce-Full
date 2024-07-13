@@ -32,7 +32,7 @@ class UsersTableSeeder extends Seeder
             // Vendor
             [
                 'id' => Uuid::uuid4()->toString(),
-                'name' => 'Ferdinal Vendor',
+                'name' => 'Vendor',
                 'username' => 'vendor',
                 'email' => 'vendor@gmail.com',
                 'password' => Hash::make('123'),

@@ -114,8 +114,19 @@
                         <span>Panjabi</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('panjabi.create')}}">Create Panjabi</a></li>
+                        <li><a href="{{ route('panjabi.create')}}">Add Panjabi</a></li>
                         <li><a href="{{ route('panjabi.index') }}">Panjabi List</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-mail-send-line"></i>
+                        <span>Casul Shirt</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('cshirt.create')}}">Add Casul Shirt</a></li>
+                        <li><a href="{{ route('cshirt.index') }}">Casul Shirt List</a></li>
                     </ul>
                 </li>
 

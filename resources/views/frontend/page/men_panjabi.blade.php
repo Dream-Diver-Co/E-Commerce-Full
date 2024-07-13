@@ -28,7 +28,11 @@
                     <div class="product-img position-relative overflow-hidden">
                         <img class="img-fluid w-100" style="height: 300px; width: 300px;" src="{{ asset('storage/'. $item->image) }}" alt="">
                         <div class="product-action">
-                            <a href="" title="View Panjabi" class="btn btn-outline-dark btn-square view-btn" data-name="{{ $item->name }}"  data-price="{{ $item->price }}" data-image="{{ asset('storage/'. $item->image) }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp"><i class="fa fa-eye"></i></a>
+                            {{-- <a href="{{ route('product_details',$panjabis->id)}}" title="View Panjabi" class="btn btn-outline-dark btn-square view-btn" data-name="{{ $item->name }}"  data-price="{{ $item->price }}" data-image="{{ asset('storage/'. $item->image) }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp"><i class="fa fa-eye"></i></a> --}}
+                            <a href="{{ route('product_details', $item->id) }}" title="View Panjabi" class="btn btn-outline-dark btn-square">
+                                <i class="fa fa-eye"></i>
+                            </a>
+
                             <a class="btn btn-outline-dark btn-square product-heart-btn" data-name="{{ $item->name }}" data-price="{{ $item->price }}" data-image="{{ asset('storage/'. $item->image) }}" href="#"><i class="far fa-heart"></i></a>
                             <a class="btn btn-outline-dark btn-square add-btn add-to-cart-btn" data-name="{{ $item->name }} " data-price="{{ $item->price }}" data-image="{{ asset('storage/'. $item->image) }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp" ><i class="fa fa-shopping-cart"></i></a>
                         </div>
