@@ -18,6 +18,7 @@ use App\Http\Controllers\FshirtController;
 use App\Http\Controllers\TshirtController;
 use App\Http\Controllers\PoloController;
 use App\Http\Controllers\MenpentController;
+use App\Http\Controllers\BlazerController;
 
 
 
@@ -117,6 +118,7 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
         Route::resource('/tshirt', TshirtController::class);
         Route::resource('/polo', PoloController::class);
         Route::resource('/menpent', MenpentController::class);
+        Route::resource('/blazer', BlazerController::class);
 
     });
 });

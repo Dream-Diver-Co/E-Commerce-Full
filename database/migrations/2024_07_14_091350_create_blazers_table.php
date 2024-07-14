@@ -13,6 +13,13 @@ return new class extends Migration
     {
         Schema::create('blazers', function (Blueprint $table) {
             $table->id();
+            $table->string("name");
+            $table->string("price");
+            $table->string("old_price")->nullable();
+            $table->text("subtitle")->nullable();
+            $table->text("description")->nullable();
+            $table->string("information");
+            $table->text("image")->nullable();
             $table->timestamps();
         });
     }

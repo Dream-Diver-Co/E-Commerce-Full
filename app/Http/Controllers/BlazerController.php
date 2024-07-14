@@ -2,64 +2,66 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Blazer;
 use Illuminate\Http\Request;
+use App\Models\Blazer;
 
 class BlazerController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        //
+        $blazers = Blazer::all();
+        return view('admin.pages.blazer.index')->with('blazers', $blazers);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
-        //
+        return view('admin.pages.blazer.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
-        //
+        $input = $request->all();
+
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+            $path = $file->store('images', 'public');
+            $input['image'] = $path;
+        }
+
+        Blazer::create($input);
+        return redirect('admin/blazer')->with('flash_message', 'blazer Added!');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Blazer $blazer)
+    public function show($id)
     {
-        //
+        $blazer = Blazer::find($id);
+        return view('admin.pages.blazer.show')->with('blazer', $blazer);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Blazer $blazer)
+    public function edit($id)
     {
-        //
+        $blazer = Blazer::find($id);
+        return view('admin.pages.blazer.edit')->with('blazer', $blazer);
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Blazer $blazer)
+    public function update(Request $request, $id)
     {
-        //
+        $blazer = Blazer::find($id);
+        $input = $request->all();
+
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+            $path = $file->store('images', 'public');
+            $input['image'] = $path;
+        }
+
+        $blazer->update($input);
+        return redirect('admin/blazer')->with('flash_message', 'blazer Updated!');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Blazer $blazer)
+    public function destroy($id)
     {
-        //
+        Blazer::destroy($id);
+        return redirect('admin/blazer')->with('flash_message', 'blazer Deleted!');
     }
 }
