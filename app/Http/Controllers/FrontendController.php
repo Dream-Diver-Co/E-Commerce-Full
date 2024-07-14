@@ -89,9 +89,10 @@ class FrontendController extends Controller
 
     public function men_panjabi()
     {
-        $panjabis = Panjabi::all();
-        return view('frontend.page.men_panjabi',compact('panjabis'));
+        $panjabis = Panjabi::paginate(8); // Show 8 products per page
+        return view('frontend.page.men_panjabi', compact('panjabis'));
     }
+
 
     public function men_polo()
     {
@@ -176,32 +177,21 @@ class FrontendController extends Controller
 
     // public function product_details($id)
     // {
-    //     $panjabi = Panjabi::find($id);
+    //     // Check if the product is a Punjabi
+    //     $product = Panjabi::find($id);
 
-    //     if (!$panjabi) {
-    //         abort(404); // Handle the case where the product is not found
+    //     // If not found, check if it's a Casual Shirt
+    //     if (!$product) {
+    //         $product = Cshirt::find($id);
     //     }
 
-    //     return view('frontend.page.product_details', compact('panjabi'));
+    //     // If still not found, abort with 404
+    //     if (!$product) {
+    //         abort(404);
+    //     }
+
+    //     return view('frontend.page.product_details', compact('product'));
     // }
-
-    public function product_details($id)
-    {
-        // Check if the product is a Punjabi
-        $product = Panjabi::find($id);
-
-        // If not found, check if it's a Casual Shirt
-        if (!$product) {
-            $product = Cshirt::find($id);
-        }
-
-        // If still not found, abort with 404
-        if (!$product) {
-            abort(404);
-        }
-
-        return view('frontend.page.product_details', compact('product'));
-    }
 
 
 }

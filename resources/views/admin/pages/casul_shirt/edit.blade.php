@@ -19,7 +19,7 @@
 </div>
 <!-- end page title -->
 
-<div class="card" style="margin:20px;">
+<div class="card">
     <div class="card-header">Edit Cshirt</div>
     <div class="card-body">
         <form action="{{ url('admin/cshirt/' . $cshirt->id) }}" method="post" enctype="multipart/form-data">

@@ -57,10 +57,10 @@
                                 <div id="product-carousel" class="carousel slide" data-ride="carousel">
                                     <div class="carousel-inner bg-light">
                                         <div class="carousel-item active">
-                                            <!-- <img class="w-100 h-100" src="{{ asset('frontend/img/product-1.jpg') }}" alt="Image"> -->
+                                            {{-- <img class="w-100 h-100" src="{{ asset('frontend/img/product-1.jpg') }}" alt="Image"> --}}
                                             <img id="itemModalImage" src="" alt="Item Image" style="width: 100%; height: auto;">
                                         </div>
-                                        <!-- <div class="carousel-item">
+                                        {{-- <div class="carousel-item">
                                             <img class="w-100 h-100" src="{{ asset('frontend/img/product-2.jpg') }}" alt="Image">
                                         </div>
                                         <div class="carousel-item">
@@ -68,7 +68,7 @@
                                         </div>
                                         <div class="carousel-item">
                                             <img class="w-100 h-100" src="{{ asset('frontend/img/product-4.jpg') }}" alt="Image">
-                                        </div> -->
+                                        </div> --}}
                                     </div>
                                     <a class="carousel-control-prev" href="#product-carousel" data-slide="prev">
                                         <i class="fa fa-2x fa-angle-left text-dark"></i>
@@ -93,9 +93,7 @@
                                         <small class="pt-1">(99 Reviews)</small>
                                     </div>
                                     <h3 class="font-weight-semi-bold mb-4" id="itemModalPrice"></h3>
-                                    <p class="mb-4">Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit
-                                        clita ea. Sanc ipsum et, labore clita lorem magna duo dolor no sea
-                                        Nonumy</p>
+                                    <p class="mb-4" id="itemModalSubtitle"></p>
                                     <div class="d-flex mb-3">
                                         <strong class="text-dark mr-3">Sizes:</strong>
                                         <form>
@@ -194,46 +192,11 @@
                                     <div class="tab-content">
                                         <div class="tab-pane fade show active" id="tab-pane-1">
                                             <h4 class="mb-3">Product Description</h4>
-                                            <p>Eos no lorem eirmod diam diam, eos elitr et gubergren diam sea. Consetetur vero aliquyam invidunt duo dolores et duo sit. Vero diam ea vero et dolore rebum, dolor rebum eirmod consetetur invidunt sed sed et, lorem duo et eos elitr, sadipscing kasd ipsum rebum diam. Dolore diam stet rebum sed tempor kasd eirmod. Takimata kasd ipsum accusam sadipscing, eos dolores sit no ut diam consetetur duo justo est, sit sanctus diam tempor aliquyam eirmod nonumy rebum dolor accusam, ipsum kasd eos consetetur at sit rebum, diam kasd invidunt tempor lorem, ipsum lorem elitr sanctus eirmod takimata dolor ea invidunt.</p>
-                                            <p>Dolore magna est eirmod sanctus dolor, amet diam et eirmod et ipsum. Amet dolore tempor consetetur sed lorem dolor sit lorem tempor. Gubergren amet amet labore sadipscing clita clita diam clita. Sea amet et sed ipsum lorem elitr et, amet et labore voluptua sit rebum. Ea erat sed et diam takimata sed justo. Magna takimata justo et amet magna et.</p>
+                                            <p id="itemModalDescription"></p>
                                         </div>
                                         <div class="tab-pane fade" id="tab-pane-2">
                                             <h4 class="mb-3">Additional Information</h4>
-                                            <p>Eos no lorem eirmod diam diam, eos elitr et gubergren diam sea. Consetetur vero aliquyam invidunt duo dolores et duo sit. Vero diam ea vero et dolore rebum, dolor rebum eirmod consetetur invidunt sed sed et, lorem duo et eos elitr, sadipscing kasd ipsum rebum diam. Dolore diam stet rebum sed tempor kasd eirmod. Takimata kasd ipsum accusam sadipscing, eos dolores sit no ut diam consetetur duo justo est, sit sanctus diam tempor aliquyam eirmod nonumy rebum dolor accusam, ipsum kasd eos consetetur at sit rebum, diam kasd invidunt tempor lorem, ipsum lorem elitr sanctus eirmod takimata dolor ea invidunt.</p>
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <ul class="list-group list-group-flush">
-                                                        <li class="list-group-item px-0">
-                                                            Sit erat duo lorem duo ea consetetur, et eirmod takimata.
-                                                        </li>
-                                                        <li class="list-group-item px-0">
-                                                            Amet kasd gubergren sit sanctus et lorem eos sadipscing at.
-                                                        </li>
-                                                        <li class="list-group-item px-0">
-                                                            Duo amet accusam eirmod nonumy stet et et stet eirmod.
-                                                        </li>
-                                                        <li class="list-group-item px-0">
-                                                            Takimata ea clita labore amet ipsum erat justo voluptua. Nonumy.
-                                                        </li>
-                                                      </ul>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <ul class="list-group list-group-flush">
-                                                        <li class="list-group-item px-0">
-                                                            Sit erat duo lorem duo ea consetetur, et eirmod takimata.
-                                                        </li>
-                                                        <li class="list-group-item px-0">
-                                                            Amet kasd gubergren sit sanctus et lorem eos sadipscing at.
-                                                        </li>
-                                                        <li class="list-group-item px-0">
-                                                            Duo amet accusam eirmod nonumy stet et et stet eirmod.
-                                                        </li>
-                                                        <li class="list-group-item px-0">
-                                                            Takimata ea clita labore amet ipsum erat justo voluptua. Nonumy.
-                                                        </li>
-                                                      </ul>
-                                                </div>
-                                            </div>
+                                            <p id="itemModalInformation"></p>
                                         </div>
                                         <div class="tab-pane fade" id="tab-pane-3">
                                             <div class="row">
@@ -269,16 +232,20 @@
                                                     </div>
                                                     <form>
                                                         <div class="form-group">
-                                                            <label for="message">Your Review *</label>
-                                                            <textarea id="message" cols="30" rows="5" class="form-control"></textarea>
-                                                        </div>
-                                                        <div class="form-group">
                                                             <label for="name">Your Name *</label>
-                                                            <input type="text" class="form-control" id="name">
+                                                            <input type="text" class="form-control" id="name" required>
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="email">Your Email *</label>
-                                                            <input type="email" class="form-control" id="email">
+                                                            <input type="email" class="form-control" id="email" required>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="file">Your File *</label>
+                                                            <input type="file" class="form-control" id="file" style="height: 0%">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="message">Your Review *</label>
+                                                            <textarea id="message" cols="30" rows="5" class="form-control"></textarea>
                                                         </div>
                                                         <div class="form-group mb-0">
                                                             <input type="submit" value="Leave Your Review" class="btn btn-primary px-3">
@@ -309,44 +276,6 @@
             </div>
         </div>
         <!-- Product view modal end -->
-        <div class="modal fade" id="itemModal" tabindex="-1" aria-labelledby="itemModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-dialog-view">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="itemModalLabel">Item Details</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="container-fluid pb-5">
-                        <div class="row px-xl-5">
-                            <div class="col-lg-5 mb-30">
-                                <div id="product-carousel" class="carousel slide" data-ride="carousel">
-                                    <div class="carousel-inner bg-light">
-                                        <div class="carousel-item active">
-                                            <img id="itemModalImage" src="" alt="Item Image" style="width: 100%; height: auto;">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-7 h-auto mb-30">
-                                <div class="h-100 bg-light p-30">
-                                    <h3 id="itemModalName"></h3>
-                                    <h3 id="itemModalPrice"></h3>
-                                    <p id="itemModalSubtitle"></p>
-                                    <p id="itemModalDescription"></p>
-                                    <p id="itemModalInformation"></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
 
         <!-- Cart modal start -->
         <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
