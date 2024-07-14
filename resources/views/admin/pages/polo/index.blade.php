@@ -27,7 +27,7 @@
                     <h2>Formal Shirt</h2>
                 </div>
                 <div class="card-body">
-                    <a href="{{ url('/polo/create') }}" class="btn btn-success btn-sm" title="Add New polo">
+                    <a href="{{ url('admin/polo/create') }}" class="btn btn-success btn-sm" title="Add New polo">
                         Add New
                     </a>
                     <br/>

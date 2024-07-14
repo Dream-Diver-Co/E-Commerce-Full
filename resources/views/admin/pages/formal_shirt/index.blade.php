@@ -27,7 +27,7 @@
                     <h2>Formal Shirt</h2>
                 </div>
                 <div class="card-body">
-                    <a href="{{ url('/fshirt/create') }}" class="btn btn-success btn-sm" title="Add New fshirt">
+                    <a href="{{ url('admin/fshirt/create') }}" class="btn btn-success btn-sm" title="Add New fshirt">
                         Add New
                     </a>
                     <br/>

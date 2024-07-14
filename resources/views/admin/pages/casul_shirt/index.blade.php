@@ -27,7 +27,7 @@
                     <h2>Casul Shirt</h2>
                 </div>
                 <div class="card-body">
-                    <a href="{{ url('/cshirt/create') }}" class="btn btn-success btn-sm" title="Add New Cshirt">
+                    <a href="{{ url('admin/cshirt/create') }}" class="btn btn-success btn-sm" title="Add New Cshirt">
                         Add New
                     </a>
                     <br/>

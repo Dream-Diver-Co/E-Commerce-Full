@@ -24,7 +24,7 @@
                     <h2>Formal Shirt</h2>
                 </div>
                 <div class="card-body">
-                    <a href="{{ url('/menpent/create') }}" class="btn btn-success btn-sm" title="Add New menpent">
+                    <a href="{{ url('admin/menpent/create') }}" class="btn btn-success btn-sm" title="Add New menpent">
                         Add New
                     </a>
                     <br/>
