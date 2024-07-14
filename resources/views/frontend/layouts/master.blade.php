@@ -42,7 +42,7 @@
     <!-- Modal start -->
     <section>
         <!-- Product view modal start -->
-        {{-- <div class="modal fade" id="itemModal" tabindex="-1" aria-labelledby="itemModalLabel" aria-hidden="true">
+        <div class="modal fade" id="itemModal" tabindex="-1" aria-labelledby="itemModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-dialog-view">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -307,7 +307,7 @@
                     </div>
                 </div>
             </div>
-        </div> --}}
+        </div>
         <!-- Product view modal end -->
         <div class="modal fade" id="itemModal" tabindex="-1" aria-labelledby="itemModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-dialog-view">
