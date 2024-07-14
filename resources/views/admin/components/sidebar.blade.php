@@ -136,8 +136,30 @@
                         <span>Formal Shirt</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('fshirt.create')}}">Add Casul Shirt</a></li>
-                        <li><a href="{{ route('fshirt.index') }}">Casul Shirt List</a></li>
+                        <li><a href="{{ route('fshirt.create')}}">Add Formal Shirt</a></li>
+                        <li><a href="{{ route('fshirt.index') }}">Formal Shirt List</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-mail-send-line"></i>
+                        <span>T-Shirt</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('tshirt.create')}}">Add T-Shirt</a></li>
+                        <li><a href="{{ route('tshirt.index') }}">T-Shirt List</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-mail-send-line"></i>
+                        <span>Polo</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('polo.create')}}">Add Polo</a></li>
+                        <li><a href="{{ route('polo.index') }}">Polo List</a></li>
                     </ul>
                 </li>
 

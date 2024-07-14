@@ -25,12 +25,14 @@
     <div class="card">
         <div class="card-header">Create New Fshirt</div>
                     <div class="card-body">
-                        <form action="{{ url('admin/fshirt') }}" method="POST" enctype="multipart/form-data">
+                        <form action="{{ url('admin/polo') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <label>Name</label><br>
                             <input type="text" name="name" id="name" class="form-control"><br>
-                            <label>price</label><br>
+                            <label>New price</label><br>
                             <input type="text" name="price" id="price" class="form-control"><br>
+                            <label>Old Price</label><br>
+                            <input type="text" name="old_price" id="old_price" class="form-control"><br>
                             <label>Small description </label><br>
                             <input type="text" name="subtitle" id="subtitle" class="form-control"><br>
                             <label>image</label><br>

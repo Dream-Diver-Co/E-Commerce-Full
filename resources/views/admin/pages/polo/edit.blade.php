@@ -22,25 +22,27 @@
 <!-- end page title -->
 
                 <div class="card">
-                    <div class="card-header">Edit Fshirt</div>
+                    <div class="card-header">Edit polo</div>
 
                     <div class="card-body">
-                        <form action="{{ route('fshirt.update', $fshirt->id) }}" method="POST" enctype="multipart/form-data">
+                        <form action="{{ route('polo.update', $polo->id) }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             @method('PATCH')
-                            <input type="hidden" name="id" id="id" value="{{$fshirt->id}}" />
+                            <input type="hidden" name="id" id="id" value="{{$polo->id}}" />
                             <label>Name</label><br>
-                            <input type="text" name="name" id="name" value="{{$fshirt->name}}" class="form-control"><br>
-                            <label>price</label><br>
-                            <input type="text" name="price" id="price" value="{{$fshirt->price}}" class="form-control"><br>
+                            <input type="text" name="name" id="name" value="{{$polo->name}}" class="form-control"><br>
+                            <label>New price</label><br>
+                            <input type="text" name="price" id="price" value="{{$polo->price}}" class="form-control"><br>
+                            <label>Old price</label><br>
+                            <input type="text" name="old_price" id="old_price" value="{{$polo->old_price}}" class="form-control"><br>
                             <label>subtitle</label><br>
-                            <input type="text" name="subtitle" id="subtitle" value="{{$fshirt->subtitle}}" class="form-control"><br>
+                            <input type="text" name="subtitle" id="subtitle" value="{{$polo->subtitle}}" class="form-control"><br>
                             <label>Image</label><br>
                             <input type="file" name="image" id="image" class="form-control"><br>
                             <label>description</label><br>
-                            <input type="text" name="description" id="description" value="{{$fshirt->description}}" class="form-control"><br>
+                            <input type="text" name="description" id="description" value="{{$polo->description}}" class="form-control"><br>
                             <label>information</label><br>
-                            <input type="text" name="information" id="information" value="{{$fshirt->information}}" class="form-control"><br>
+                            <input type="text" name="information" id="information" value="{{$polo->information}}" class="form-control"><br>
                             <input type="submit" value="Update" class="btn btn-success"><br>
                         </form>
                     </div>

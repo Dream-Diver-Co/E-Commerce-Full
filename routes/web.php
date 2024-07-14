@@ -15,6 +15,8 @@ use App\Http\Controllers\PanjabiController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CshirtController;
 use App\Http\Controllers\FshirtController;
+use App\Http\Controllers\TshirtController;
+use App\Http\Controllers\PoloController;
 
 
 
@@ -111,6 +113,8 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
         Route::resource('panjabi', PanjabiController::class);
         Route::resource("/cshirt", CshirtController::class);
         Route::resource('/fshirt', FshirtController::class);
+        Route::resource('/tshirt', TshirtController::class);
+        Route::resource('/polo', PoloController::class);
 
     });
 });
