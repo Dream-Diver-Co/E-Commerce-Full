@@ -7,6 +7,7 @@ use App\Models\Winter;
 use App\Models\Admincontact;
 use App\Models\About;
 use App\Models\Panjabi;
+use App\Models\Cshirt;
 
 use Illuminate\Http\Request;
 
@@ -77,7 +78,8 @@ class FrontendController extends Controller
 
     public function men_casul_shirt()
     {
-        return view('frontend.page.men_casul_shirt');
+        $cshirts = Cshirt::all();
+        return view('frontend.page.men_casul_shirt',compact('cshirts'));
     }
 
     public function men_formal_shirt()
@@ -172,17 +174,34 @@ class FrontendController extends Controller
     }
 
 
+    // public function product_details($id)
+    // {
+    //     $panjabi = Panjabi::find($id);
+
+    //     if (!$panjabi) {
+    //         abort(404); // Handle the case where the product is not found
+    //     }
+
+    //     return view('frontend.page.product_details', compact('panjabi'));
+    // }
+
     public function product_details($id)
     {
-        $panjabi = Panjabi::find($id);
+        // Check if the product is a Punjabi
+        $product = Panjabi::find($id);
 
-        if (!$panjabi) {
-            abort(404); // Handle the case where the product is not found
+        // If not found, check if it's a Casual Shirt
+        if (!$product) {
+            $product = Cshirt::find($id);
         }
 
-        return view('frontend.page.product_details', compact('panjabi'));
-    }
+        // If still not found, abort with 404
+        if (!$product) {
+            abort(404);
+        }
 
+        return view('frontend.page.product_details', compact('product'));
+    }
 
 
 }

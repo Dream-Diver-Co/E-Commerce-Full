@@ -120,64 +120,33 @@ $(document).ready(function() {
   });
 
   // View item details in modal and handle add to cart from modal
-  $('.view-item-btn').click(function(e) {
-    e.preventDefault();
-
-    // Retrieve data attributes
-    var id = $(this).data('id');
+  $('.view-btn').click(function(event) {
+    event.preventDefault();
     var name = $(this).data('name');
     var price = $(this).data('price');
     var image = $(this).data('image');
-    var subtitle = $(this).data('subtitle');
-    var description = $(this).data('description');
-    var information = $(this).data('information');
+    var miles = $(this).data('miles');
+    var condition = $(this).data('condition');
+    var transmission = $(this).data('transmission');
+    var hp = $(this).data('hp');
 
-    // Update modal content
     $('#itemModalImage').attr('src', image);
     $('#itemModalName').text(name);
-    $('#itemModalPrice').text(price);
-    $('#itemModalSubtitle').text(subtitle);
-    $('#itemModalDescription').text(description);
-    $('#itemModalInformation').text(information);
+    $('#itemModalPrice').text('Price: $' + price);
+    $('#itemModalMiles').text('Miles: ' + miles);
+    $('#itemModalCondition').text('Condition: ' + condition);
+    $('#itemModalTransmission').text('Transmission: ' + transmission);
+    $('#itemModalHp').text('Horsepower: ' + hp);
 
-    // Open the modal
     $('#itemModal').modal('show');
 
     // Add to cart from modal
     $('.add-to-cart-from-modal-btn').off('click').on('click', function() {
-        shoppingCart.addItemToCart(name, Number(price), 1, image);
-        displayCart();
-        $('#itemModal').modal('hide');
+      shoppingCart.addItemToCart(name, Number(price), 1, image);
+      displayCart();
+      $('#itemModal').modal('hide');
     });
-});
-
-//   $('.view-btn').click(function(event) {
-//     event.preventDefault();
-//     var name = $(this).data('name');
-//     var price = $(this).data('price');
-//     var image = $(this).data('image');
-//     var miles = $(this).data('miles');
-//     var condition = $(this).data('condition');
-//     var transmission = $(this).data('transmission');
-//     var hp = $(this).data('hp');
-
-//     $('#itemModalImage').attr('src', image);
-//     $('#itemModalName').text(name);
-//     $('#itemModalPrice').text('Price: $' + price);
-//     $('#itemModalMiles').text('Miles: ' + miles);
-//     $('#itemModalCondition').text('Condition: ' + condition);
-//     $('#itemModalTransmission').text('Transmission: ' + transmission);
-//     $('#itemModalHp').text('Horsepower: ' + hp);
-
-//     $('#itemModal').modal('show');
-
-//     // Add to cart from modal
-//     $('.add-to-cart-from-modal-btn').off('click').on('click', function() {
-//       shoppingCart.addItemToCart(name, Number(price), 1, image);
-//       displayCart();
-//       $('#itemModal').modal('hide');
-//     });
-//   });
+  });
 
   // Shopping cart display and functionality
   $('.show-cart').on("click", ".delete-item", function(event) {

@@ -42,7 +42,7 @@
     <!-- Modal start -->
     <section>
         <!-- Product view modal start -->
-        <div class="modal fade" id="itemModal" tabindex="-1" aria-labelledby="itemModalLabel" aria-hidden="true">
+        {{-- <div class="modal fade" id="itemModal" tabindex="-1" aria-labelledby="itemModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-dialog-view">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -307,8 +307,46 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <!-- Product view modal end -->
+        <div class="modal fade" id="itemModal" tabindex="-1" aria-labelledby="itemModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-view">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="itemModalLabel">Item Details</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="container-fluid pb-5">
+                        <div class="row px-xl-5">
+                            <div class="col-lg-5 mb-30">
+                                <div id="product-carousel" class="carousel slide" data-ride="carousel">
+                                    <div class="carousel-inner bg-light">
+                                        <div class="carousel-item active">
+                                            <img id="itemModalImage" src="" alt="Item Image" style="width: 100%; height: auto;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-7 h-auto mb-30">
+                                <div class="h-100 bg-light p-30">
+                                    <h3 id="itemModalName"></h3>
+                                    <h3 id="itemModalPrice"></h3>
+                                    <p id="itemModalSubtitle"></p>
+                                    <p id="itemModalDescription"></p>
+                                    <p id="itemModalInformation"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
         <!-- Cart modal start -->
         <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">

@@ -29,10 +29,22 @@
                         <img class="img-fluid w-100" style="height: 300px; width: 300px;" src="{{ asset('storage/'. $item->image) }}" alt="">
                         <div class="product-action">
                             {{-- <a href="{{ route('product_details',$panjabis->id)}}" title="View Panjabi" class="btn btn-outline-dark btn-square view-btn" data-name="{{ $item->name }}"  data-price="{{ $item->price }}" data-image="{{ asset('storage/'. $item->image) }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp"><i class="fa fa-eye"></i></a> --}}
-                            <a href="{{ route('product_details', $item->id) }}" title="View Panjabi" class="btn btn-outline-dark btn-square">
+                            {{-- <a href="{{ route('product_details', $item->id) }}" title="View Panjabi" class="btn btn-outline-dark btn-square">
                                 <i class="fa fa-eye"></i>
-                            </a>
+                            </a> --}}
 
+                            <a href="#" class="btn btn-outline-dark btn-square view-item-btn"
+                                data-toggle="modal"
+                                data-target="#itemModal"
+                                data-id="{{ $item->id }}"
+                                data-name="{{ $item->name }}"
+                                data-price="{{ $item->price }}"
+                                data-image="{{ asset('storage/'. $item->image) }}"
+                                data-subtitle="{{ $item->subtitle }}"
+                                data-description="{{ $item->description }}"
+                                data-information="{{ $item->information }}">
+                                <i class="fa fa-eye" aria-hidden="true"></i>
+                            </a>
                             <a class="btn btn-outline-dark btn-square product-heart-btn" data-name="{{ $item->name }}" data-price="{{ $item->price }}" data-image="{{ asset('storage/'. $item->image) }}" href="#"><i class="far fa-heart"></i></a>
                             <a class="btn btn-outline-dark btn-square add-btn add-to-cart-btn" data-name="{{ $item->name }} " data-price="{{ $item->price }}" data-image="{{ asset('storage/'. $item->image) }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp" ><i class="fa fa-shopping-cart"></i></a>
                         </div>
