@@ -25,24 +25,24 @@
         <div class="row">
             <div class="col-md-8 offset-md-2"> --}}
                 <div class="card">
-                    <div class="card-header">menshoes Details</div>
+                    <div class="card-header">menshoe Details</div>
 
                     <div class="card-body">
-                        <h5 class="card-title">Name: {{ $menshoes->name }}</h5>
-                        <p class="card-text">New Price: {{ $menshoes->price }}</p>
-                        <p class="card-text">Old price: {{ $menshoes->old_price }}</p>
-                        <p class="card-text">Small Description: {{ $menshoes->small_description }}</p>
-                        <p class="card-text">Image: <img src="{{ asset('storage/' . $menshoes->image) }}" alt="{{ $menshoes->name }}" width="100"></p>
-                        <p class="card-text">Large Description: {{ $menshoes->large_description }}</p>
-                        <p class="card-text">Information: {{ $menshoes->information }}</p>
+                        <h5 class="card-title">Name: {{ $menshoe->name }}</h5>
+                        <p class="card-text">New Price: {{ $menshoe->price }}</p>
+                        <p class="card-text">Old price: {{ $menshoe->old_price }}</p>
+                        <p class="card-text">Small Description: {{ $menshoe->small_description }}</p>
+                        <p class="card-text">Image: <img src="{{ asset('storage/' . $menshoe->image) }}" alt="{{ $menshoe->name }}" width="100"></p>
+                        <p class="card-text">Large Description: {{ $menshoe->large_description }}</p>
+                        <p class="card-text">Information: {{ $menshoe->information }}</p>
 
-                        <a href="{{ route('menshoes.edit', $menshoes->id) }}" class="btn btn-primary">Edit</a>
-                        <form action="{{ route('menshoes.destroy', $menshoes->id) }}" method="POST" style="display: inline-block;">
+                        <a href="{{ route('menshoe.edit', $menshoe->id) }}" class="btn btn-primary">Edit</a>
+                        <form action="{{ route('menshoe.destroy', $menshoe->id) }}" method="POST" style="display: inline-block;">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this menshoes?')">Delete</button>
+                            <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this menshoe?')">Delete</button>
                         </form>
-                        <a href="{{ route('menshoes.index') }}" class="btn btn-secondary">Back</a>
+                        <a href="{{ route('menshoe.index') }}" class="btn btn-secondary">Back</a>
                     </div>
                 </div>
 @endsection

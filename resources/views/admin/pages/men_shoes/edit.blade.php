@@ -22,27 +22,27 @@
 <!-- end page title -->
 
                 <div class="card">
-                    <div class="card-header">Edit menshoes</div>
+                    <div class="card-header">Edit menshoe</div>
 
                     <div class="card-body">
-                        <form action="{{ route('menshoes.update', $menshoes->id) }}" method="POST" enctype="multipart/form-data">
+                        <form action="{{ route('menshoe.update', $menshoe->id) }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             @method('PATCH')
-                            <input type="hidden" name="id" id="id" value="{{$menshoes->id}}" />
+                            <input type="hidden" name="id" id="id" value="{{$menshoe->id}}" />
                             <label>Name</label><br>
-                            <input type="text" name="name" id="name" value="{{$menshoes->name}}" class="form-control"><br>
+                            <input type="text" name="name" id="name" value="{{$menshoe->name}}" class="form-control"><br>
                             <label>New price</label><br>
-                            <input type="text" name="price" id="price" value="{{$menshoes->price}}" class="form-control"><br>
+                            <input type="text" name="price" id="price" value="{{$menshoe->price}}" class="form-control"><br>
                             <label>Old price</label><br>
-                            <input type="text" name="old_price" id="old_price" value="{{$menshoes->old_price}}" class="form-control"><br>
+                            <input type="text" name="old_price" id="old_price" value="{{$menshoe->old_price}}" class="form-control"><br>
                             <label>subtitle</label><br>
-                            <input type="text" name="subtitle" id="subtitle" value="{{$menshoes->subtitle}}" class="form-control"><br>
+                            <input type="text" name="subtitle" id="subtitle" value="{{$menshoe->subtitle}}" class="form-control"><br>
                             <label>Image</label><br>
                             <input type="file" name="image" id="image" class="form-control"><br>
                             <label>description</label><br>
-                            <input type="text" name="description" id="description" value="{{$menshoes->description}}" class="form-control"><br>
+                            <input type="text" name="description" id="description" value="{{$menshoe->description}}" class="form-control"><br>
                             <label>information</label><br>
-                            <input type="text" name="information" id="information" value="{{$menshoes->information}}" class="form-control"><br>
+                            <input type="text" name="information" id="information" value="{{$menshoe->information}}" class="form-control"><br>
                             <input type="submit" value="Update" class="btn btn-success"><br>
                         </form>
                     </div>

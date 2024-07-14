@@ -3,14 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Menshoes;
+use App\Models\Menshoe;
 
-class MenshoesController extends Controller
+class MenshoeController extends Controller
 {
     public function index()
     {
-        $menshoess = Menshoes::all();
-        return view('admin.pages.men_shoes.index')->with('menshoess', $menshoess);
+        $menshoes = Menshoe::all();
+        return view('admin.pages.men_shoes.index')->with('menshoes', $menshoes);
     }
 
     public function create()
@@ -28,25 +28,25 @@ class MenshoesController extends Controller
             $input['image'] = $path;
         }
 
-        Menshoes::create($input);
-        return redirect('admin/menshoes')->with('flash_message', 'menshoes Added!');
+        Menshoe::create($input);
+        return redirect('admin/menshoe')->with('flash_message', 'menshoe Added!');
     }
 
     public function show($id)
     {
-        $menshoes = Menshoes::find($id);
-        return view('admin.pages.mens_hoes.show')->with('menshoes', $menshoes);
+        $menshoe = Menshoe::find($id);
+        return view('admin.pages.men_shoes.show')->with('menshoe', $menshoe);
     }
 
     public function edit($id)
     {
-        $menshoes = Menshoes::find($id);
-        return view('admin.pages.men_shoes.edit')->with('menshoes', $menshoes);
+        $menshoe = Menshoe::find($id);
+        return view('admin.pages.men_shoes.edit')->with('menshoe', $menshoe);
     }
 
     public function update(Request $request, $id)
     {
-        $menshoes = Menshoes::find($id);
+        $menshoe = Menshoe::find($id);
         $input = $request->all();
 
         if ($request->hasFile('image')) {
@@ -55,13 +55,13 @@ class MenshoesController extends Controller
             $input['image'] = $path;
         }
 
-        $menshoes->update($input);
-        return redirect('admin/menshoes')->with('flash_message', 'menshoes Updated!');
+        $menshoe->update($input);
+        return redirect('admin/menshoe')->with('flash_message', 'menshoe Updated!');
     }
 
     public function destroy($id)
     {
-        Menshoes::destroy($id);
-        return redirect('admin/menshoes')->with('flash_message', 'menshoes Deleted!');
+        Menshoe::destroy($id);
+        return redirect('admin/menshoe')->with('flash_message', 'menshoe Deleted!');
     }
 }

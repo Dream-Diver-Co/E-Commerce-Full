@@ -19,7 +19,7 @@ use App\Http\Controllers\TshirtController;
 use App\Http\Controllers\PoloController;
 use App\Http\Controllers\MenpentController;
 use App\Http\Controllers\BlazerController;
-use App\Http\Controllers\MenshoesController;
+use App\Http\Controllers\MenshoeController;
 
 
 
@@ -120,7 +120,7 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
         Route::resource('/polo', PoloController::class);
         Route::resource('/menpent', MenpentController::class);
         Route::resource('/blazer', BlazerController::class);
-        Route::resource('/menshoes', MenshoesController::class);
+        Route::resource('/menshoe', MenshoeController::class);
 
     });
 });
