@@ -27,6 +27,7 @@ use App\Http\Controllers\KameezController;
 use App\Http\Controllers\BagController;
 use App\Http\Controllers\CosmeticController;
 use App\Http\Controllers\WomenshoeController;
+use App\Http\Controllers\JuwalariController;
 
 
 
@@ -135,6 +136,7 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
         Route::resource('/bag', BagController::class);
         Route::resource('/cosmetic', CosmeticController::class);
         Route::resource('/womenshoe', WomenshoeController::class);
+        Route::resource('/juwalari', JuwalariController::class);
 
     });
 });
