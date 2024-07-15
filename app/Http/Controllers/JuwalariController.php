@@ -10,12 +10,12 @@ class JuwalariController extends Controller
     public function index()
     {
         $juwalaris = Juwalari::all();
-        return view('admin.pages.juwalari.index')->with('juwalaris', $juwalaris);
+        return view('admin.pages.women.juwalari.index')->with('juwalaris', $juwalaris);
     }
 
     public function create()
     {
-        return view('admin.pages.juwalari.create');
+        return view('admin.pages.women.juwalari.create');
     }
 
     public function store(Request $request)
@@ -35,13 +35,13 @@ class JuwalariController extends Controller
     public function show($id)
     {
         $juwalari = Juwalari::find($id);
-        return view('admin.pages.juwalari.show')->with('juwalari', $juwalari);
+        return view('admin.pages.women.juwalari.show')->with('juwalari', $juwalari);
     }
 
     public function edit($id)
     {
         $juwalari = Juwalari::find($id);
-        return view('admin.pages.juwalari.edit')->with('juwalari', $juwalari);
+        return view('admin.pages.women.juwalari.edit')->with('juwalari', $juwalari);
     }
 
     public function update(Request $request, $id)
