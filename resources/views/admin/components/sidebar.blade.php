@@ -223,28 +223,15 @@
                             </ul>
                         </li>
 
-                        <li>
-                            <a href="javascript: void(0);" class="has-arrow waves-effect">
-                                <i class="ri-share-line"></i>
-                                <span>Contact</span>
-                            </a>
+                        <li><a href="javascript: void(0);" class="has-arrow">Kameez</a>
                             <ul class="sub-menu" aria-expanded="true">
-                                <li><a href="javascript: void(0);" class="has-arrow">User Contact</a>
-                                    <ul class="sub-menu" aria-expanded="true">
-                                        {{-- <li><a href="{{ route('usercontact.create')}}">create</a></li> --}}
-                                        <li><a href="{{ route('usercontact.index')}}">User Contact List</a></li>
-                                    </ul>
-                                </li>
-
-                                <li><a href="javascript: void(0);" class="has-arrow">Kameez</a>
-                                    <ul class="sub-menu" aria-expanded="true">
-                                        <li><a href="{{ route('kameez.create')}}">Kameez Add</a></li>
-                                        <li><a href="{{ route('kameez.index')}}">Kameez List</a></li>
-                                    </ul>
-                                </li>
+                                <li><a href="{{ route('kameez.create')}}">Kameez Add</a></li>
+                                <li><a href="{{ route('kameez.index')}}">Kameez List</a></li>
                             </ul>
                         </li>
 
+
+                        
 
                     </ul>
                 </li>
