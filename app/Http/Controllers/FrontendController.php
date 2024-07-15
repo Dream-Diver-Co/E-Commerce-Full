@@ -13,6 +13,7 @@ use App\Models\Tshirt;
 use App\Models\Polo;
 use App\Models\Menpent;
 use App\Models\Blazer;
+use App\Models\Menshoe;
 
 use Illuminate\Http\Request;
 
@@ -110,7 +111,8 @@ class FrontendController extends Controller
 
     public function men_shoes()
     {
-        return view('frontend.page.men_shoes');
+        $menshoes = Menshoe::paginate(8);
+        return view('frontend.page.men_shoes',compact('menshoes'));
     }
 
     public function men_t_shirt()
