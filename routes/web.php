@@ -26,6 +26,7 @@ use App\Http\Controllers\WomenpentController;
 use App\Http\Controllers\KameezController;
 use App\Http\Controllers\BagController;
 use App\Http\Controllers\CosmeticController;
+use App\Http\Controllers\WomenshoeController;
 
 
 
@@ -133,6 +134,7 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
         Route::resource('/kameez', KameezController::class);
         Route::resource('/bag', BagController::class);
         Route::resource('/cosmetic', CosmeticController::class);
+        Route::resource('/womenshoe', WomenshoeController::class);
 
     });
 });

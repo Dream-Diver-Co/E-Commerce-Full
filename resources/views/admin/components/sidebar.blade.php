@@ -244,6 +244,13 @@
                             </ul>
                         </li>
 
+                        <li><a href="javascript: void(0);" class="has-arrow">Women Shoes</a>
+                            <ul class="sub-menu" aria-expanded="true">
+                                <li><a href="{{ route('womenshoe.create')}}">Women Shoes Add</a></li>
+                                <li><a href="{{ route('womenshoe.index')}}">Women Shoes List</a></li>
+                            </ul>
+                        </li>
+
                     </ul>
                 </li>
 
