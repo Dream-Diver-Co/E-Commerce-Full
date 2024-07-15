@@ -8,6 +8,7 @@ use App\Models\Admincontact;
 use App\Models\About;
 use App\Models\Panjabi;
 use App\Models\Cshirt;
+use App\Models\Fshirt;
 
 use Illuminate\Http\Request;
 
@@ -84,7 +85,8 @@ class FrontendController extends Controller
 
     public function men_formal_shirt()
     {
-        return view('frontend.page.men_formal_shirt');
+        $fshirts = Fshirt::paginate(8);
+        return view('frontend.page.men_formal_shirt',compact('fshirts'));
     }
 
     public function men_panjabi()
