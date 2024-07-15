@@ -11,6 +11,7 @@ use App\Models\Cshirt;
 use App\Models\Fshirt;
 use App\Models\Tshirt;
 use App\Models\Polo;
+use App\Models\Menpent;
 
 use Illuminate\Http\Request;
 
@@ -76,7 +77,8 @@ class FrontendController extends Controller
 
     public function men_bottom()
     {
-        return view('frontend.page.men_bottom');
+        $menpents = Menpent::paginate(8);
+        return view('frontend.page.men_bottom',compact('menpents'));
     }
 
     public function men_casul_shirt()
