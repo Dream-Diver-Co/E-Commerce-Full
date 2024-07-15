@@ -198,6 +198,28 @@
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-share-line"></i>
+                        <span>Women</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="true">
+                        <li><a href="javascript: void(0);" class="has-arrow">Tops</a>
+                            <ul class="sub-menu" aria-expanded="true">
+                                <li><a href="{{ route('womentop.create')}}">Tops Add</a></li>
+                                <li><a href="{{ route('womentop.index')}}">Tops List</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript: void(0);" class="has-arrow">Admin Contact</a>
+                            <ul class="sub-menu" aria-expanded="true">
+                                <li><a href="{{ route('admincontact.create')}}">Admin Contact Add</a></li>
+                                <li><a href="{{ route('admincontact.index')}}">Admin Contact List</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-mail-send-line"></i>
                         <span>Email</span>
                     </a>

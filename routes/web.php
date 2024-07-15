@@ -20,6 +20,7 @@ use App\Http\Controllers\PoloController;
 use App\Http\Controllers\MenpentController;
 use App\Http\Controllers\BlazerController;
 use App\Http\Controllers\MenshoeController;
+use App\Http\Controllers\WomentopController;
 
 
 
@@ -121,6 +122,7 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
         Route::resource('/menpent', MenpentController::class);
         Route::resource('/blazer', BlazerController::class);
         Route::resource('/menshoe', MenshoeController::class);
+        Route::resource('/womentop', WomentopController::class);
 
     });
 });
