@@ -9,6 +9,7 @@ use App\Models\About;
 use App\Models\Panjabi;
 use App\Models\Cshirt;
 use App\Models\Fshirt;
+use App\Models\Tshirt;
 
 use Illuminate\Http\Request;
 
@@ -108,7 +109,8 @@ class FrontendController extends Controller
 
     public function men_t_shirt()
     {
-        return view('frontend.page.men_t_shirt');
+        $tshirts = Tshirt::paginate(8);
+        return view('frontend.page.men_t_shirt',compact('tshirts'));
     }
 
     public function women_bag()
