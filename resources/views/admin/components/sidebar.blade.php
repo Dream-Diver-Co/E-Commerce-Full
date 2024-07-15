@@ -251,6 +251,13 @@
                             </ul>
                         </li>
 
+                        <li><a href="javascript: void(0);" class="has-arrow">Juwalari</a>
+                            <ul class="sub-menu" aria-expanded="true">
+                                <li><a href="{{ route('juwalari.create')}}">Juwalari Add</a></li>
+                                <li><a href="{{ route('juwalari.index')}}">Juwalari List</a></li>
+                            </ul>
+                        </li>
+
                     </ul>
                 </li>
 
