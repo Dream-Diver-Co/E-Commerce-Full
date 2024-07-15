@@ -230,8 +230,13 @@
                             </ul>
                         </li>
 
+                        <li><a href="javascript: void(0);" class="has-arrow">Bag</a>
+                            <ul class="sub-menu" aria-expanded="true">
+                                <li><a href="{{ route('bag.create')}}">Bag Add</a></li>
+                                <li><a href="{{ route('bag.index')}}">Bag List</a></li>
+                            </ul>
+                        </li>
 
-                        
 
                     </ul>
                 </li>
