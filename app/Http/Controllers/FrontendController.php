@@ -12,6 +12,7 @@ use App\Models\Fshirt;
 use App\Models\Tshirt;
 use App\Models\Polo;
 use App\Models\Menpent;
+use App\Models\Blazer;
 
 use Illuminate\Http\Request;
 
@@ -72,7 +73,8 @@ class FrontendController extends Controller
 
     public function men_blazer()
     {
-        return view('frontend.page.men_blazer');
+        $blazers = Blazer::paginate(8);
+        return view('frontend.page.men_blazer',compact('blazers'));
     }
 
     public function men_bottom()
