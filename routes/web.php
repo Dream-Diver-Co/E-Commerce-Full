@@ -22,6 +22,7 @@ use App\Http\Controllers\BlazerController;
 use App\Http\Controllers\MenshoeController;
 use App\Http\Controllers\WomentopController;
 use App\Http\Controllers\DresseController;
+use App\Http\Controllers\WomenpentController;
 
 
 
@@ -125,6 +126,7 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
         Route::resource('/menshoe', MenshoeController::class);
         Route::resource('/womentop', WomentopController::class);
         Route::resource('/dresse', DresseController::class);
+        Route::resource('/womenpent', WomenpentController::class);
 
     });
 });

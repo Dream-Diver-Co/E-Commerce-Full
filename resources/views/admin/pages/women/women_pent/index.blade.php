@@ -1,17 +1,17 @@
 @extends('admin.layouts.master')
 
-@section('title', 'polo List')
+@section('title', 'womenpent List')
 @section('content')
 
 <!-- start page title -->
 <div class="row">
     <div class="col-12">
         <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-            <h4 class="mb-sm-0">polo List</h4>
+            <h4 class="mb-sm-0">womenpent List</h4>
             <div class="page-title-right">
                 <ol class="breadcrumb m-0">
                     <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">{{ env('APP_NAME') }}</a></li>
-                    <li class="breadcrumb-item active">polo List</li>
+                    <li class="breadcrumb-item active">womenpent List</li>
                 </ol>
             </div>
         </div>
@@ -27,7 +27,7 @@
                     <h2>Formal Shirt</h2>
                 </div>
                 <div class="card-body">
-                    <a href="{{ url('admin/polo/create') }}" class="btn btn-success btn-sm" title="Add New polo">
+                    <a href="{{ url('admin/womenpent/create') }}" class="btn btn-success btn-sm" title="Add New womenpent">
                         Add New
                     </a>
                     <br/>
@@ -48,25 +48,25 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach($polos as $polo)
+                                @foreach($womenpents as $womenpent)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
-                                    <td>{{ $polo->name }}</td>
-                                    <td>{{ $polo->price }}</td>
-                                    <td>{{ $polo->old_price }}</td>
-                                    <td>{{ $polo->subtitle }}</td>
-                                    <td><img class="admin-index-img" src="{{ asset('storage/'. $polo->image) }}" alt="{{ $polo->title }}" width="100"></td>
-                                    <td>{{ $polo->description }}</td>
-                                    <td>{{ $polo->information }}</td>
+                                    <td>{{ $womenpent->name }}</td>
+                                    <td>{{ $womenpent->price }}</td>
+                                    <td>{{ $womenpent->old_price }}</td>
+                                    <td>{{ $womenpent->subtitle }}</td>
+                                    <td><img class="admin-index-img" src="{{ asset('storage/'. $womenpent->image) }}" alt="{{ $womenpent->title }}" width="100"></td>
+                                    <td>{{ $womenpent->description }}</td>
+                                    <td>{{ $womenpent->information }}</td>
 
                                     <td>
-                                        <a href="{{ url('admin/polo/' . $polo->id) }}" title="View polo"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
-                                        <a href="{{ url('admin/polo/' . $polo->id . '/edit') }}" title="Edit polo"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
+                                        <a href="{{ url('admin/womenpent/' . $womenpent->id) }}" title="View womenpent"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
+                                        <a href="{{ url('admin/womenpent/' . $womenpent->id . '/edit') }}" title="Edit womenpent"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
 
-                                        <form method="POST" action="{{ url('admin/polo' . '/' . $polo->id) }}" accept-charset="UTF-8" style="display:inline">
+                                        <form method="POST" action="{{ url('admin/womenpent' . '/' . $womenpent->id) }}" accept-charset="UTF-8" style="display:inline">
                                             {{ method_field('DELETE') }}
                                             {{ csrf_field() }}
-                                            <button type="submit" class="btn btn-danger btn-sm" title="Delete polo" onclick="return confirm('Confirm delete?')"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</button>
+                                            <button type="submit" class="btn btn-danger btn-sm" title="Delete womenpent" onclick="return confirm('Confirm delete?')"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</button>
                                         </form>
                                     </td>
                                 </tr>
