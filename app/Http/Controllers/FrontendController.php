@@ -10,6 +10,7 @@ use App\Models\Panjabi;
 use App\Models\Cshirt;
 use App\Models\Fshirt;
 use App\Models\Tshirt;
+use App\Models\Polo;
 
 use Illuminate\Http\Request;
 
@@ -99,7 +100,8 @@ class FrontendController extends Controller
 
     public function men_polo()
     {
-        return view('frontend.page.men_polo');
+        $polos = Polo::paginate(8);
+        return view('frontend.page.men_polo',compact('polos'));
     }
 
     public function men_shoes()
