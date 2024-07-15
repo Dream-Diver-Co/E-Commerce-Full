@@ -28,9 +28,9 @@
                         <h5 class="card-title">Name: {{ $womentop->name }}</h5>
                         <p class="card-text">New Price: {{ $womentop->price }}</p>
                         <p class="card-text">Old price: {{ $womentop->old_price }}</p>
-                        <p class="card-text">Small Description: {{ $womentop->small_description }}</p>
+                        <p class="card-text">Small Description: {{ $womentop->subtitle }}</p>
                         <p class="card-text">Image: <img src="{{ asset('storage/' . $womentop->image) }}" alt="{{ $womentop->name }}" width="100"></p>
-                        <p class="card-text">Large Description: {{ $womentop->large_description }}</p>
+                        <p class="card-text">Large Description: {{ $womentop->description }}</p>
                         <p class="card-text">Information: {{ $womentop->information }}</p>
 
                         <a href="{{ route('womentop.edit', $womentop->id) }}" class="btn btn-primary">Edit</a>

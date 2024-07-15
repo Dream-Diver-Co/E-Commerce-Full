@@ -25,9 +25,9 @@
     <div class="card-body">
         <h5 class="card-title">Name: {{ $cshirt->name }}</h5>
         <p class="card-text">Price: {{ $cshirt->price }}</p>
-        <p class="card-text">Small Description: {{ $cshirt->small_description }}</p>
+        <p class="card-text">Small Description: {{ $cshirt->subtitle }}</p>
         <p class="card-text">Image: <img src="{{ asset('storage/' . $cshirt->image) }}" alt="{{ $cshirt->name }}" width="100"></p>
-        <p class="card-text">Large Description: {{ $cshirt->large_description }}</p>
+        <p class="card-text">Large Description: {{ $cshirt->description }}</p>
         <p class="card-text">Information: {{ $cshirt->information }}</p>
     </div>
 </div>

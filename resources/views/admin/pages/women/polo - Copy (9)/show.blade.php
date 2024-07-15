@@ -31,9 +31,9 @@
                         <h5 class="card-title">Name: {{ $polo->name }}</h5>
                         <p class="card-text">New Price: {{ $polo->price }}</p>
                         <p class="card-text">Old price: {{ $polo->old_price }}</p>
-                        <p class="card-text">Small Description: {{ $polo->small_description }}</p>
+                        <p class="card-text">Small Description: {{ $polo->subtitle }}</p>
                         <p class="card-text">Image: <img src="{{ asset('storage/' . $polo->image) }}" alt="{{ $polo->name }}" width="100"></p>
-                        <p class="card-text">Large Description: {{ $polo->large_description }}</p>
+                        <p class="card-text">Large Description: {{ $polo->description }}</p>
                         <p class="card-text">Information: {{ $polo->information }}</p>
 
                         <a href="{{ route('polo.edit', $polo->id) }}" class="btn btn-primary">Edit</a>

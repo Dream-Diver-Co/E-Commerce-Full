@@ -31,9 +31,9 @@
                         <h5 class="card-title">Name: {{ $menshoe->name }}</h5>
                         <p class="card-text">New Price: {{ $menshoe->price }}</p>
                         <p class="card-text">Old price: {{ $menshoe->old_price }}</p>
-                        <p class="card-text">Small Description: {{ $menshoe->small_description }}</p>
+                        <p class="card-text">Small Description: {{ $menshoe->subtitle }}</p>
                         <p class="card-text">Image: <img src="{{ asset('storage/' . $menshoe->image) }}" alt="{{ $menshoe->name }}" width="100"></p>
-                        <p class="card-text">Large Description: {{ $menshoe->large_description }}</p>
+                        <p class="card-text">Large Description: {{ $menshoe->description }}</p>
                         <p class="card-text">Information: {{ $menshoe->information }}</p>
 
                         <a href="{{ route('menshoe.edit', $menshoe->id) }}" class="btn btn-primary">Edit</a>
