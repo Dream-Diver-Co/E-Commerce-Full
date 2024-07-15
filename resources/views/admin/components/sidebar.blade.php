@@ -198,6 +198,64 @@
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-share-line"></i>
+                        <span>Women</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="true">
+                        <li><a href="javascript: void(0);" class="has-arrow">Tops</a>
+                            <ul class="sub-menu" aria-expanded="true">
+                                <li><a href="{{ route('womentop.create')}}">Tops Add</a></li>
+                                <li><a href="{{ route('womentop.index')}}">Tops List</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript: void(0);" class="has-arrow">Dresses</a>
+                            <ul class="sub-menu" aria-expanded="true">
+                                <li><a href="{{ route('dresse.create')}}">Dresses Add</a></li>
+                                <li><a href="{{ route('dresse.index')}}">Dresses List</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript: void(0);" class="has-arrow">Women Pent</a>
+                            <ul class="sub-menu" aria-expanded="true">
+                                <li><a href="{{ route('womenpent.create')}}">Women Pent Add</a></li>
+                                <li><a href="{{ route('womenpent.index')}}">Women Pent List</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript: void(0);" class="has-arrow">Kameez</a>
+                            <ul class="sub-menu" aria-expanded="true">
+                                <li><a href="{{ route('kameez.create')}}">Kameez Add</a></li>
+                                <li><a href="{{ route('kameez.index')}}">Kameez List</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript: void(0);" class="has-arrow">Bag</a>
+                            <ul class="sub-menu" aria-expanded="true">
+                                <li><a href="{{ route('bag.create')}}">Bag Add</a></li>
+                                <li><a href="{{ route('bag.index')}}">Bag List</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript: void(0);" class="has-arrow">Cosmetic</a>
+                            <ul class="sub-menu" aria-expanded="true">
+                                <li><a href="{{ route('cosmetic.create')}}">Cosmetic Add</a></li>
+                                <li><a href="{{ route('cosmetic.index')}}">Cosmetic List</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="javascript: void(0);" class="has-arrow">Women Shoes</a>
+                            <ul class="sub-menu" aria-expanded="true">
+                                <li><a href="{{ route('womenshoe.create')}}">Women Shoes Add</a></li>
+                                <li><a href="{{ route('womenshoe.index')}}">Women Shoes List</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-mail-send-line"></i>
                         <span>Email</span>
                     </a>

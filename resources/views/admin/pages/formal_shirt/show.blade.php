@@ -30,9 +30,9 @@
                     <div class="card-body">
                         <h5 class="card-title">Name: {{ $fshirt->name }}</h5>
                         <p class="card-text">Price: {{ $fshirt->price }}</p>
-                        <p class="card-text">Small Description: {{ $fshirt->small_description }}</p>
+                        <p class="card-text">Small Description: {{ $fshirt->subtitle }}</p>
                         <p class="card-text">Image: <img src="{{ asset('storage/' . $fshirt->image) }}" alt="{{ $fshirt->name }}" width="100"></p>
-                        <p class="card-text">Large Description: {{ $fshirt->large_description }}</p>
+                        <p class="card-text">Large Description: {{ $fshirt->description }}</p>
                         <p class="card-text">Information: {{ $fshirt->information }}</p>
 
                         <a href="{{ route('fshirt.edit', $fshirt->id) }}" class="btn btn-primary">Edit</a>

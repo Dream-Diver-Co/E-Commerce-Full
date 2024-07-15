@@ -20,6 +20,14 @@ use App\Http\Controllers\PoloController;
 use App\Http\Controllers\MenpentController;
 use App\Http\Controllers\BlazerController;
 use App\Http\Controllers\MenshoeController;
+use App\Http\Controllers\WomentopController;
+use App\Http\Controllers\DresseController;
+use App\Http\Controllers\WomenpentController;
+use App\Http\Controllers\KameezController;
+use App\Http\Controllers\BagController;
+use App\Http\Controllers\CosmeticController;
+use App\Http\Controllers\WomenshoeController;
+use App\Http\Controllers\JuwalariController;
 
 
 
@@ -121,6 +129,14 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
         Route::resource('/menpent', MenpentController::class);
         Route::resource('/blazer', BlazerController::class);
         Route::resource('/menshoe', MenshoeController::class);
+        Route::resource('/womentop', WomentopController::class);
+        Route::resource('/dresse', DresseController::class);
+        Route::resource('/womenpent', WomenpentController::class);
+        Route::resource('/kameez', KameezController::class);
+        Route::resource('/bag', BagController::class);
+        Route::resource('/cosmetic', CosmeticController::class);
+        Route::resource('/womenshoe', WomenshoeController::class);
+        Route::resource('/juwalari', JuwalariController::class);
 
     });
 });

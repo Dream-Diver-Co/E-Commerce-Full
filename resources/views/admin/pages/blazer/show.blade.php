@@ -31,9 +31,9 @@
                         <h5 class="card-title">Name: {{ $blazer->name }}</h5>
                         <p class="card-text">New Price: {{ $blazer->price }}</p>
                         <p class="card-text">Old price: {{ $blazer->old_price }}</p>
-                        <p class="card-text">Small Description: {{ $blazer->small_description }}</p>
+                        <p class="card-text">Small Description: {{ $blazer->subtitle }}</p>
                         <p class="card-text">Image: <img src="{{ asset('storage/' . $blazer->image) }}" alt="{{ $blazer->name }}" width="100"></p>
-                        <p class="card-text">Large Description: {{ $blazer->large_description }}</p>
+                        <p class="card-text">Large Description: {{ $blazer->description }}</p>
                         <p class="card-text">Information: {{ $blazer->information }}</p>
 
                         <a href="{{ route('blazer.edit', $blazer->id) }}" class="btn btn-primary">Edit</a>

@@ -8,6 +8,12 @@ use App\Models\Admincontact;
 use App\Models\About;
 use App\Models\Panjabi;
 use App\Models\Cshirt;
+use App\Models\Fshirt;
+use App\Models\Tshirt;
+use App\Models\Polo;
+use App\Models\Menpent;
+use App\Models\Blazer;
+use App\Models\Menshoe;
 
 use Illuminate\Http\Request;
 
@@ -68,12 +74,14 @@ class FrontendController extends Controller
 
     public function men_blazer()
     {
-        return view('frontend.page.men_blazer');
+        $blazers = Blazer::paginate(8);
+        return view('frontend.page.men_blazer',compact('blazers'));
     }
 
     public function men_bottom()
     {
-        return view('frontend.page.men_bottom');
+        $menpents = Menpent::paginate(8);
+        return view('frontend.page.men_bottom',compact('menpents'));
     }
 
     public function men_casul_shirt()
@@ -84,7 +92,8 @@ class FrontendController extends Controller
 
     public function men_formal_shirt()
     {
-        return view('frontend.page.men_formal_shirt');
+        $fshirts = Fshirt::paginate(8);
+        return view('frontend.page.men_formal_shirt',compact('fshirts'));
     }
 
     public function men_panjabi()
@@ -96,17 +105,20 @@ class FrontendController extends Controller
 
     public function men_polo()
     {
-        return view('frontend.page.men_polo');
+        $polos = Polo::paginate(8);
+        return view('frontend.page.men_polo',compact('polos'));
     }
 
     public function men_shoes()
     {
-        return view('frontend.page.men_shoes');
+        $menshoes = Menshoe::paginate(8);
+        return view('frontend.page.men_shoes',compact('menshoes'));
     }
 
     public function men_t_shirt()
     {
-        return view('frontend.page.men_t_shirt');
+        $tshirts = Tshirt::paginate(8);
+        return view('frontend.page.men_t_shirt',compact('tshirts'));
     }
 
     public function women_bag()

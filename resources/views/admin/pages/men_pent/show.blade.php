@@ -27,9 +27,9 @@
                         <h5 class="card-title">Name: {{ $menpent->name }}</h5>
                         <p class="card-text">New Price: {{ $menpent->price }}</p>
                         <p class="card-text">Old price: {{ $menpent->old_price }}</p>
-                        <p class="card-text">Small Description: {{ $menpent->small_description }}</p>
+                        <p class="card-text">Small Description: {{ $menpent->subtitle }}</p>
                         <p class="card-text">Image: <img src="{{ asset('storage/' . $menpent->image) }}" alt="{{ $menpent->name }}" width="100"></p>
-                        <p class="card-text">Large Description: {{ $menpent->large_description }}</p>
+                        <p class="card-text">Large Description: {{ $menpent->description }}</p>
                         <p class="card-text">Information: {{ $menpent->information }}</p>
 
                         <a href="{{ route('menpent.edit', $menpent->id) }}" class="btn btn-primary">Edit</a>
