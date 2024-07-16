@@ -27,54 +27,56 @@
                 </li>
 
                 <li>
-                    <a href="#" class=" waves-effect">
-                        <i class="ri-price-tag-3-line"></i>
-                        <span>Brand</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="ri-mail-send-line"></i>
-                        <span>Hero section</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('hero.create')}}">Create Hero Section</a></li>
-                        <li><a href="{{ route('hero.index') }}">Hero Section List</a></li>
-                    </ul>
-                </li>
-
-
-                <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-share-line"></i>
-                        <span>Contact</span>
+                        <span>Home</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="true">
-                        <li><a href="javascript: void(0);" class="has-arrow">User Contact</a>
-                            <ul class="sub-menu" aria-expanded="true">
-                                {{-- <li><a href="{{ route('usercontact.create')}}">create</a></li> --}}
-                                <li><a href="{{ route('usercontact.index')}}">User Contact List</a></li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                <i class="ri-mail-send-line"></i>
+                                <span>Hero section</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="{{ route('hero.create')}}">Create Hero Section</a></li>
+                                <li><a href="{{ route('hero.index') }}">Hero Section List</a></li>
                             </ul>
                         </li>
 
-                        <li><a href="javascript: void(0);" class="has-arrow">Admin Contact</a>
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                <i class="ri-share-line"></i>
+                                <span>Contact</span>
+                            </a>
                             <ul class="sub-menu" aria-expanded="true">
-                                <li><a href="{{ route('admincontact.create')}}">Admin Contact Add</a></li>
-                                <li><a href="{{ route('admincontact.index')}}">Admin Contact List</a></li>
+                                <li><a href="javascript: void(0);" class="has-arrow">User Contact</a>
+                                    <ul class="sub-menu" aria-expanded="true">
+                                        {{-- <li><a href="{{ route('usercontact.create')}}">create</a></li> --}}
+                                        <li><a href="{{ route('usercontact.index')}}">User Contact List</a></li>
+                                    </ul>
+                                </li>
+
+                                <li><a href="javascript: void(0);" class="has-arrow">Admin Contact</a>
+                                    <ul class="sub-menu" aria-expanded="true">
+                                        <li><a href="{{ route('admincontact.create')}}">Admin Contact Add</a></li>
+                                        <li><a href="{{ route('admincontact.index')}}">Admin Contact List</a></li>
+                                    </ul>
+                                </li>
                             </ul>
                         </li>
-                    </ul>
-                </li>
 
-                <li>
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="ri-mail-send-line"></i>
-                        <span>About</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('about.create')}}">Create About</a></li>
-                        <li><a href="{{ route('about.index') }}">About List</a></li>
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                <i class="ri-mail-send-line"></i>
+                                <span>About</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="{{ route('about.create')}}">Create About</a></li>
+                                <li><a href="{{ route('about.index') }}">About List</a></li>
+                            </ul>
+                        </li>
+
                     </ul>
                 </li>
 
@@ -110,89 +112,99 @@
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="ri-mail-send-line"></i>
-                        <span>Panjabi</span>
+                        <i class="ri-share-line"></i>
+                        <span>Men</span>
                     </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('panjabi.create')}}">Add Panjabi</a></li>
-                        <li><a href="{{ route('panjabi.index') }}">Panjabi List</a></li>
-                    </ul>
-                </li>
+                    <ul class="sub-menu" aria-expanded="true">
 
-                <li>
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="ri-mail-send-line"></i>
-                        <span>Casul Shirt</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('cshirt.create')}}">Add Casul Shirt</a></li>
-                        <li><a href="{{ route('cshirt.index') }}">Casul Shirt List</a></li>
-                    </ul>
-                </li>
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                <i class="ri-mail-send-line"></i>
+                                <span>Panjabi</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="{{ route('panjabi.create')}}">Add Panjabi</a></li>
+                                <li><a href="{{ route('panjabi.index') }}">Panjabi List</a></li>
+                            </ul>
+                        </li>
 
-                <li>
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="ri-mail-send-line"></i>
-                        <span>Formal Shirt</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('fshirt.create')}}">Add Formal Shirt</a></li>
-                        <li><a href="{{ route('fshirt.index') }}">Formal Shirt List</a></li>
-                    </ul>
-                </li>
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                <i class="ri-mail-send-line"></i>
+                                <span>Casul Shirt</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="{{ route('cshirt.create')}}">Add Casul Shirt</a></li>
+                                <li><a href="{{ route('cshirt.index') }}">Casul Shirt List</a></li>
+                            </ul>
+                        </li>
 
-                <li>
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="ri-mail-send-line"></i>
-                        <span>T-Shirt</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('tshirt.create')}}">Add T-Shirt</a></li>
-                        <li><a href="{{ route('tshirt.index') }}">T-Shirt List</a></li>
-                    </ul>
-                </li>
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                <i class="ri-mail-send-line"></i>
+                                <span>Formal Shirt</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="{{ route('fshirt.create')}}">Add Formal Shirt</a></li>
+                                <li><a href="{{ route('fshirt.index') }}">Formal Shirt List</a></li>
+                            </ul>
+                        </li>
 
-                <li>
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="ri-mail-send-line"></i>
-                        <span>Polo</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('polo.create')}}">Add Polo</a></li>
-                        <li><a href="{{ route('polo.index') }}">Polo List</a></li>
-                    </ul>
-                </li>
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                <i class="ri-mail-send-line"></i>
+                                <span>T-Shirt</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="{{ route('tshirt.create')}}">Add T-Shirt</a></li>
+                                <li><a href="{{ route('tshirt.index') }}">T-Shirt List</a></li>
+                            </ul>
+                        </li>
 
-                <li>
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="ri-mail-send-line"></i>
-                        <span>Men Pent</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('menpent.create')}}">Add Men Pent</a></li>
-                        <li><a href="{{ route('menpent.index') }}">Men Pent List</a></li>
-                    </ul>
-                </li>
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                <i class="ri-mail-send-line"></i>
+                                <span>Polo</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="{{ route('polo.create')}}">Add Polo</a></li>
+                                <li><a href="{{ route('polo.index') }}">Polo List</a></li>
+                            </ul>
+                        </li>
 
-                <li>
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="ri-mail-send-line"></i>
-                        <span>Blazer</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('blazer.create')}}">Add Blazer</a></li>
-                        <li><a href="{{ route('blazer.index') }}">Blazer List</a></li>
-                    </ul>
-                </li>
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                <i class="ri-mail-send-line"></i>
+                                <span>Men Pent</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="{{ route('menpent.create')}}">Add Men Pent</a></li>
+                                <li><a href="{{ route('menpent.index') }}">Men Pent List</a></li>
+                            </ul>
+                        </li>
 
-                <li>
-                    <a href="javascript: void(0);" class="has-arrow waves-effect">
-                        <i class="ri-mail-send-line"></i>
-                        <span>Men Shoes</span>
-                    </a>
-                    <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{ route('menshoe.create')}}">Add Men Shoes</a></li>
-                        <li><a href="{{ route('menshoe.index') }}">Men Shoes List</a></li>
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                <i class="ri-mail-send-line"></i>
+                                <span>Blazer</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="{{ route('blazer.create')}}">Add Blazer</a></li>
+                                <li><a href="{{ route('blazer.index') }}">Blazer List</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                <i class="ri-mail-send-line"></i>
+                                <span>Men Shoes</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="{{ route('menshoe.create')}}">Add Men Shoes</a></li>
+                                <li><a href="{{ route('menshoe.index') }}">Men Shoes List</a></li>
+                            </ul>
+                        </li>
+
                     </ul>
                 </li>
 
@@ -259,6 +271,13 @@
                         </li>
 
                     </ul>
+                </li>
+
+                <li>
+                    <a href="#" class=" waves-effect">
+                        <i class="ri-price-tag-3-line"></i>
+                        <span>Brand</span>
+                    </a>
                 </li>
 
                 <li>
