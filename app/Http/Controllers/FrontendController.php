@@ -76,111 +76,111 @@ class FrontendController extends Controller
     public function men_blazer()
     {
         $blazers = Blazer::paginate(8);
-        return view('frontend.page.men_blazer',compact('blazers'));
+        return view('frontend.page.men.men_blazer',compact('blazers'));
     }
 
     public function men_bottom()
     {
         $menpents = Menpent::paginate(8);
-        return view('frontend.page.men_bottom',compact('menpents'));
+        return view('frontend.page.men.men_bottom',compact('menpents'));
     }
 
     public function men_casul_shirt()
     {
         $cshirts = Cshirt::all();
-        return view('frontend.page.men_casul_shirt',compact('cshirts'));
+        return view('frontend.page.men.men_casul_shirt',compact('cshirts'));
     }
 
     public function men_formal_shirt()
     {
         $fshirts = Fshirt::paginate(8);
-        return view('frontend.page.men_formal_shirt',compact('fshirts'));
+        return view('frontend.page.men.men_formal_shirt',compact('fshirts'));
     }
 
     public function men_panjabi()
     {
         $panjabis = Panjabi::paginate(8); // Show 8 products per page
-        return view('frontend.page.men_panjabi', compact('panjabis'));
+        return view('frontend.page.men.men_panjabi', compact('panjabis'));
     }
 
 
     public function men_polo()
     {
         $polos = Polo::paginate(8);
-        return view('frontend.page.men_polo',compact('polos'));
+        return view('frontend.page.men.men_polo',compact('polos'));
     }
 
     public function men_shoes()
     {
         $menshoes = Menshoe::paginate(8);
-        return view('frontend.page.men_shoes',compact('menshoes'));
+        return view('frontend.page.men.men_shoes',compact('menshoes'));
     }
 
     public function men_t_shirt()
     {
         $tshirts = Tshirt::paginate(8);
-        return view('frontend.page.men_t_shirt',compact('tshirts'));
+        return view('frontend.page.men.men_t_shirt',compact('tshirts'));
     }
 
     public function women_bag()
     {
         $bags = Bag::paginate(8);
-        return view('frontend.page.women_bag',compact('bags'));
+        return view('frontend.page.women.women_bag',compact('bags'));
     }
 
     public function women_bottom()
     {
-        return view('frontend.page.women_bottom');
+        return view('frontend.page.women.women_bottom');
     }
 
     public function women_cosmetic()
     {
-        return view('frontend.page.women_cosmetic');
+        return view('frontend.page.women.women_cosmetic');
     }
 
     public function women_kameez()
     {
-        return view('frontend.page.women_kameez');
+        return view('frontend.page.women.women_kameez');
     }
 
     public function women_dress()
     {
-        return view('frontend.page.women_dress');
+        return view('frontend.page.women.women_dress');
     }
 
     public function women_shoes()
     {
-        return view('frontend.page.women_shoes');
+        return view('frontend.page.women.women_shoes');
     }
 
     public function women_tops()
     {
-        return view('frontend.page.women_tops');
+        return view('frontend.page.women.women_tops');
     }
 
     public function juwalari()
     {
-        return view('frontend.page.juwalari');
+        return view('frontend.page.women.juwalari');
     }
 
     public function baby_strollers()
     {
-        return view('frontend.page.baby_strollers');
+        return view('frontend.page.baby.baby_strollers');
     }
 
     public function baby_clothing()
     {
-        return view('frontend.page.baby_clothing');
+        return view('frontend.page.baby.baby_clothing');
     }
 
     public function baby_foods()
     {
-        return view('frontend.page.baby_foods');
+        return view('frontend.page.baby.baby_foods');
     }
 
     public function baby_newborn()
     {
-        return view('frontend.page.baby_newborn');
+        return view('frontend.page.baby.baby_newborn');
     }
 
     public function offer()
