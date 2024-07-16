@@ -22,24 +22,24 @@
 <!-- end page title -->
 
                 <div class="card">
-                    <div class="card-header">polo Details</div>
+                    <div class="card-header">recent Details</div>
 
                     <div class="card-body">
-                        <h5 class="card-title">Name: {{ $polo->name }}</h5>
-                        <p class="card-text">New Price: {{ $polo->price }}</p>
-                        <p class="card-text">Old price: {{ $polo->old_price }}</p>
-                        <p class="card-text">Small Description: {{ $polo->subtitle }}</p>
-                        <p class="card-text">Image: <img src="{{ asset('storage/' . $polo->image) }}" alt="{{ $polo->name }}" width="100"></p>
-                        <p class="card-text">Large Description: {{ $polo->description }}</p>
-                        <p class="card-text">Information: {{ $polo->information }}</p>
+                        <h5 class="card-title">Name: {{ $recent->name }}</h5>
+                        <p class="card-text">New Price: {{ $recent->price }}</p>
+                        <p class="card-text">Old price: {{ $recent->old_price }}</p>
+                        <p class="card-text">Small Description: {{ $recent->subtitle }}</p>
+                        <p class="card-text">Image: <img src="{{ asset('storage/' . $recent->image) }}" alt="{{ $recent->name }}" width="100"></p>
+                        <p class="card-text">Large Description: {{ $recent->description }}</p>
+                        <p class="card-text">Information: {{ $recent->information }}</p>
 
-                        <a href="{{ route('polo.edit', $polo->id) }}" class="btn btn-primary">Edit</a>
-                        <form action="{{ route('polo.destroy', $polo->id) }}" method="POST" style="display: inline-block;">
+                        <a href="{{ route('recent.edit', $recent->id) }}" class="btn btn-primary">Edit</a>
+                        <form action="{{ route('recent.destroy', $recent->id) }}" method="POST" style="display: inline-block;">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this polo?')">Delete</button>
+                            <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this recent?')">Delete</button>
                         </form>
-                        <a href="{{ route('polo.index') }}" class="btn btn-secondary">Back</a>
+                        <a href="{{ route('recent.index') }}" class="btn btn-secondary">Back</a>
                     </div>
                 </div>
 @endsection

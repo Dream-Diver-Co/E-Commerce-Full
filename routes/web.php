@@ -34,6 +34,7 @@ use App\Http\Controllers\NewbornController;
 use App\Http\Controllers\StrollerController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\FeaturedController;
+use App\Http\Controllers\RecentController;
 
 
 
@@ -124,6 +125,7 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
         Route::resource("/hero", HeroController::class);
         Route::resource('/client', ClientController::class);
         Route::resource('featured', FeaturedController::class);
+        Route::resource('recent', RecentController::class);
         //offer route
         Route::resource('/summer', SummerController::class);
         Route::resource('winter', WinterController::class);

@@ -94,8 +94,19 @@
                                 <span>Featured Product</span>
                             </a>
                             <ul class="sub-menu" aria-expanded="false">
-                                <li><a href="{{ route('featured.create')}}">Create Featured Product</a></li>
-                                <li><a href="{{ route('featured.index') }}">Featured Product List</a></li>
+                                <li><a href="{{ route('featured.create')}}">Create Featured</a></li>
+                                <li><a href="{{ route('featured.index') }}">Featured List</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                <i class="ri-mail-send-line"></i>
+                                <span>Recent Product</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="{{ route('recent.create')}}">Create Recent</a></li>
+                                <li><a href="{{ route('recent.index') }}">Recent List</a></li>
                             </ul>
                         </li>
 
