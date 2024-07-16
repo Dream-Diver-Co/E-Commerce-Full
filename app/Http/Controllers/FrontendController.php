@@ -15,6 +15,9 @@ use App\Models\Menpent;
 use App\Models\Blazer;
 use App\Models\Menshoe;
 use App\Models\Bag;
+use App\Models\Juwalari;
+use App\Models\Cosmetic;
+use App\Models\Dresse;
 
 use Illuminate\Http\Request;
 
@@ -135,7 +138,8 @@ class FrontendController extends Controller
 
     public function women_cosmetic()
     {
-        return view('frontend.page.women.women_cosmetic');
+        $cosmetics = Cosmetic::paginate(8);
+        return view('frontend.page.women.women_cosmetic',compact('cosmetics'));
     }
 
     public function women_kameez()
@@ -145,7 +149,8 @@ class FrontendController extends Controller
 
     public function women_dress()
     {
-        return view('frontend.page.women.women_dress');
+        $dresses = Dresse::paginate(8);
+        return view('frontend.page.women.women_dress',compact('dresses'));
     }
 
     public function women_shoes()
@@ -160,7 +165,8 @@ class FrontendController extends Controller
 
     public function juwalari()
     {
-        return view('frontend.page.women.juwalari');
+        $juwalaris = Juwalari::paginate(8);
+        return view('frontend.page.women.juwalari',compact('juwalaris'));
     }
 
     public function baby_strollers()
