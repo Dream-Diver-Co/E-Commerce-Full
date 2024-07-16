@@ -18,221 +18,59 @@
     <!-- Breadcrumb End -->
 
 
-    <!-- Products Start -->
-    <div class="container-fluid">
-        <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Dresses Featured Products</span></h2>
-        <div class="row px-xl-5">
-            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-                <div class="product-item bg-light mb-4">
-                    <div class="product-img position-relative overflow-hidden">
-                        <img class="img-fluid w-100" style="height: 300px; width: 300px;"  src="{{ asset('frontend/img/women/dresses/Dresses.jpg') }}" alt="">
-                        <div class="product-action">
-                            <a class="btn btn-outline-dark btn-square view-btn" data-name="Dresses 1"  data-price="459" data-image="{{ asset('frontend/img/women/dresses/Dresses.jpg') }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-outline-dark btn-square product-heart-btn" data-name="Dresses 1" data-price="459" data-image="{{ asset('frontend/img/women/dresses/Dresses.jpg') }}" href="#"><i class="far fa-heart"></i></a>
-                            <a class="btn btn-outline-dark btn-square add-btn add-to-cart-btn" data-name="Dresses 1" data-price="459" data-image="{{ asset('frontend/img/women/dresses/Dresses.jpg') }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp" ><i class="fa fa-shopping-cart"></i></a>
-                        </div>
-                    </div>
-                    <div class="text-center py-4">
-                        <a class="h6 text-decoration-none text-truncate" href="">Dresses 1</a>
-                        <div class="d-flex align-items-center justify-content-center mt-2">
-                            <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-center mb-1">
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small>(99)</small>
-                        </div>
+ <!-- Products Start -->
+<div class="container-fluid">
+    <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">dresse Shirt Featured Products</span></h2>
+    <div class="row px-xl-5">
+        @foreach($dresses as $dresse)
+        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+            <div class="product-item bg-light mb-4">
+                <div class="product-img position-relative overflow-hidden">
+                    <img class="img-fluid w-100" style="height: 300px; width: 300px;"  src="{{ asset('storage/'. $dresse->image) }}" alt="{{ $dresse->name }}">
+                    <div class="product-action">
+                        <a href="#" class="btn btn-outline-dark btn-square view-item-btn"
+                            data-toggle="modal"
+                            data-target="#itemModal"
+                            data-id="{{ $dresse->id }}"
+                            data-name="{{ $dresse->name }}"
+                            data-price="{{ $dresse->price }}"
+                            data-image="{{ asset('storage/'. $dresse->image) }}"
+                            data-subtitle="{{ $dresse->subtitle }}"
+                            data-description="{{ $dresse->description }}"
+                            data-information="{{ $dresse->information }}">
+                            <i class="fa fa-eye" aria-hidden="true"></i>
+                        </a>
+                        <a class="btn btn-outline-dark btn-square product-heart-btn" data-name="{{ $dresse->name }}" data-price="{{ $dresse->price }}" data-image="{{ asset('storage/'. $dresse->image) }}" href="#"><i class="far fa-heart"></i></a>
+                        <a class="btn btn-outline-dark btn-square add-btn add-to-cart-btn" data-name="{{ $dresse->name }}" data-price="{{ $dresse->price }}" data-image="{{ asset('storage/'. $dresse->image) }}"><i class="fa fa-shopping-cart"></i></a>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-                <div class="product-item bg-light mb-4">
-                    <div class="product-img position-relative overflow-hidden">
-                        <img class="img-fluid w-100" style="height: 300px; width: 300px;"  src="{{ asset('frontend/img/women/dresses/Dresses2.jpg') }}" alt="">
-                        <div class="product-action">
-                            <a class="btn btn-outline-dark btn-square view-btn" data-name="Dresses 2"  data-price="459" data-image="{{ asset('frontend/img/women/dresses/Dresses2.jpg') }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-outline-dark btn-square product-heart-btn" data-name="Dresses 2" data-price="459" data-image="{{ asset('frontend/img/women/dresses/Dresses2.jpg') }}" href="#"><i class="far fa-heart"></i></a>
-                            <a class="btn btn-outline-dark btn-square add-btn add-to-cart-btn" data-name="Dresses 2" data-price="459" data-image="{{ asset('frontend/img/women/dresses/Dresses2.jpg') }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp" ><i class="fa fa-shopping-cart"></i></a>
-                        </div>
+                <div class="text-center py-4">
+                    <a class="h6 text-decoration-none text-truncate" href="">{{ $dresse->name }}</a>
+                    <div class="d-flex align-items-center justify-content-center mt-2">
+                        <h5>${{ $dresse->price }}</h5>
+                        @if($dresse->old_price)
+                            <h6 class="text-muted ml-2"><del>${{ $dresse->old_price }}</del></h6>
+                        @endif
                     </div>
-                    <div class="text-center py-4">
-                        <a class="h6 text-decoration-none text-truncate" href="">Dresses 2</a>
-                        <div class="d-flex align-items-center justify-content-center mt-2">
-                            <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-center mb-1">
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star-half-alt text-primary mr-1"></small>
-                            <small>(99)</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-                <div class="product-item bg-light mb-4">
-                    <div class="product-img position-relative overflow-hidden">
-                        <img class="img-fluid w-100" style="height: 300px; width: 300px;"  src="{{ asset('frontend/img/women/dresses/Dresses3.jpg') }}" alt="">
-                        <div class="product-action">
-                            <a class="btn btn-outline-dark btn-square view-btn" data-name="Dresses 3"  data-price="459" data-image="{{ asset('frontend/img/women/dresses/Dresses3.jpg') }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-outline-dark btn-square product-heart-btn" data-name="Dresses 3" data-price="459" data-image="{{ asset('frontend/img/women/dresses/Dresses3.jpg') }}" href="#"><i class="far fa-heart"></i></a>
-                            <a class="btn btn-outline-dark btn-square add-btn add-to-cart-btn" data-name="Dresses 3" data-price="459" data-image="{{ asset('frontend/img/women/dresses/Dresses3.jpg') }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp" ><i class="fa fa-shopping-cart"></i></a>
-                        </div>
-                    </div>
-                    <div class="text-center py-4">
-                        <a class="h6 text-decoration-none text-truncate" href="">Dresses 3</a>
-                        <div class="d-flex align-items-center justify-content-center mt-2">
-                            <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-center mb-1">
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star-half-alt text-primary mr-1"></small>
-                            <small class="far fa-star text-primary mr-1"></small>
-                            <small>(99)</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-                <div class="product-item bg-light mb-4">
-                    <div class="product-img position-relative overflow-hidden">
-                        <img class="img-fluid w-100" style="height: 300px; width: 300px;"  src="{{ asset('frontend/img/women/dresses/Dresses4.jpg') }}" alt="">
-                        <div class="product-action">
-                            <a class="btn btn-outline-dark btn-square view-btn" data-name="Dresses 4"  data-price="459" data-image="{{ asset('frontend/img/women/dresses/Dresses4.jpg') }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-outline-dark btn-square product-heart-btn" data-name="Dresses 4" data-price="459" data-image="{{ asset('frontend/img/women/dresses/Dresses4.jpg') }}" href="#"><i class="far fa-heart"></i></a>
-                            <a class="btn btn-outline-dark btn-square add-btn add-to-cart-btn" data-name="Dresses 4" data-price="459" data-image="{{ asset('frontend/img/women/dresses/Dresses4.jpg') }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp" ><i class="fa fa-shopping-cart"></i></a>
-                        </div>
-                    </div>
-                    <div class="text-center py-4">
-                        <a class="h6 text-decoration-none text-truncate" href="">Dresses 4</a>
-                        <div class="d-flex align-items-center justify-content-center mt-2">
-                            <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-center mb-1">
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="far fa-star text-primary mr-1"></small>
-                            <small class="far fa-star text-primary mr-1"></small>
-                            <small>(99)</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-                <div class="product-item bg-light mb-4">
-                    <div class="product-img position-relative overflow-hidden">
-                        <img class="img-fluid w-100" style="height: 300px; width: 300px;"  src="{{ asset('frontend/img/women/dresses/Dresses5.jpg') }}" alt="">
-                        <div class="product-action">
-                            <a class="btn btn-outline-dark btn-square view-btn" data-name="Dresses 5"  data-price="459" data-image="{{ asset('frontend/img/women/dresses/Dresses5.jpg') }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-outline-dark btn-square product-heart-btn" data-name="Dresses 5" data-price="459" data-image="{{ asset('frontend/img/women/dresses/Dresses5.jpg') }}" href="#"><i class="far fa-heart"></i></a>
-                            <a class="btn btn-outline-dark btn-square add-btn add-to-cart-btn" data-name="Dresses 5" data-price="459" data-image="{{ asset('frontend/img/women/dresses/Dresses5.jpg') }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp" ><i class="fa fa-shopping-cart"></i></a>
-                        </div>
-                    </div>
-                    <div class="text-center py-4">
-                        <a class="h6 text-decoration-none text-truncate" href="">Dresses 5</a>
-                        <div class="d-flex align-items-center justify-content-center mt-2">
-                            <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-center mb-1">
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small>(99)</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-                <div class="product-item bg-light mb-4">
-                    <div class="product-img position-relative overflow-hidden">
-                        <img class="img-fluid w-100" style="height: 300px; width: 300px;"  src="{{ asset('frontend/img/women/dresses/Dresses6.jpg') }}" alt="">
-                        <div class="product-action">
-                            <a class="btn btn-outline-dark btn-square view-btn" data-name="Dresses 6"  data-price="459" data-image="{{ asset('frontend/img/women/dresses/Dresses6.jpg') }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-outline-dark btn-square product-heart-btn" data-name="Dresses 6" data-price="459" data-image="{{ asset('frontend/img/women/dresses/Dresses6.jpg') }}" href="#"><i class="far fa-heart"></i></a>
-                            <a class="btn btn-outline-dark btn-square add-btn add-to-cart-btn" data-name="Dresses 6" data-price="459" data-image="{{ asset('frontend/img/women/dresses/Dresses6.jpg') }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp" ><i class="fa fa-shopping-cart"></i></a>
-                        </div>
-                    </div>
-                    <div class="text-center py-4">
-                        <a class="h6 text-decoration-none text-truncate" href="">Dresses 6</a>
-                        <div class="d-flex align-items-center justify-content-center mt-2">
-                            <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-center mb-1">
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star-half-alt text-primary mr-1"></small>
-                            <small>(99)</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-                <div class="product-item bg-light mb-4">
-                    <div class="product-img position-relative overflow-hidden">
-                        <img class="img-fluid w-100" style="height: 300px; width: 300px;"  src="{{ asset('frontend/img/women/dresses/Dresses7.jpg') }}" alt="">
-                        <div class="product-action">
-                            <a class="btn btn-outline-dark btn-square view-btn" data-name="Dresses 7"  data-price="459" data-image="{{ asset('frontend/img/women/dresses/Dresses7.jpg') }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-outline-dark btn-square product-heart-btn" data-name="Dresses 7" data-price="459" data-image="{{ asset('frontend/img/women/dresses/Dresses7.jpg') }}" href="#"><i class="far fa-heart"></i></a>
-                            <a class="btn btn-outline-dark btn-square add-btn add-to-cart-btn" data-name="Dresses 7" data-price="459" data-image="{{ asset('frontend/img/women/dresses/Dresses7.jpg') }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp" ><i class="fa fa-shopping-cart"></i></a>
-                        </div>
-                    </div>
-                    <div class="text-center py-4">
-                        <a class="h6 text-decoration-none text-truncate" href="">Dresses 7</a>
-                        <div class="d-flex align-items-center justify-content-center mt-2">
-                            <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-center mb-1">
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star-half-alt text-primary mr-1"></small>
-                            <small class="far fa-star text-primary mr-1"></small>
-                            <small>(99)</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-                <div class="product-item bg-light mb-4">
-                    <div class="product-img position-relative overflow-hidden">
-                        <img class="img-fluid w-100" style="height: 300px; width: 300px;"  src="{{ asset('frontend/img/women/dresses/Dresses8.jpg') }}" alt="">
-                        <div class="product-action">
-                            <a class="btn btn-outline-dark btn-square view-btn" data-name="Dresses 8"  data-price="459" data-image="{{ asset('frontend/img/women/dresses/Dresses8.jpg') }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-outline-dark btn-square product-heart-btn" data-name="Dresses 8" data-price="459" data-image="{{ asset('frontend/img/women/dresses/Dresses8.jpg') }}" href="#"><i class="far fa-heart"></i></a>
-                            <a class="btn btn-outline-dark btn-square add-btn add-to-cart-btn" data-name="Dresses 8" data-price="459" data-image="{{ asset('frontend/img/women/dresses/Dresses8.jpg') }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp" ><i class="fa fa-shopping-cart"></i></a>
-                        </div>
-                    </div>
-                    <div class="text-center py-4">
-                        <a class="h6 text-decoration-none text-truncate" href="">Dresses 8</a>
-                        <div class="d-flex align-items-center justify-content-center mt-2">
-                            <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-center mb-1">
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="far fa-star text-primary mr-1"></small>
-                            <small class="far fa-star text-primary mr-1"></small>
-                            <small>(99)</small>
-                        </div>
+                    <div class="d-flex align-items-center justify-content-center mb-1">
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small>(99)</small>
                     </div>
                 </div>
             </div>
         </div>
+        @endforeach
     </div>
-    <!-- Products End -->
+</div>
+<!-- Products End -->
 
+  <!-- Pagination Links -->
+<div class="d-flex justify-content-center">
+    {{ $dresses->links('pagination::bootstrap-4') }}
+</div>
 @endsection
 

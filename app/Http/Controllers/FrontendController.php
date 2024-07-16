@@ -18,6 +18,8 @@ use App\Models\Bag;
 use App\Models\Juwalari;
 use App\Models\Cosmetic;
 use App\Models\Dresse;
+use App\Models\Kameez;
+
 
 use Illuminate\Http\Request;
 
@@ -144,7 +146,8 @@ class FrontendController extends Controller
 
     public function women_kameez()
     {
-        return view('frontend.page.women.women_kameez');
+        $kameezs = Kameez::paginate(8);
+        return view('frontend.page.women.women_kameez',compact('kameezs'));
     }
 
     public function women_dress()
