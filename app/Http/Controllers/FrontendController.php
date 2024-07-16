@@ -21,6 +21,7 @@ use App\Models\Dresse;
 use App\Models\Kameez;
 use App\Models\Womenpent;
 use App\Models\Womenshoe;
+use App\Models\Womentop;
 
 
 use Illuminate\Http\Request;
@@ -167,7 +168,8 @@ class FrontendController extends Controller
 
     public function women_tops()
     {
-        return view('frontend.page.women.women_tops');
+        $womentops = Womentop::paginate(8);
+        return view('frontend.page.women.women_tops',compact('womentops'));
     }
 
     public function juwalari()
