@@ -29,6 +29,7 @@ use App\Http\Controllers\CosmeticController;
 use App\Http\Controllers\WomenshoeController;
 use App\Http\Controllers\JuwalariController;
 use App\Http\Controllers\FoodController;
+use App\Http\Controllers\ClothingController;
 
 
 
@@ -144,6 +145,7 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
         Route::resource('/juwalari', JuwalariController::class);
         //baby route
         Route::resource('/food', FoodController::class);
+        Route::resource('/clothing', ClothingController::class);
 
     });
 });
