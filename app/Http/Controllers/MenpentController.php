@@ -10,12 +10,12 @@ class MenpentController extends Controller
     public function index()
     {
         $menpents = Menpent::all();
-        return view('admin.pages.men_pent.index')->with('menpents', $menpents);
+        return view('admin.pages.men.men_pent.index')->with('menpents', $menpents);
     }
 
     public function create()
     {
-        return view('admin.pages.men_pent.create');
+        return view('admin.pages.men.men_pent.create');
     }
 
     public function store(Request $request)
@@ -35,13 +35,13 @@ class MenpentController extends Controller
     public function show($id)
     {
         $menpent = Menpent::find($id);
-        return view('admin.pages.men_pent.show')->with('menpent', $menpent);
+        return view('admin.pages.men.men_pent.show')->with('menpent', $menpent);
     }
 
     public function edit($id)
     {
         $menpent = Menpent::find($id);
-        return view('admin.pages.men_pent.edit')->with('menpent', $menpent);
+        return view('admin.pages.men.men_pent.edit')->with('menpent', $menpent);
     }
 
     public function update(Request $request, $id)

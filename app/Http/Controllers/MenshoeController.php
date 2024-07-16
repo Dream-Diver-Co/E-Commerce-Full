@@ -10,12 +10,12 @@ class MenshoeController extends Controller
     public function index()
     {
         $menshoes = Menshoe::all();
-        return view('admin.pages.men_shoes.index')->with('menshoes', $menshoes);
+        return view('admin.pages.men.men_shoes.index')->with('menshoes', $menshoes);
     }
 
     public function create()
     {
-        return view('admin.pages.men_shoes.create');
+        return view('admin.pages.men.men_shoes.create');
     }
 
     public function store(Request $request)
@@ -35,13 +35,13 @@ class MenshoeController extends Controller
     public function show($id)
     {
         $menshoe = Menshoe::find($id);
-        return view('admin.pages.men_shoes.show')->with('menshoe', $menshoe);
+        return view('admin.pages.men.men_shoes.show')->with('menshoe', $menshoe);
     }
 
     public function edit($id)
     {
         $menshoe = Menshoe::find($id);
-        return view('admin.pages.men_shoes.edit')->with('menshoe', $menshoe);
+        return view('admin.pages.men.men_shoes.edit')->with('menshoe', $menshoe);
     }
 
     public function update(Request $request, $id)

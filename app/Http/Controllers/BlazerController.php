@@ -10,12 +10,12 @@ class BlazerController extends Controller
     public function index()
     {
         $blazers = Blazer::all();
-        return view('admin.pages.blazer.index')->with('blazers', $blazers);
+        return view('admin.pages.men.blazer.index')->with('blazers', $blazers);
     }
 
     public function create()
     {
-        return view('admin.pages.blazer.create');
+        return view('admin.pages.men.blazer.create');
     }
 
     public function store(Request $request)
@@ -35,13 +35,13 @@ class BlazerController extends Controller
     public function show($id)
     {
         $blazer = Blazer::find($id);
-        return view('admin.pages.blazer.show')->with('blazer', $blazer);
+        return view('admin.pages.men.blazer.show')->with('blazer', $blazer);
     }
 
     public function edit($id)
     {
         $blazer = Blazer::find($id);
-        return view('admin.pages.blazer.edit')->with('blazer', $blazer);
+        return view('admin.pages.men.blazer.edit')->with('blazer', $blazer);
     }
 
     public function update(Request $request, $id)

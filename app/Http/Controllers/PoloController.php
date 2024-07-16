@@ -10,12 +10,12 @@ class PoloController extends Controller
     public function index()
     {
         $polos = Polo::all();
-        return view('admin.pages.polo.index')->with('polos', $polos);
+        return view('admin.pages.men.polo.index')->with('polos', $polos);
     }
 
     public function create()
     {
-        return view('admin.pages.polo.create');
+        return view('admin.pages.men.polo.create');
     }
 
     public function store(Request $request)
@@ -35,13 +35,13 @@ class PoloController extends Controller
     public function show($id)
     {
         $polo = Polo::find($id);
-        return view('admin.pages.polo.show')->with('polo', $polo);
+        return view('admin.pages.men.polo.show')->with('polo', $polo);
     }
 
     public function edit($id)
     {
         $polo = Polo::find($id);
-        return view('admin.pages.polo.edit')->with('polo', $polo);
+        return view('admin.pages.men.polo.edit')->with('polo', $polo);
     }
 
     public function update(Request $request, $id)

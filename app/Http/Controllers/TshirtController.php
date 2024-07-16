@@ -10,12 +10,12 @@ class TshirtController extends Controller
     public function index()
     {
         $tshirts = Tshirt::all();
-        return view('admin.pages.tshirt.index')->with('tshirts', $tshirts);
+        return view('admin.pages.men.tshirt.index')->with('tshirts', $tshirts);
     }
 
     public function create()
     {
-        return view('admin.pages.tshirt.create');
+        return view('admin.pages.men.tshirt.create');
     }
 
     public function store(Request $request)
@@ -35,13 +35,13 @@ class TshirtController extends Controller
     public function show($id)
     {
         $tshirt = Tshirt::find($id);
-        return view('admin.pages.tshirt.show')->with('tshirt', $tshirt);
+        return view('admin.pages.men.tshirt.show')->with('tshirt', $tshirt);
     }
 
     public function edit($id)
     {
         $tshirt = Tshirt::find($id);
-        return view('admin.pages.tshirt.edit')->with('tshirt', $tshirt);
+        return view('admin.pages.men.tshirt.edit')->with('tshirt', $tshirt);
     }
 
     public function update(Request $request, $id)
