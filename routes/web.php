@@ -31,6 +31,7 @@ use App\Http\Controllers\JuwalariController;
 use App\Http\Controllers\FoodController;
 use App\Http\Controllers\ClothingController;
 use App\Http\Controllers\NewbornController;
+use App\Http\Controllers\StrollerController;
 
 
 
@@ -148,6 +149,7 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
         Route::resource('/food', FoodController::class);
         Route::resource('/clothing', ClothingController::class);
         Route::resource('/newborn', NewbornController::class);
+        Route::resource('/stroller', StrollerController::class);
 
     });
 });
