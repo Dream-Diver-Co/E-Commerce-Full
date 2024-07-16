@@ -10,12 +10,12 @@ class PanjabiController extends Controller
     public function index()
     {
         $panjabis = Panjabi::all();
-        return view('admin.pages.panjabi.index')->with('panjabis', $panjabis);
+        return view('admin.pages.men.panjabi.index')->with('panjabis', $panjabis);
     }
 
     public function create()
     {
-        return view('admin.pages.panjabi.create');
+        return view('admin.pages.men.panjabi.create');
     }
 
     public function store(Request $request)
@@ -33,13 +33,13 @@ class PanjabiController extends Controller
     public function show($id)
     {
         $panjabi = Panjabi::find($id);
-        return view('admin.pages.panjabi.show')->with('panjabis', $panjabi);
+        return view('admin.pages.men.panjabi.show')->with('panjabis', $panjabi);
     }
 
     public function edit($id)
     {
         $panjabi = Panjabi::find($id);
-        return view('admin.pages.panjabi.edit')->with('panjabis', $panjabi);
+        return view('admin.pages.men.panjabi.edit')->with('panjabis', $panjabi);
     }
 
     public function update(Request $request, $id)

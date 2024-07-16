@@ -14,6 +14,7 @@ use App\Models\Polo;
 use App\Models\Menpent;
 use App\Models\Blazer;
 use App\Models\Menshoe;
+use App\Models\Bag;
 
 use Illuminate\Http\Request;
 
@@ -123,7 +124,8 @@ class FrontendController extends Controller
 
     public function women_bag()
     {
-        return view('frontend.page.women_bag');
+        $bags = Bag::paginate(8);
+        return view('frontend.page.women_bag',compact('bags'));
     }
 
     public function women_bottom()

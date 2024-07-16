@@ -10,12 +10,12 @@ class FshirtController extends Controller
     public function index()
     {
         $fshirts = Fshirt::all();
-        return view('admin.pages.formal_shirt.index')->with('fshirts', $fshirts);
+        return view('admin.pages.men.formal_shirt.index')->with('fshirts', $fshirts);
     }
 
     public function create()
     {
-        return view('admin.pages.formal_shirt.create');
+        return view('admin.pages.men.formal_shirt.create');
     }
 
     public function store(Request $request)
@@ -35,13 +35,13 @@ class FshirtController extends Controller
     public function show($id)
     {
         $fshirt = Fshirt::find($id);
-        return view('admin.pages.formal_shirt.show')->with('fshirt', $fshirt);
+        return view('admin.pages.men.formal_shirt.show')->with('fshirt', $fshirt);
     }
 
     public function edit($id)
     {
         $fshirt = Fshirt::find($id);
-        return view('admin.pages.formal_shirt.edit')->with('fshirt', $fshirt);
+        return view('admin.pages.men.formal_shirt.edit')->with('fshirt', $fshirt);
     }
 
     public function update(Request $request, $id)

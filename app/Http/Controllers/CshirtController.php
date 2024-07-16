@@ -10,12 +10,12 @@ class CshirtController extends Controller
     public function index()
     {
         $cshirts = Cshirt::all();
-        return view('admin.pages.casul_shirt.index')->with('cshirts', $cshirts);
+        return view('admin.pages.men.casul_shirt.index')->with('cshirts', $cshirts);
     }
 
     public function create()
     {
-        return view('admin.pages.casul_shirt.create');
+        return view('admin.pages.men.casul_shirt.create');
     }
 
     public function store(Request $request)
@@ -35,13 +35,13 @@ class CshirtController extends Controller
     public function show($id)
     {
         $cshirt = Cshirt::find($id);
-        return view('admin.pages.casul_shirt.show')->with('cshirt', $cshirt);
+        return view('admin.pages.men.casul_shirt.show')->with('cshirt', $cshirt);
     }
 
     public function edit($id)
     {
         $cshirt = Cshirt::find($id);
-        return view('admin.pages.casul_shirt.edit')->with('cshirt', $cshirt);
+        return view('admin.pages.men.casul_shirt.edit')->with('cshirt', $cshirt);
     }
 
     public function update(Request $request, $id)

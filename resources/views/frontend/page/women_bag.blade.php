@@ -17,222 +17,60 @@
     </div>
     <!-- Breadcrumb End -->
 
-
-    <!-- Products Start -->
-    <div class="container-fluid">
-        <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Bag Featured Products</span></h2>
-        <div class="row px-xl-5">
-            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-                <div class="product-item bg-light mb-4">
-                    <div class="product-img position-relative overflow-hidden">
-                        <img class="img-fluid w-100" style="height: 300px; width: 300px;"  src="{{ asset('frontend/img/women/Bags/Bags1.jpg') }}" alt="">
-                        <div class="product-action">
-                            <a class="btn btn-outline-dark btn-square view-btn" data-name="Bag"  data-price="459" data-image="{{ asset('frontend/img/women/Bags/Bags1.jpg') }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-outline-dark btn-square product-heart-btn" data-name="Bag" data-price="459" data-image="{{ asset('frontend/img/women/Bags/Bags1.jpg') }}" href="#"><i class="far fa-heart"></i></a>
-                            <a class="btn btn-outline-dark btn-square add-btn add-to-cart-btn" data-name="Bag" data-price="459" data-image="{{ asset('frontend/img/women/Bags/Bags1.jpg') }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp" ><i class="fa fa-shopping-cart"></i></a>
-                        </div>
-                    </div>
-                    <div class="text-center py-4">
-                        <a class="h6 text-decoration-none text-truncate" href="">Bag</a>
-                        <div class="d-flex align-items-center justify-content-center mt-2">
-                            <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-center mb-1">
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small>(99)</small>
-                        </div>
+<!-- Products Start -->
+<div class="container-fluid">
+    <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">bag Shirt Featured Products</span></h2>
+    <div class="row px-xl-5">
+        @foreach($bags as $bag)
+        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+            <div class="product-item bg-light mb-4">
+                <div class="product-img position-relative overflow-hidden">
+                    <img class="img-fluid w-100" style="height: 300px; width: 300px;"  src="{{ asset('storage/'. $bag->image) }}" alt="{{ $bag->name }}">
+                    <div class="product-action">
+                        <a href="#" class="btn btn-outline-dark btn-square view-item-btn"
+                            data-toggle="modal"
+                            data-target="#itemModal"
+                            data-id="{{ $bag->id }}"
+                            data-name="{{ $bag->name }}"
+                            data-price="{{ $bag->price }}"
+                            data-image="{{ asset('storage/'. $bag->image) }}"
+                            data-subtitle="{{ $bag->subtitle }}"
+                            data-description="{{ $bag->description }}"
+                            data-information="{{ $bag->information }}">
+                            <i class="fa fa-eye" aria-hidden="true"></i>
+                        </a>
+                        <a class="btn btn-outline-dark btn-square product-heart-btn" data-name="{{ $bag->name }}" data-price="{{ $bag->price }}" data-image="{{ asset('storage/'. $bag->image) }}" href="#"><i class="far fa-heart"></i></a>
+                        <a class="btn btn-outline-dark btn-square add-btn add-to-cart-btn" data-name="{{ $bag->name }}" data-price="{{ $bag->price }}" data-image="{{ asset('storage/'. $bag->image) }}"><i class="fa fa-shopping-cart"></i></a>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-                <div class="product-item bg-light mb-4">
-                    <div class="product-img position-relative overflow-hidden">
-                        <img class="img-fluid w-100" style="height: 300px; width: 300px;"  src="{{ asset('frontend/img/women/Bags/Bags2.jpg') }}" alt="">
-                        <div class="product-action">
-                            <a class="btn btn-outline-dark btn-square view-btn" data-name="Bag"  data-price="459" data-image="{{ asset('frontend/img/women/Bags/Bags2.jpg') }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-outline-dark btn-square product-heart-btn" data-name="Bag" data-price="459" data-image="{{ asset('frontend/img/women/Bags/Bags2.jpg') }}" href="#"><i class="far fa-heart"></i></a>
-                            <a class="btn btn-outline-dark btn-square add-btn add-to-cart-btn" data-name="Bag" data-price="459" data-image="{{ asset('frontend/img/women/Bags/Bags2.jpg') }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp" ><i class="fa fa-shopping-cart"></i></a>
-                        </div>
+                <div class="text-center py-4">
+                    <a class="h6 text-decoration-none text-truncate" href="">{{ $bag->name }}</a>
+                    <div class="d-flex align-items-center justify-content-center mt-2">
+                        <h5>${{ $bag->price }}</h5>
+                        @if($bag->old_price)
+                            <h6 class="text-muted ml-2"><del>${{ $bag->old_price }}</del></h6>
+                        @endif
                     </div>
-                    <div class="text-center py-4">
-                        <a class="h6 text-decoration-none text-truncate" href="">Bag1</a>
-                        <div class="d-flex align-items-center justify-content-center mt-2">
-                            <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-center mb-1">
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star-half-alt text-primary mr-1"></small>
-                            <small>(99)</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-                <div class="product-item bg-light mb-4">
-                    <div class="product-img position-relative overflow-hidden">
-                        <img class="img-fluid w-100" style="height: 300px; width: 300px;"  src="{{ asset('frontend/img/women/Bags/Bags3.jpg') }}" alt="">
-                        <div class="product-action">
-                            <a class="btn btn-outline-dark btn-square view-btn" data-name="Bag"  data-price="459" data-image="{{ asset('frontend/img/women/Bags/Bags3.jpg') }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-outline-dark btn-square product-heart-btn" data-name="Bag" data-price="459" data-image="{{ asset('frontend/img/women/Bags/Bags3.jpg') }}" href="#"><i class="far fa-heart"></i></a>
-                            <a class="btn btn-outline-dark btn-square add-btn add-to-cart-btn" data-name="Bag" data-price="459" data-image="{{ asset('frontend/img/women/Bags/Bags3.jpg') }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp" ><i class="fa fa-shopping-cart"></i></a>
-                        </div>
-                    </div>
-                    <div class="text-center py-4">
-                        <a class="h6 text-decoration-none text-truncate" href="">Bag</a>
-                        <div class="d-flex align-items-center justify-content-center mt-2">
-                            <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-center mb-1">
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star-half-alt text-primary mr-1"></small>
-                            <small class="far fa-star text-primary mr-1"></small>
-                            <small>(99)</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-                <div class="product-item bg-light mb-4">
-                    <div class="product-img position-relative overflow-hidden">
-                        <img class="img-fluid w-100" style="height: 300px; width: 300px;"  src="{{ asset('frontend/img/women/Bags/Bags4.jpg') }}" alt="">
-                        <div class="product-action">
-                            <a class="btn btn-outline-dark btn-square view-btn" data-name="Bag"  data-price="459" data-image="{{ asset('frontend/img/women/Bags/Bags4.jpg') }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-outline-dark btn-square product-heart-btn" data-name="Bag" data-price="459" data-image="{{ asset('frontend/img/women/Bags/Bags4.jpg') }}" href="#"><i class="far fa-heart"></i></a>
-                            <a class="btn btn-outline-dark btn-square add-btn add-to-cart-btn" data-name="Bag" data-price="459" data-image="{{ asset('frontend/img/women/Bags/Bags4.jpg') }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp" ><i class="fa fa-shopping-cart"></i></a>
-                        </div>
-                    </div>
-                    <div class="text-center py-4">
-                        <a class="h6 text-decoration-none text-truncate" href="">Bag</a>
-                        <div class="d-flex align-items-center justify-content-center mt-2">
-                            <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-center mb-1">
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="far fa-star text-primary mr-1"></small>
-                            <small class="far fa-star text-primary mr-1"></small>
-                            <small>(99)</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-                <div class="product-item bg-light mb-4">
-                    <div class="product-img position-relative overflow-hidden">
-                        <img class="img-fluid w-100" style="height: 300px; width: 300px;"  src="{{ asset('frontend/img/women/Bags/Bags5.jpg') }}" alt="">
-                        <div class="product-action">
-                            <a class="btn btn-outline-dark btn-square view-btn" data-name="Bag"  data-price="459" data-image="{{ asset('frontend/img/women/Bags/Bags5.jpg') }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-outline-dark btn-square product-heart-btn" data-name="Bag" data-price="459" data-image="{{ asset('frontend/img/women/Bags/Bags5.jpg') }}" href="#"><i class="far fa-heart"></i></a>
-                            <a class="btn btn-outline-dark btn-square add-btn add-to-cart-btn" data-name="Bag" data-price="459" data-image="{{ asset('frontend/img/women/Bags/Bags5.jpg') }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp" ><i class="fa fa-shopping-cart"></i></a>
-                        </div>
-                    </div>
-                    <div class="text-center py-4">
-                        <a class="h6 text-decoration-none text-truncate" href="">Bag</a>
-                        <div class="d-flex align-items-center justify-content-center mt-2">
-                            <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-center mb-1">
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small>(99)</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-                <div class="product-item bg-light mb-4">
-                    <div class="product-img position-relative overflow-hidden">
-                        <img class="img-fluid w-100" style="height: 300px; width: 300px;"  src="{{ asset('frontend/img/women/Bags/Bags6.jpg') }}" alt="">
-                        <div class="product-action">
-                            <a class="btn btn-outline-dark btn-square view-btn" data-name="Bag"  data-price="459" data-image="{{ asset('frontend/img/women/Bags/Bags6.jpg') }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-outline-dark btn-square product-heart-btn" data-name="Bag" data-price="459" data-image="{{ asset('frontend/img/women/Bags/Bags6.jpg') }}" href="#"><i class="far fa-heart"></i></a>
-                            <a class="btn btn-outline-dark btn-square add-btn add-to-cart-btn" data-name="Bag" data-price="459" data-image="{{ asset('frontend/img/women/Bags/Bags6.jpg') }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp" ><i class="fa fa-shopping-cart"></i></a>
-                        </div>
-                    </div>
-                    <div class="text-center py-4">
-                        <a class="h6 text-decoration-none text-truncate" href="">Bag</a>
-                        <div class="d-flex align-items-center justify-content-center mt-2">
-                            <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-center mb-1">
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star-half-alt text-primary mr-1"></small>
-                            <small>(99)</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-                <div class="product-item bg-light mb-4">
-                    <div class="product-img position-relative overflow-hidden">
-                        <img class="img-fluid w-100" style="height: 300px; width: 300px;"  src="{{ asset('frontend/img/women/Bags/Bags7.jpg') }}" alt="">
-                        <div class="product-action">
-                            <a class="btn btn-outline-dark btn-square view-btn" data-name="Bag"  data-price="459" data-image="{{ asset('frontend/img/women/Bags/Bags7.jpg') }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-outline-dark btn-square product-heart-btn" data-name="Bag" data-price="459" data-image="{{ asset('frontend/img/women/Bags/Bags7.jpg') }}" href="#"><i class="far fa-heart"></i></a>
-                            <a class="btn btn-outline-dark btn-square add-btn add-to-cart-btn" data-name="Bag" data-price="459" data-image="{{ asset('frontend/img/women/Bags/Bags7.jpg') }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp" ><i class="fa fa-shopping-cart"></i></a>
-                        </div>
-                    </div>
-                    <div class="text-center py-4">
-                        <a class="h6 text-decoration-none text-truncate" href="">Bag</a>
-                        <div class="d-flex align-items-center justify-content-center mt-2">
-                            <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-center mb-1">
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star-half-alt text-primary mr-1"></small>
-                            <small class="far fa-star text-primary mr-1"></small>
-                            <small>(99)</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-                <div class="product-item bg-light mb-4">
-                    <div class="product-img position-relative overflow-hidden">
-                        <img class="img-fluid w-100" style="height: 300px; width: 300px;"  src="{{ asset('frontend/img/women/Bags/Bags8.jpg') }}" alt="">
-                        <div class="product-action">
-                            <a class="btn btn-outline-dark btn-square view-btn" data-name="Bag"  data-price="459" data-image="{{ asset('frontend/img/women/Bags/Bags8.jpg') }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-outline-dark btn-square product-heart-btn" data-name="Bag" data-price="459" data-image="{{ asset('frontend/img/women/Bags/Bags8.jpg') }}" href="#"><i class="far fa-heart"></i></a>
-                            <a class="btn btn-outline-dark btn-square add-btn add-to-cart-btn" data-name="Bag" data-price="459" data-image="{{ asset('frontend/img/women/Bags/Bags8.jpg') }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp" ><i class="fa fa-shopping-cart"></i></a>
-                        </div>
-                    </div>
-                    <div class="text-center py-4">
-                        <a class="h6 text-decoration-none text-truncate" href="">Bag</a>
-                        <div class="d-flex align-items-center justify-content-center mt-2">
-                            <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-center mb-1">
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="fa fa-star text-primary mr-1"></small>
-                            <small class="far fa-star text-primary mr-1"></small>
-                            <small class="far fa-star text-primary mr-1"></small>
-                            <small>(99)</small>
-                        </div>
+                    <div class="d-flex align-items-center justify-content-center mb-1">
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small class="fa fa-star text-primary mr-1"></small>
+                        <small>(99)</small>
                     </div>
                 </div>
             </div>
         </div>
+        @endforeach
     </div>
-    <!-- Products End -->
+</div>
+<!-- Products End -->
+
+  <!-- Pagination Links -->
+<div class="d-flex justify-content-center">
+    {{ $bags->links('pagination::bootstrap-4') }}
+</div>
 
 @endsection
 

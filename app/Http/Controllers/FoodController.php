@@ -3,19 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Tshirt;
+use App\Models\Food;
 
-class TshirtController extends Controller
+class FoodController extends Controller
 {
     public function index()
     {
-        $tshirts = Tshirt::all();
-        return view('admin.pages.men.tshirt.index')->with('tshirts', $tshirts);
+        $foods = Food::all();
+        return view('admin.pages.baby.food.index')->with('foods', $foods);
     }
 
     public function create()
     {
-        return view('admin.pages.men.tshirt.create');
+        return view('admin.pages.baby.food.create');
     }
 
     public function store(Request $request)
@@ -28,25 +28,25 @@ class TshirtController extends Controller
             $input['image'] = $path;
         }
 
-        Tshirt::create($input);
-        return redirect('admin/tshirt')->with('flash_message', 'tshirt Added!');
+        Food::create($input);
+        return redirect('admin/food')->with('flash_message', 'food Added!');
     }
 
     public function show($id)
     {
-        $tshirt = Tshirt::find($id);
-        return view('admin.pages.men.tshirt.show')->with('tshirt', $tshirt);
+        $food = Food::find($id);
+        return view('admin.pages.baby.food.show')->with('food', $food);
     }
 
     public function edit($id)
     {
-        $tshirt = Tshirt::find($id);
-        return view('admin.pages.men.tshirt.edit')->with('tshirt', $tshirt);
+        $food = Food::find($id);
+        return view('admin.pages.baby.food.edit')->with('food', $food);
     }
 
     public function update(Request $request, $id)
     {
-        $tshirt = Tshirt::find($id);
+        $food = Food::find($id);
         $input = $request->all();
 
         if ($request->hasFile('image')) {
@@ -55,13 +55,13 @@ class TshirtController extends Controller
             $input['image'] = $path;
         }
 
-        $tshirt->update($input);
-        return redirect('admin/tshirt')->with('flash_message', 'tshirt Updated!');
+        $food->update($input);
+        return redirect('admin/food')->with('flash_message', 'food Updated!');
     }
 
     public function destroy($id)
     {
-        Tshirt::destroy($id);
-        return redirect('admin/tshirt')->with('flash_message', 'tshirt Deleted!');
+        Food::destroy($id);
+        return redirect('admin/food')->with('flash_message', 'food Deleted!');
     }
 }
