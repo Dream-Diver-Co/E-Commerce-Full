@@ -25,6 +25,7 @@ use App\Models\Womentop;
 use App\Models\Clothing;
 use App\Models\Food;
 use App\Models\Newborn;
+use App\Models\Stroller;
 
 
 use Illuminate\Http\Request;
@@ -183,7 +184,8 @@ class FrontendController extends Controller
 
     public function baby_strollers()
     {
-        return view('frontend.page.baby.baby_strollers');
+        $strollers = Stroller::paginate(8);
+        return view('frontend.page.baby.baby_strollers',compact('strollers'));
     }
 
     public function baby_clothing()
