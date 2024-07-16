@@ -10,12 +10,12 @@ class WinterController extends Controller
     public function index()
     {
         $winters = Winter::all();
-        return view('admin.pages.offer.winter_offer.index')->with('winters', $winters);
+        return view('admin.pages.home.offer.winter_offer.index')->with('winters', $winters);
     }
 
     public function create()
     {
-        return view('admin.pages.offer.winter_offer.create');
+        return view('admin.pages.home.offer.winter_offer.create');
     }
 
     public function store(Request $request)
@@ -33,13 +33,13 @@ class WinterController extends Controller
     public function show($id)
     {
         $winter = Winter::find($id);
-        return view('admin.pages.offer.winter_offer.show')->with('winters', $winter);
+        return view('admin.pages.home.offer.winter_offer.show')->with('winters', $winter);
     }
 
     public function edit($id)
     {
         $winter = Winter::find($id);
-        return view('admin.pages.offer.winter_offer.edit')->with('winters', $winter);
+        return view('admin.pages.home.offer.winter_offer.edit')->with('winters', $winter);
     }
 
     public function update(Request $request, $id)

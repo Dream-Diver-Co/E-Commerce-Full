@@ -10,12 +10,12 @@ class SummerController extends Controller
     public function index()
     {
         $summers = Summer::all();
-        return view('admin.pages.offer.summer_offer.index')->with('summers', $summers);
+        return view('admin.pages.home.offer.summer_offer.index')->with('summers', $summers);
     }
 
     public function create()
     {
-        return view('admin.pages.offer.summer_offer.create');
+        return view('admin.pages.home.offer.summer_offer.create');
     }
 
     public function store(Request $request)
@@ -35,13 +35,13 @@ class SummerController extends Controller
     public function show($id)
     {
         $summer = Summer::find($id);
-        return view('admin.pages.offer.summer_offer.show')->with('summer', $summer);
+        return view('admin.pages.home.offer.summer_offer.show')->with('summer', $summer);
     }
 
     public function edit($id)
     {
         $summer = Summer::find($id);
-        return view('admin.pages.offer.summer_offer.edit')->with('summer', $summer);
+        return view('admin.pages.home.offer.summer_offer.edit')->with('summer', $summer);
     }
 
     public function update(Request $request, $id)
