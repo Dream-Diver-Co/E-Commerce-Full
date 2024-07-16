@@ -10,12 +10,12 @@ class HeroController extends Controller
     public function index()
     {
         $heroes = Hero::all();
-        return view('admin.pages.hero_section.index')->with('heroes', $heroes);
+        return view('admin.pages.home.hero_section.index')->with('heroes', $heroes);
     }
 
     public function create()
     {
-        return view('admin.pages.hero_section.create');
+        return view('admin.pages.home.hero_section.create');
     }
 
     public function store(Request $request)
@@ -39,13 +39,13 @@ class HeroController extends Controller
     public function show($id)
     {
         $hero = Hero::find($id);
-        return view('admin.pages.hero_section.show')->with('hero', $hero);
+        return view('admin.pages.home.hero_section.show')->with('hero', $hero);
     }
 
     public function edit($id)
     {
         $hero = Hero::find($id);
-        return view('admin.pages.hero_section.edit')->with('hero', $hero);
+        return view('admin.pages.home.hero_section.edit')->with('hero', $hero);
     }
 
     public function update(Request $request, $id)
