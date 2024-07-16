@@ -22,24 +22,24 @@
 <!-- end page title -->
 
                 <div class="card">
-                    <div class="card-header">polo Details</div>
+                    <div class="card-header">featured Details</div>
 
                     <div class="card-body">
-                        <h5 class="card-title">Name: {{ $polo->name }}</h5>
-                        <p class="card-text">New Price: {{ $polo->price }}</p>
-                        <p class="card-text">Old price: {{ $polo->old_price }}</p>
-                        <p class="card-text">Small Description: {{ $polo->subtitle }}</p>
-                        <p class="card-text">Image: <img src="{{ asset('storage/' . $polo->image) }}" alt="{{ $polo->name }}" width="100"></p>
-                        <p class="card-text">Large Description: {{ $polo->description }}</p>
-                        <p class="card-text">Information: {{ $polo->information }}</p>
+                        <h5 class="card-title">Name: {{ $featured->name }}</h5>
+                        <p class="card-text">New Price: {{ $featured->price }}</p>
+                        <p class="card-text">Old price: {{ $featured->old_price }}</p>
+                        <p class="card-text">Small Description: {{ $featured->subtitle }}</p>
+                        <p class="card-text">Image: <img src="{{ asset('storage/' . $featured->image) }}" alt="{{ $featured->name }}" width="100"></p>
+                        <p class="card-text">Large Description: {{ $featured->description }}</p>
+                        <p class="card-text">Information: {{ $featured->information }}</p>
 
-                        <a href="{{ route('polo.edit', $polo->id) }}" class="btn btn-primary">Edit</a>
-                        <form action="{{ route('polo.destroy', $polo->id) }}" method="POST" style="display: inline-block;">
+                        <a href="{{ route('featured.edit', $featured->id) }}" class="btn btn-primary">Edit</a>
+                        <form action="{{ route('featured.destroy', $featured->id) }}" method="POST" style="display: inline-block;">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this polo?')">Delete</button>
+                            <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this featured?')">Delete</button>
                         </form>
-                        <a href="{{ route('polo.index') }}" class="btn btn-secondary">Back</a>
+                        <a href="{{ route('featured.index') }}" class="btn btn-secondary">Back</a>
                     </div>
                 </div>
 @endsection

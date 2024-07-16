@@ -33,6 +33,7 @@ use App\Http\Controllers\ClothingController;
 use App\Http\Controllers\NewbornController;
 use App\Http\Controllers\StrollerController;
 use App\Http\Controllers\ClientController;
+use App\Http\Controllers\FeaturedController;
 
 
 
@@ -122,6 +123,7 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
         // other route
         Route::resource("/hero", HeroController::class);
         Route::resource('/client', ClientController::class);
+        Route::resource('featured', FeaturedController::class);
         //offer route
         Route::resource('/summer', SummerController::class);
         Route::resource('winter', WinterController::class);
