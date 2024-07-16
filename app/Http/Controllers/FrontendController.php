@@ -22,6 +22,7 @@ use App\Models\Kameez;
 use App\Models\Womenpent;
 use App\Models\Womenshoe;
 use App\Models\Womentop;
+use App\Models\Clothing;
 
 
 use Illuminate\Http\Request;
@@ -185,7 +186,8 @@ class FrontendController extends Controller
 
     public function baby_clothing()
     {
-        return view('frontend.page.baby.baby_clothing');
+        $clothings = Clothing::paginate();
+        return view('frontend.page.baby.baby_clothing',compact('clothings'));
     }
 
     public function baby_foods()
