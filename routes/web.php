@@ -28,6 +28,7 @@ use App\Http\Controllers\BagController;
 use App\Http\Controllers\CosmeticController;
 use App\Http\Controllers\WomenshoeController;
 use App\Http\Controllers\JuwalariController;
+use App\Http\Controllers\FoodController;
 
 
 
@@ -116,11 +117,14 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
 
         // other route
         Route::resource("/hero", HeroController::class);
+        //offer route
         Route::resource('/summer', SummerController::class);
         Route::resource('winter', WinterController::class);
+        //contact route
         Route::resource('usercontact', UserContactController::class);
         Route::resource('admincontact', AdmincontactController::class);
         Route::resource('about', AboutController::class);
+        //men route
         Route::resource('panjabi', PanjabiController::class);
         Route::resource("/cshirt", CshirtController::class);
         Route::resource('/fshirt', FshirtController::class);
@@ -129,6 +133,7 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
         Route::resource('/menpent', MenpentController::class);
         Route::resource('/blazer', BlazerController::class);
         Route::resource('/menshoe', MenshoeController::class);
+        //women route
         Route::resource('/womentop', WomentopController::class);
         Route::resource('/dresse', DresseController::class);
         Route::resource('/womenpent', WomenpentController::class);
@@ -137,6 +142,8 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
         Route::resource('/cosmetic', CosmeticController::class);
         Route::resource('/womenshoe', WomenshoeController::class);
         Route::resource('/juwalari', JuwalariController::class);
+        //baby route
+        Route::resource('/food', FoodController::class);
 
     });
 });
