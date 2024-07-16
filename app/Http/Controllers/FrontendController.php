@@ -24,6 +24,7 @@ use App\Models\Womenshoe;
 use App\Models\Womentop;
 use App\Models\Clothing;
 use App\Models\Food;
+use App\Models\Newborn;
 
 
 use Illuminate\Http\Request;
@@ -199,7 +200,8 @@ class FrontendController extends Controller
 
     public function baby_newborn()
     {
-        return view('frontend.page.baby.baby_newborn');
+        $newborns = Newborn::paginate(8);
+        return view('frontend.page.baby.baby_newborn',compact('newborns'));
     }
 
     public function offer()
