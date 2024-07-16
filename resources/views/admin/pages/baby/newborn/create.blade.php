@@ -25,7 +25,7 @@
     <div class="card">
         <div class="card-header">Create New Fshirt</div>
                     <div class="card-body">
-                        <form action="{{ url('admin/polo') }}" method="POST" enctype="multipart/form-data">
+                        <form action="{{ url('admin/newborn') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <label>Name</label><br>
                             <input type="text" name="name" id="name" class="form-control"><br>

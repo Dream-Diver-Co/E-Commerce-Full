@@ -296,6 +296,17 @@
                 </li>
 
                 <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-mail-send-line"></i>
+                        <span>Newborn</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('newborn.create')}}">Add Newborn</a></li>
+                        <li><a href="{{ route('newborn.index') }}">Newborn List</a></li>
+                    </ul>
+                </li>
+
+                <li>
                     <a href="#" class=" waves-effect">
                         <i class="ri-price-tag-3-line"></i>
                         <span>Brand</span>
