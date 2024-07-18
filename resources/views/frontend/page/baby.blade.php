@@ -24,7 +24,7 @@
             <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
                 <div class="product-item bg-light mb-4">
                     <div class="product-img position-relative overflow-hidden">
-                        <img class="img-fluid w-100" style="height: 300px; width: 300px;"  src="{{ asset('frontend/img/baby.png') }}" alt="">
+                        <img class="img-fluid w-100" style="height: 450px; width: 300px;"  src="{{ asset('frontend/img/baby.png') }}" alt="">
                         <div class="product-action">
                             <a href="{{ route('baby_foods') }}" class="btn btn-primary">Shop Now</a>
                         </div>
@@ -37,7 +37,7 @@
             <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
                 <div class="product-item bg-light mb-4">
                     <div class="product-img position-relative overflow-hidden">
-                        <img class="img-fluid w-100" style="height: 300px; width: 300px;"  src="{{ asset('frontend/img/baby2.jpg') }}" alt="">
+                        <img class="img-fluid w-100" style="height: 450px; width: 300px;"  src="{{ asset('frontend/img/baby2.jpg') }}" alt="">
                         <div class="product-action">
                             <a href="{{ route('baby_clothing') }}" class="btn btn-primary">Shop Now</a>
                         </div>
@@ -51,7 +51,7 @@
             <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
                 <div class="product-item bg-light mb-4">
                     <div class="product-img position-relative overflow-hidden">
-                        <img class="img-fluid w-100" style="height: 300px; width: 300px;"  src="{{ asset('frontend/img/baby3.jpg') }}" alt="">
+                        <img class="img-fluid w-100" style="height: 450px; width: 300px;"  src="{{ asset('frontend/img/baby3.jpg') }}" alt="">
                         <div class="product-action">
                             <a href="{{ route('baby_newborn') }}" class="btn btn-primary">Shop Now</a>
                         </div>
@@ -64,7 +64,7 @@
             <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
                 <div class="product-item bg-light mb-4">
                     <div class="product-img position-relative overflow-hidden">
-                        <img class="img-fluid w-100" style="height: 300px; width: 300px;" src="{{ asset('frontend/img/baby4.png') }}" alt="">
+                        <img class="img-fluid w-100" style="height: 450px; width: 300px;" src="{{ asset('frontend/img/baby4.png') }}" alt="">
                         <div class="product-action">
                             <a href="{{ route('baby_strollers') }}" class="btn btn-primary">Shop Now</a>
                         </div>

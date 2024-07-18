@@ -299,7 +299,7 @@
         <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
             <div class="product-item bg-light mb-4">
                 <div class="product-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" style="height: 350px; width: 300px;"  style="height: 300px; width: 300px;"   src="{{ asset('frontend/img/men/panjabi/Panjabi7.jpg') }}" alt="">
+                    <img class="img-fluid w-100"style="height: 450px; width: 300px;"  src="{{ asset('frontend/img/men/panjabi/Panjabi7.jpg') }}" alt="">
                     <div class="product-action">
                         <a class="btn btn-outline-dark btn-square view-btn" data-name="Panjabi 7"  data-price="459" data-image="{{ asset('frontend/img/men/panjabi/Panjabi7.jpg') }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp"><i class="fa fa-eye"></i></a>
                         <a class="btn btn-outline-dark btn-square product-heart-btn" data-name="Panjabi 7" data-price="459" data-image="{{ asset('frontend/img/men/panjabi/Panjabi7.jpg') }}" href="#"><i class="far fa-heart"></i></a>
@@ -325,7 +325,7 @@
         <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
             <div class="product-item bg-light mb-4">
                 <div class="product-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" style="height: 350px; width: 300px;"  src="{{ asset('frontend/img/women/dresses/Dresses7.jpg') }}" alt="">
+                    <img class="img-fluid w-100" style="height: 450px; width: 300px;"  src="{{ asset('frontend/img/women/dresses/Dresses7.jpg') }}" alt="">
                     <div class="product-action">
                         <a class="btn btn-outline-dark btn-square view-btn" data-name="Dresses 7"  data-price="459" data-image="{{ asset('frontend/img/women/dresses/Dresses7.jpg') }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp"><i class="fa fa-eye"></i></a>
                         <a class="btn btn-outline-dark btn-square product-heart-btn" data-name="Dresses 7" data-price="459" data-image="{{ asset('frontend/img/women/dresses/Dresses7.jpg') }}" href="#"><i class="far fa-heart"></i></a>
@@ -351,7 +351,7 @@
         <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
             <div class="product-item bg-light mb-4">
                 <div class="product-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" style="height: 350px; width: 300px;"  src="{{ asset('frontend/img/men/f-shirt/Formal1.jpg') }}" alt="">
+                    <img class="img-fluid w-100" style="height: 450px; width: 300px;"  src="{{ asset('frontend/img/men/f-shirt/Formal1.jpg') }}" alt="">
                     <div class="product-action">
                         <a class="btn btn-outline-dark btn-square view-btn" data-name="Formal Shirt 6"  data-price="459" data-image="{{ asset('frontend/img/men/f-shirt/Formal1.jpg') }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp"><i class="fa fa-eye"></i></a>
                         <a class="btn btn-outline-dark btn-square product-heart-btn" data-name="Formal Shirt 6" data-price="459" data-image="{{ asset('frontend/img/men/f-shirt/Formal1.jpg') }}" href="#"><i class="far fa-heart"></i></a>
@@ -377,7 +377,7 @@
         <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
             <div class="product-item bg-light mb-4">
                 <div class="product-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" style="height: 350px; width: 300px;"  src="{{ asset('frontend/img/women/Kameez/Kameez8.jpg') }}" alt="">
+                    <img class="img-fluid w-100" style="height: 450px; width: 300px;"  src="{{ asset('frontend/img/women/Kameez/Kameez8.jpg') }}" alt="">
                     <div class="product-action">
                         <a class="btn btn-outline-dark btn-square view-btn" data-name="Kameez"  data-price="459" data-image="{{ asset('frontend/img/women/Kameez/Kameez8.jpg') }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp"><i class="fa fa-eye"></i></a>
                         <a class="btn btn-outline-dark btn-square product-heart-btn" data-name="Kameez " data-price="459" data-image="{{ asset('frontend/img/women/Kameez/Kameez8.jpg') }}" href="#"><i class="far fa-heart"></i></a>
@@ -403,7 +403,7 @@
         <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
             <div class="product-item bg-light mb-4">
                 <div class="product-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" style="height: 350px; width: 300px;"  src="{{ asset('frontend/img/women/Bags/Bags5.jpg') }}" alt="">
+                    <img class="img-fluid w-100" style="height: 450px; width: 300px;"  src="{{ asset('frontend/img/women/Bags/Bags5.jpg') }}" alt="">
                     <div class="product-action">
                         <a class="btn btn-outline-dark btn-square view-btn" data-name="Bag"  data-price="459" data-image="{{ asset('frontend/img/women/Bags/Bags5.jpg') }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp"><i class="fa fa-eye"></i></a>
                         <a class="btn btn-outline-dark btn-square product-heart-btn" data-name="Bag " data-price="459" data-image="{{ asset('frontend/img/women/Bags/Bags5.jpg') }}" href="#"><i class="far fa-heart"></i></a>
@@ -429,7 +429,7 @@
         <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
             <div class="product-item bg-light mb-4">
                 <div class="product-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" style="height: 350px; width: 300px;"  src="{{ asset('frontend/img/men/blazer/Blazer7.jpg') }}" alt="">
+                    <img class="img-fluid w-100" style="height: 450px; width: 300px;"  src="{{ asset('frontend/img/men/blazer/Blazer7.jpg') }}" alt="">
                     <div class="product-action">
                         <a class="btn btn-outline-dark btn-square view-btn" data-name="Blazer 6"  data-price="459" data-image="{{ asset('frontend/img/men/blazer/Blazer7.jpg') }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp"><i class="fa fa-eye"></i></a>
                         <a class="btn btn-outline-dark btn-square product-heart-btn" data-name="Blazer 6" data-price="459" data-image="{{ asset('frontend/img/men/blazer/Blazer7.jpg') }}g" href="#"><i class="far fa-heart"></i></a>
@@ -455,7 +455,7 @@
         <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
             <div class="product-item bg-light mb-4">
                 <div class="product-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" style="height: 350px; width: 300px;"  src="{{ asset('frontend/img/women/Cosmetic/Cosmetic1.jpg') }}" alt="">
+                    <img class="img-fluid w-100" style="height: 450px; width: 300px;"  src="{{ asset('frontend/img/women/Cosmetic/Cosmetic1.jpg') }}" alt="">
                     <div class="product-action">
                         <a class="btn btn-outline-dark btn-square view-btn" data-name="Cosmetic"  data-price="459" data-image="{{ asset('frontend/img/women/Cosmetic/Cosmetic1.jpg') }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp"><i class="fa fa-eye"></i></a>
                         <a class="btn btn-outline-dark btn-square product-heart-btn" data-name="Cosmetic" data-price="459" data-image="{{ asset('frontend/img/women/Cosmetic/Cosmetic1.jpg') }}" href="#"><i class="far fa-heart"></i></a>
@@ -481,7 +481,7 @@
         <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
             <div class="product-item bg-light mb-4">
                 <div class="product-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" style="height: 350px; width: 300px;"  src="{{ asset('frontend/img/baby/Clothing/Clothing4.jpg') }}" alt="">
+                    <img class="img-fluid w-100" style="height: 450px; width: 300px;"  src="{{ asset('frontend/img/baby/Clothing/Clothing4.jpg') }}" alt="">
                     <div class="product-action">
                         <a class="btn btn-outline-dark btn-square view-btn" data-name="Clothing"  data-price="459" data-image="{{ asset('frontend/img/baby/Clothing/Clothing4.jpg') }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp"><i class="fa fa-eye"></i></a>
                         <a class="btn btn-outline-dark btn-square product-heart-btn" data-name="Clothing" data-price="459" data-image="{{ asset('frontend/img/baby/Clothing/Clothing4.jpg') }}" href="#"><i class="far fa-heart"></i></a>
@@ -554,7 +554,7 @@
         <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
             <div class="product-item bg-light mb-4">
                 <div class="product-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" style="height: 350px; width: 300px;"  src="{{ asset('frontend/img/women/shoes/Shoes2.jpg') }}" alt="">
+                    <img class="img-fluid w-100" style="height: 450px; width: 300px;"  src="{{ asset('frontend/img/women/shoes/Shoes2.jpg') }}" alt="">
                     <div class="product-action">
                         <a class="btn btn-outline-dark btn-square view-btn" data-name="Shoes"  data-price="459" data-image="{{ asset('frontend/img/women/shoes/Shoes2.jpg') }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp"><i class="fa fa-eye"></i></a>
                         <a class="btn btn-outline-dark btn-square product-heart-btn" data-name="Shoes" data-price="459" data-image="{{ asset('frontend/imgwomen/shoes/Shoes2.jpg ') }}" href="#"><i class="far fa-heart"></i></a>
@@ -580,7 +580,7 @@
         <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
             <div class="product-item bg-light mb-4">
                 <div class="product-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" style="height: 350px; width: 300px;"  src="{{ asset('frontend/img/women/bottom/Bottoms2.jpg') }}" alt="">
+                    <img class="img-fluid w-100" style="height: 450px; width: 300px;"  src="{{ asset('frontend/img/women/bottom/Bottoms2.jpg') }}" alt="">
                     <div class="product-action">
                         <a class="btn btn-outline-dark btn-square view-btn" data-name="Bottom 2"  data-price="459" data-image="{{ asset('frontend/img/women/bottom/Bottoms2.jpg') }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp"><i class="fa fa-eye"></i></a>
                         <a class="btn btn-outline-dark btn-square product-heart-btn" data-name="Bottom 2" data-price="459" data-image="{{ asset('frontend/img/women/bottom/Bottoms2.jpg') }}" href="#"><i class="far fa-heart"></i></a>
@@ -606,7 +606,7 @@
         <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
             <div class="product-item bg-light mb-4">
                 <div class="product-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" style="height: 350px; width: 300px;"  src="{{ asset('frontend/img/product-7.jpg ') }}" alt="">
+                    <img class="img-fluid w-100" style="height: 450px; width: 300px;"  src="{{ asset('frontend/img/product-7.jpg ') }}" alt="">
                     <div class="product-action">
                         <a class="btn btn-outline-dark btn-square view-btn" data-name="Formal Shirt 6"  data-price="459" data-image="{{ asset('frontend/img/product-7.jpg') }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp"><i class="fa fa-eye"></i></a>
                         <a class="btn btn-outline-dark btn-square product-heart-btn" data-name="Formal Shirt 6" data-price="459" data-image="{{ asset('frontend/img/product-7.jpg') }}" href="#"><i class="far fa-heart"></i></a>
@@ -632,7 +632,7 @@
         <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
             <div class="product-item bg-light mb-4">
                 <div class="product-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" style="height: 350px; width: 300px;"  style="height: 300px; width: 300px;"  src="{{ asset('frontend/img/men/c-shirt/Casual8.jpg') }}" alt="">
+                    <img class="img-fluid w-100"style="height: 450px; width: 300px;" src="{{ asset('frontend/img/men/c-shirt/Casual8.jpg') }}" alt="">
                     <div class="product-action">
                         <a class="btn btn-outline-dark btn-square view-btn" data-name="Casul Shirt 8"  data-price="459" data-image="{{ asset('frontend/img/men/c-shirt/Casual8.jpg') }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp"><i class="fa fa-eye"></i></a>
                         <a class="btn btn-outline-dark btn-square product-heart-btn" data-name="Casul Shirt 8" data-price="459" data-image="{{ asset('frontend/img/men/c-shirt/Casual8.jpg') }}" href="#"><i class="far fa-heart"></i></a>
@@ -658,7 +658,7 @@
         <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
             <div class="product-item bg-light mb-4">
                 <div class="product-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" style="height: 350px; width: 300px;"  src="{{ asset('frontend/img/men/t-shirt/T-Shirt6.jpg') }}" alt="">
+                    <img class="img-fluid w-100" style="height: 450px; width: 300px;"  src="{{ asset('frontend/img/men/t-shirt/T-Shirt6.jpg') }}" alt="">
                     <div class="product-action">
                         <a class="btn btn-outline-dark btn-square view-btn" data-name="T-Shirt 4"  data-price="459" data-image="{{ asset('frontend/img/men/t-shirt/T-Shirt6.jpg') }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp"><i class="fa fa-eye"></i></a>
                         <a class="btn btn-outline-dark btn-square product-heart-btn" data-name="T_Shirt 4" data-price="459" data-image="{{ asset('frontend/img/men/t-shirt/T-Shirt6.jpg') }}" href="#"><i class="far fa-heart"></i></a>
@@ -684,7 +684,7 @@
         <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
             <div class="product-item bg-light mb-4">
                 <div class="product-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" style="height: 350px; width: 300px;"  src="{{ asset('frontend/img/women/tops/tops2.jpg') }}" alt="">
+                    <img class="img-fluid w-100" style="height: 450px; width: 300px;"  src="{{ asset('frontend/img/women/tops/tops2.jpg') }}" alt="">
                     <div class="product-action">
                         <a class="btn btn-outline-dark btn-square view-btn" data-name="Tops 2"  data-price="459" data-image="{{ asset('frontend/img/women/tops/tops2.jpg') }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp"><i class="fa fa-eye"></i></a>
                         <a class="btn btn-outline-dark btn-square product-heart-btn" data-name="Tops 2" data-price="459" data-image="{{ asset('frontend/img/women/tops/tops2.jpg') }}" href="#"><i class="far fa-heart"></i></a>
@@ -710,7 +710,7 @@
         <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
             <div class="product-item bg-light mb-4">
                 <div class="product-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" style="height: 350px; width: 300px;"  src="{{ asset('frontend/img/men/bottom/Bottom2.jpg') }}" alt="">
+                    <img class="img-fluid w-100" style="height: 450px; width: 300px;"  src="{{ asset('frontend/img/men/bottom/Bottom2.jpg') }}" alt="">
                     <div class="product-action">
                         <a class="btn btn-outline-dark btn-square view-btn" data-name="Bottom 2"  data-price="459" data-image="{{ asset('frontend/img/men/bottom/Bottom2.jpg') }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp"><i class="fa fa-eye"></i></a>
                         <a class="btn btn-outline-dark btn-square product-heart-btn" data-name="Bottom 2" data-price="459" data-image="{{ asset('frontend/img/men/bottom/Bottom2.jpg') }}" href="#"><i class="far fa-heart"></i></a>
@@ -736,7 +736,7 @@
         <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
             <div class="product-item bg-light mb-4">
                 <div class="product-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" style="height: 350px; width: 300px;"  src="{{ asset('frontend/img/men/shoes/Sneakers6.jpg') }}" alt="">
+                    <img class="img-fluid w-100" style="height: 450px; width: 300px;"  src="{{ asset('frontend/img/men/shoes/Sneakers6.jpg') }}" alt="">
                     <div class="product-action">
                         <a class="btn btn-outline-dark btn-square view-btn" data-name="Shoes 6"  data-price="459" data-image="{{ asset('frontend/img/men/shoes/Sneakers6.jpg') }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp"><i class="fa fa-eye"></i></a>
                         <a class="btn btn-outline-dark btn-square product-heart-btn" data-name="Shoes 6" data-price="459" data-image="{{ asset('frontend/img/men/shoes/Sneakers6.jpg') }}" href="#"><i class="far fa-heart"></i></a>

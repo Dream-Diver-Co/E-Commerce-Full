@@ -52,7 +52,7 @@
     <div class="container-fluid mb-3">
         <div class="row px-xl-5">
             <div class="col-lg-12">
-                <div class="carousel-item position-relative active" style="height: 230px; margin-bottom: 15px;">
+                <div class="carousel-item position-relative active" style="height: 350px; margin-bottom: 15px;">
                     <img class="position-absolute w-100 h-100" src="{{ asset('frontend/img/baby.gif') }}" style="object-fit: cover;">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 700px;">
@@ -72,7 +72,7 @@
         <div class="container-fluid mb-3">
             <div class="row px-xl-5">
                 <div class="col-lg-6">
-                    <div class="product-offer mb-30" style="height: 200px;">
+                    <div class="product-offer mb-30" style="height: 300px;">
                         <img class="img-fluid" src="{{ asset('frontend/img/offer1.gif') }}" alt="">
                         <div class="offer-text">
                             <h6 class="text-white text-uppercase">Save 20%</h6>
@@ -80,7 +80,7 @@
                             <a href="{{ route('offer') }}" class="btn btn-primary">Shop Now</a>
                         </div>
                     </div>
-                    <div class="product-offer mb-30" style="height: 200px;">
+                    <div class="product-offer mb-30" style="height: 300px;">
                         <img class="img-fluid" src="{{ asset('frontend/img/offer.gif') }}" alt="">
                         <div class="offer-text">
                             <h6 class="text-white text-uppercase">Save 20%</h6>
@@ -90,7 +90,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="product-offer mb-30" style="height: 200px;">
+                    <div class="product-offer mb-30" style="height: 300px;">
                         <img class="img-fluid" src="{{ asset('frontend/img/offer2.gif') }}" alt="">
                         <div class="offer-text">
                             <h6 class="text-white text-uppercase">Save 20%</h6>
@@ -98,7 +98,7 @@
                             <a href="{{ route('offer') }}" class="btn btn-primary">Shop Now</a>
                         </div>
                     </div>
-                    <div class="product-offer mb-30" style="height: 200px;">
+                    <div class="product-offer mb-30" style="height: 300px;">
                         <img class="img-fluid" src="{{ asset('frontend/img/offer4.gif') }}" alt="">
                         <div class="offer-text">
                             <h6 class="text-white text-uppercase">Save 20%</h6>
