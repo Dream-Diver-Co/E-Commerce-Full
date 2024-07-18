@@ -24,7 +24,7 @@
         <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
             <div class="product-item bg-light mb-4">
                 <div class="product-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" style="height: 300px; width: 300px;"  src="{{ asset('frontend/img/men/panjabi/Panjabi.jpg') }}" alt="">
+                    <img class="img-fluid w-100" style="height: 450px; width: 300px;"  src="{{ asset('frontend/img/men/panjabi/Panjabi.jpg') }}" alt="">
                     <div class="product-action">
                         <a href="{{ route('men_panjabi') }}" class="btn btn-primary">Shop Now</a>
                     </div>
@@ -38,7 +38,7 @@
         <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
             <div class="product-item bg-light mb-4">
                 <div class="product-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" style="height: 300px; width: 300px;"  src="{{ asset('frontend/img/men/c-shirt/Casual.jpg') }}" alt="">
+                    <img class="img-fluid w-100" style="height: 450px; width: 300px;"  src="{{ asset('frontend/img/men/c-shirt/Casual.jpg') }}" alt="">
                     <div class="product-action">
                         <a href="{{ route('men_casul_shirt') }}" class="btn btn-primary">Shop Now</a>
                     </div>
@@ -51,7 +51,7 @@
         <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
             <div class="product-item bg-light mb-4">
                 <div class="product-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" style="height: 300px; width: 300px;"  src="{{ asset('frontend/img/men/f-shirt/Formal.jpg') }}" alt="">
+                    <img class="img-fluid w-100" style="height: 450px; width: 300px;"  src="{{ asset('frontend/img/men/f-shirt/Formal.jpg') }}" alt="">
                     <div class="product-action">
                         <a href="{{ route('men_formal_shirt') }}" class="btn btn-primary">Shop Now</a>
                     </div>
@@ -64,7 +64,7 @@
         <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
             <div class="product-item bg-light mb-4">
                 <div class="product-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" style="height: 300px; width: 300px;"  src="{{ asset('frontend/img/men/t-shirt/T-Shirt.jpg') }}" alt="">
+                    <img class="img-fluid w-100" style="height: 450px; width: 300px;"  src="{{ asset('frontend/img/men/t-shirt/T-Shirt.jpg') }}" alt="">
                     <div class="product-action">
                         <a href="{{ route('men_t_shirt') }}" class="btn btn-primary">Shop Now</a>
                     </div>
@@ -77,7 +77,7 @@
         <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
             <div class="product-item bg-light mb-4">
                 <div class="product-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" style="height: 300px; width: 300px;"  src="{{ asset('frontend/img/men/polo/Polo.jpg') }}" alt="">
+                    <img class="img-fluid w-100" style="height: 450px; width: 300px;"  src="{{ asset('frontend/img/men/polo/Polo.jpg') }}" alt="">
                     <div class="product-action">
                         <a href="{{ route('men_polo') }}" class="btn btn-primary">Shop Now</a>
                     </div>
@@ -90,7 +90,7 @@
         <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
             <div class="product-item bg-light mb-4">
                 <div class="product-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" style="height: 300px; width: 300px;"  src="{{ asset('frontend/img/men/bottom/Bottom.jpg') }}" alt="">
+                    <img class="img-fluid w-100" style="height: 450px; width: 300px;"  src="{{ asset('frontend/img/men/bottom/Bottom.jpg') }}" alt="">
                     <div class="product-action">
                         <a href="{{ route('men_bottom') }}" class="btn btn-primary">Shop Now</a>
                     </div>
@@ -103,7 +103,7 @@
         <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
             <div class="product-item bg-light mb-4">
                 <div class="product-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" style="height: 300px; width: 300px;"  src="{{ asset('frontend/img/men/blazer/Blazer8.jpeg') }}" alt="">
+                    <img class="img-fluid w-100" style="height: 450px; width: 300px;"  src="{{ asset('frontend/img/men/blazer/Blazer8.jpeg') }}" alt="">
                     <div class="product-action">
                         <a href="{{ route('men_blazer') }}" class="btn btn-primary">Shop Now</a>
                     </div>
@@ -116,7 +116,7 @@
         <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
             <div class="product-item bg-light mb-4">
                 <div class="product-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" style="height: 300px; width: 300px;"  src="{{ asset('frontend/img/men/shoes/Sneakers.jpg') }}" alt="">
+                    <img class="img-fluid w-100" style="height: 450px; width: 300px;"  src="{{ asset('frontend/img/men/shoes/Sneakers.jpg') }}" alt="">
                     <div class="product-action">
                         <a href="{{ route('men_shoes') }}" class="btn btn-primary">Shop Now</a>
                     </div>
