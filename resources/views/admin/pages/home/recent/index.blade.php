@@ -7,11 +7,11 @@
 <div class="row">
     <div class="col-12">
         <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-            <h4 class="mb-sm-0">recent List</h4>
+            <h4 class="mb-sm-0">Recent Product List</h4>
             <div class="page-title-right">
                 <ol class="breadcrumb m-0">
                     <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">{{ env('APP_NAME') }}</a></li>
-                    <li class="breadcrumb-item active">recent List</li>
+                    <li class="breadcrumb-item active">Recent Product List</li>
                 </ol>
             </div>
         </div>
@@ -24,7 +24,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h2>Formal Shirt</h2>
+                    <h2>Recent Product List</h2>
                 </div>
                 <div class="card-body">
                     <a href="{{ url('admin/recent/create') }}" class="btn btn-success btn-sm" title="Add New recent">

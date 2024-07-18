@@ -24,7 +24,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h2>Formal Shirt</h2>
+                    <h2>Client List</h2>
                 </div>
                 <div class="card-body">
                     <a href="{{ url('admin/client/create') }}" class="btn btn-success btn-sm" title="Add New client">
