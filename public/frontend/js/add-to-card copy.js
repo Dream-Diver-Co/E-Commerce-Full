@@ -1,190 +1,182 @@
-
 $(document).ready(function() {
-  // Add to cart functionality
-  $('.add-to-cart-btn').click(function (event) {
-    event.preventDefault();
-    var name = $(this).data('name');
-    var price = Number($(this).data('price'));
-    var image = $(this).data('image');
-    shoppingCart.addItemToCart(name, price, 1, image);
-    displayCart();
-  });
+    var shoppingCart = (function() {
+        var cart = [];
 
-  // View item details in modal
-  $('.view-btn').click(function (event) {
-    event.preventDefault();
-    var name = $(this).data('name');
-    var price = $(this).data('price');
-    var image = $(this).data('image');
-    var miles = $(this).data('miles');
-    var condition = $(this).data('condition');
-    var transmission = $(this).data('transmission');
-    var hp = $(this).data('hp');
-
-    $('#itemModalImage').attr('src', image);
-    $('#itemModalName').text(name);
-    $('#itemModalPrice').text('Price: $' + price);
-    $('#itemModalMiles').text('Miles: ' + miles);
-    $('#itemModalCondition').text('Condition: ' + condition);
-    $('#itemModalTransmission').text('Transmission: ' + transmission);
-    $('#itemModalHp').text('Horsepower: ' + hp);
-
-    $('#itemModal').modal('show');
-  });
-
-  // Shopping cart functionality (same as your existing code)
-  var shoppingCart = (function () {
-    var cart = [];
-
-    function Item(name, price, count, image) {
-      this.name = name;
-      this.price = price;
-      this.count = count;
-      this.image = image;
-    }
-
-    function saveCart() {
-      localStorage.setItem('shoppingCart', JSON.stringify(cart));
-    }
-
-    function loadCart() {
-      cart = JSON.parse(localStorage.getItem('shoppingCart')) || [];
-    }
-
-    if (localStorage.getItem("shoppingCart") != null) {
-      loadCart();
-    }
-
-    var obj = {};
-
-    obj.addItemToCart = function (name, price, count, image) {
-      for (var item of cart) {
-        if (item.name === name) {
-          item.count++;
-          saveCart();
-          return;
+        function Item(name, price, count, image, size, color) {
+            this.name = name;
+            this.price = price;
+            this.count = count;
+            this.image = image;
+            this.size = size;
+            this.color = color;
         }
-      }
-      var newItem = new Item(name, price, count, image);
-      cart.push(newItem);
-      saveCart();
-    };
 
-    obj.setCountForItem = function (name, count) {
-      for (var item of cart) {
-        if (item.name === name) {
-          item.count = count;
-          break;
+        function saveCart() {
+            localStorage.setItem('shoppingCart', JSON.stringify(cart));
         }
-      }
-      saveCart();
-    };
 
-    obj.removeItemFromCart = function (name) {
-      for (var item of cart) {
-        if (item.name === name) {
-          item.count--;
-          if (item.count === 0) {
-            cart = cart.filter(cartItem => cartItem.name !== name);
-          }
-          break;
+        function loadCart() {
+            cart = JSON.parse(localStorage.getItem('shoppingCart')) || [];
         }
-      }
-      saveCart();
-    };
 
-    obj.removeItemFromCartAll = function (name) {
-      cart = cart.filter(item => item.name !== name);
-      saveCart();
-    };
+        if (localStorage.getItem("shoppingCart") != null) {
+            loadCart();
+        }
 
-    obj.clearCart = function () {
-      cart = [];
-      saveCart();
-    };
+        var obj = {};
 
-    obj.totalCount = function () {
-      return cart.reduce((total, item) => total + item.count, 0);
-    };
+        obj.addItemToCart = function(name, price, count, image, size, color) {
+            for (var item of cart) {
+                if (item.name === name && item.size === size && item.color === color) {
+                    item.count++;
+                    saveCart();
+                    return;
+                }
+            }
+            var newItem = new Item(name, price, count, image, size, color);
+            cart.push(newItem);
+            saveCart();
+        };
 
-    obj.totalCart = function () {
-      return cart.reduce((total, item) => total + item.price * item.count, 0).toFixed(2);
-    };
+        obj.setCountForItem = function(name, size, color, count) {
+            for (var item of cart) {
+                if (item.name === name && item.size === size && item.color === color) {
+                    item.count = count;
+                    break;
+                }
+            }
+            saveCart();
+        };
 
-    obj.listCart = function () {
-      return cart.map(item => {
-        var itemCopy = { ...item };
-        itemCopy.total = (item.price * item.count).toFixed(2);
-        return itemCopy;
-      });
-    };
+        obj.removeItemFromCart = function(name, size, color) {
+            for (var item of cart) {
+                if (item.name === name && item.size === size && item.color === color) {
+                    item.count--;
+                    if (item.count === 0) {
+                        cart = cart.filter(cartItem => !(cartItem.name === name && cartItem.size === size && cartItem.color === color));
+                    }
+                    break;
+                }
+            }
+            saveCart();
+        };
 
-    return obj;
-  })();
+        obj.removeItemFromCartAll = function(name, size, color) {
+            cart = cart.filter(item => !(item.name === name && item.size === size && item.color === color));
+            saveCart();
+        };
 
-  function displayCart() {
-    var cartArray = shoppingCart.listCart();
-    var output = "";
-    for (var item of cartArray) {
-      output += "<tr>"
-        + "<td><img src='" + item.image + "' alt='" + item.name + "' style='width: 50px; height: 50px;'></td>"
-        + "<td>" + item.name + "</td>"
-        + "<td>(" + item.price + ")</td>"
-        + "<td><div class='input-group'>"
-        + "<input type='number' class='item-count form-control' data-name='" + item.name + "' value='" + item.count + "'>"
-        + "</div></td>"
-        + "<td><button class='delete-item btn btn-danger' data-name='" + item.name + "'>X</button></td>"
-        + " = "
-        + "<td>" + item.total + "</td>"
-        + "</tr>";
+        obj.clearCart = function() {
+            cart = [];
+            saveCart();
+        };
+
+        obj.totalCount = function() {
+            return cart.reduce((total, item) => total + item.count, 0);
+        };
+
+        obj.totalCart = function() {
+            return cart.reduce((total, item) => total + item.price * item.count, 0).toFixed(2);
+        };
+
+        obj.listCart = function() {
+            return cart.map(item => {
+                var itemCopy = { ...item };
+                itemCopy.total = (item.price * item.count).toFixed(2);
+                return itemCopy;
+            });
+        };
+
+        return obj;
+    })();
+
+    function displayCart() {
+        var cartArray = shoppingCart.listCart();
+        var output = "";
+        for (var item of cartArray) {
+            output += "<tr>"
+                + "<td><img src='" + item.image + "' alt='" + item.name + "' style='width: 50px; height: 50px;'></td>"
+                + "<td>" + item.name + "</td>"
+                + "<td>" + item.size + "</td>"
+                + "<td>" + item.color + "</td>"
+                + "<td>" + item.price + "</td>"
+                + "<td><div class='input-group'>"
+                + "<input type='number' class='item-count form-control' data-name='" + item.name + "' data-size='" + item.size + "' data-color='" + item.color + "' value='" + item.count + "'>"
+                + "</div></td>"
+                + "<td>" + item.total + "</td>"
+                + "<td><button class='delete-item btn btn-danger' data-name='" + item.name + "' data-size='" + item.size + "' data-color='" + item.color + "'>X</button></td>"
+                + "</tr>";
+        }
+        $('.show-cart tbody').html(output);
+        $('.total-cart').html(shoppingCart.totalCart());
+        $('.total-count').html(shoppingCart.totalCount());
     }
-    $('.show-cart').html(output);
-    $('.total-cart').html(shoppingCart.totalCart());
-    $('.total-count').html(shoppingCart.totalCount());
-  }
 
-  // Delete item button
-  $('.show-cart').on("click", ".delete-item", function (event) {
-    var name = $(this).data('name');
-    shoppingCart.removeItemFromCartAll(name);
-    displayCart();
-  });
-
-  // Item count input
-  $('.show-cart').on("change", ".item-count", function (event) {
-    var name = $(this).data('name');
-    var count = Number($(this).val());
-    shoppingCart.setCountForItem(name, count);
-    displayCart();
-  });
-
-  displayCart();
-
-  //////// UI script start /////////
-  $('.tab ul.tabs').addClass('active').find('> li:eq(0)').addClass('current');
-  $('.tab ul.tabs li a').on('click', function (g) {
-    var tab = $(this).closest('.tab');
-    var index = $(this).closest('li').index();
-    tab.find('ul.tabs > li').removeClass('current');
-    $(this).closest('li').addClass('current');
-    tab.find('.tab_content').find('div.tabs_item').not('div.tabs_item:eq(' + index + ')').slideUp();
-    tab.find('.tab_content').find('div.tabs_item:eq(' + index + ')').slideDown();
-    g.preventDefault();
-  });
-
-  $('#search_field').on('keyup', function() {
-    var value = $(this).val();
-    var patt = new RegExp(value, "i");
-
-    $('.tab_content').find('.col-lg-3').each(function() {
-      var $table = $(this);
-
-      if (!($table.find('.featured-item').text().search(patt) >= 0)) {
-        $table.not('.thead').hide();
-      } else {
-        $table.show();
-      }
+    // Add to cart button functionality
+    $('.add-to-cart-btn').click(function(event) {
+        event.preventDefault();
+        var name = $(this).data('name');
+        var price = Number($(this).data('price'));
+        var image = $(this).data('image');
+        var size = $(this).data('size'); // Assuming you have size data
+        var color = $(this).data('color'); // Assuming you have color data
+        shoppingCart.addItemToCart(name, price, 1, image, size, color);
+        displayCart();
     });
-  });
-});
 
+    // View item details in modal and handle add to cart from modal
+    $('.view-item-btn').click(function(e) {
+        e.preventDefault();
+
+        // Retrieve data attributes
+        var id = $(this).data('id');
+        var name = $(this).data('name');
+        var price = $(this).data('price');
+        var image = $(this).data('image');
+        var subtitle = $(this).data('subtitle');
+        var description = $(this).data('description');
+        var information = $(this).data('information');
+        var size = $(this).data('size'); // Assuming you have size data
+        var color = $(this).data('color'); // Assuming you have color data
+
+        // Update modal content
+        $('#itemModalImage').attr('src', image);
+        $('#itemModalName').text(name);
+        $('#itemModalPrice').text(price);
+        $('#itemModalSubtitle').text(subtitle);
+        $('#itemModalDescription').text(description);
+        $('#itemModalInformation').text(information);
+
+        // Open the modal
+        $('#itemModal').modal('show');
+
+        // Add to cart from modal
+        $('.add-to-cart-from-modal-btn').off('click').on('click', function() {
+            var selectedSize = $('input[name="size"]:checked').val();
+            var selectedColor = $('input[name="color"]:checked').val();
+            shoppingCart.addItemToCart(name, Number(price), 1, image, selectedSize, selectedColor);
+            displayCart();
+            $('#itemModal').modal('hide');
+        });
+    });
+
+    // Shopping cart display and functionality
+    $('.show-cart').on("click", ".delete-item", function(event) {
+        var name = $(this).data('name');
+        var size = $(this).data('size');
+        var color = $(this).data('color');
+        shoppingCart.removeItemFromCartAll(name, size, color);
+        displayCart();
+    });
+
+    $('.show-cart').on("change", ".item-count", function(event) {
+        var name = $(this).data('name');
+        var size = $(this).data('size');
+        var color = $(this).data('color');
+        var count = Number($(this).val());
+        shoppingCart.setCountForItem(name, size, color, count);
+        displayCart();
+    });
+
+    displayCart();
+});

@@ -2,3 +2,8 @@
     height: 285px;
     width: 100%;
 }
+
+.card-th{
+    text-align: center;
+    background: aliceblue;
+}
