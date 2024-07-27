@@ -40,13 +40,16 @@
                             <i class="fa fa-eye" aria-hidden="true"></i>
                         </a>
                         <a class="btn btn-outline-dark btn-square product-heart-btn" data-name="{{ $item->name }}" data-price="{{ $item->price }}" data-image="{{ asset('storage/'. $item->image) }}" href="#"><i class="far fa-heart"></i></a>
-                        <a class="btn btn-outline-dark btn-square add-btn add-to-cart-btn" data-name="{{ $item->name }} " data-price="{{ $item->price }}" data-image="{{ asset('storage/'. $item->image) }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp"><i class="fa fa-shopping-cart"></i></a>
+                        {{-- <a class="btn btn-outline-dark btn-square add-btn add-to-cart-btn" data-name="{{ $item->name }} " data-price="{{ $item->price }}" data-image="{{ asset('storage/'. $item->image) }}" data-miles="35,000 mi" data-transmission="Auto" data-hp="700 hp"><i class="fa fa-shopping-cart"></i></a> --}}
                     </div>
                 </div>
                 <div class="text-center py-4">
                     <a class="h6 text-decoration-none text-truncate" href="">{{ $item->name }}</a>
                     <div class="d-flex align-items-center justify-content-center mt-2">
-                        <h5>${{ $item->price }}</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
+                        <h5>${{ $item->price }}</h5>
+                        @if($item->old_price)
+                            <h6 class="text-muted ml-2"><del>${{ $item->old_price }}</del></h6>
+                        @endif
                     </div>
                     <div class="d-flex align-items-center justify-content-center mb-1">
                         <small class="fa fa-star text-primary mr-1"></small>

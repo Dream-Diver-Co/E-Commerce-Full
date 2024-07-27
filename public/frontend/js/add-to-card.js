@@ -28,7 +28,7 @@ $(document).ready(function() {
         obj.addItemToCart = function(name, price, count, image, size, color) {
             for (var item of cart) {
                 if (item.name === name && item.size === size && item.color === color) {
-                    item.count++;
+                    item.count += count;
                     saveCart();
                     return;
                 }
@@ -93,7 +93,13 @@ $(document).ready(function() {
     function displayCart() {
         var cartArray = shoppingCart.listCart();
         var output = "";
+        var totalQuantity = 0;
+        var totalPrice = 0;
+
         for (var item of cartArray) {
+            totalQuantity += item.count;
+            totalPrice += item.price * item.count;
+
             output += "<tr>"
                 + "<td><img src='" + item.image + "' alt='" + item.name + "' style='width: 50px; height: 50px;'></td>"
                 + "<td>" + item.name + "</td>"
@@ -107,9 +113,10 @@ $(document).ready(function() {
                 + "<td><button class='delete-item btn btn-danger' data-name='" + item.name + "' data-size='" + item.size + "' data-color='" + item.color + "'>X</button></td>"
                 + "</tr>";
         }
+
         $('.show-cart tbody').html(output);
-        $('.total-cart').html(shoppingCart.totalCart());
-        $('.total-count').html(shoppingCart.totalCount());
+        $('.total-cart').html(totalPrice.toFixed(2));
+        $('.total-count').html(totalQuantity);
     }
 
     // Add to cart button functionality
@@ -118,8 +125,8 @@ $(document).ready(function() {
         var name = $(this).data('name');
         var price = Number($(this).data('price'));
         var image = $(this).data('image');
-        var size = $(this).data('size'); // Assuming you have size data
-        var color = $(this).data('color'); // Assuming you have color data
+        var size = $(this).data('size');
+        var color = $(this).data('color');
         shoppingCart.addItemToCart(name, price, 1, image, size, color);
         displayCart();
     });
@@ -136,8 +143,6 @@ $(document).ready(function() {
         var subtitle = $(this).data('subtitle');
         var description = $(this).data('description');
         var information = $(this).data('information');
-        var size = $(this).data('size'); // Assuming you have size data
-        var color = $(this).data('color'); // Assuming you have color data
 
         // Update modal content
         $('#itemModalImage').attr('src', image);
@@ -147,14 +152,26 @@ $(document).ready(function() {
         $('#itemModalDescription').text(description);
         $('#itemModalInformation').text(information);
 
+        // Clear previous selections
+        $('#itemModalSizeForm input[type=radio]').prop('checked', false);
+        $('#itemModalColorForm input[type=radio]').prop('checked', false);
+        $('#itemModalQuantity').val('1');
+
         // Open the modal
         $('#itemModal').modal('show');
 
         // Add to cart from modal
         $('.add-to-cart-from-modal-btn').off('click').on('click', function() {
-            var selectedSize = $('input[name="size"]:checked').val();
-            var selectedColor = $('input[name="color"]:checked').val();
-            shoppingCart.addItemToCart(name, Number(price), 1, image, selectedSize, selectedColor);
+            var size = $('#itemModalSizeForm input[name=size]:checked').val();
+            var color = $('#itemModalColorForm input[name=color]:checked').val();
+            var quantity = Number($('#itemModalQuantity').val());
+
+            if (!size || !color) {
+                alert('Please select size and color.');
+                return;
+            }
+
+            shoppingCart.addItemToCart(name, price, quantity, image, size, color);
             displayCart();
             $('#itemModal').modal('hide');
         });
