@@ -3,8 +3,8 @@
         <div class="row bg-secondary py-1 px-xl-5">
             <div class="col-lg-6 d-none d-lg-block">
                 <div class="d-inline-flex align-items-center h-100">
-                    <a class="text-body mr-3" href="">About</a>
-                    <a class="text-body mr-3" href="contact">Contact</a>
+                    <a class="text-body mr-3" href="{{ route('about') }}">About</a>
+                    <a class="text-body mr-3" href="{{ route('contact') }}">Contact</a>
                     <a class="text-body mr-3" href="">Help</a>
                     <a class="text-body mr-3" href="">FAQs</a>
                 </div>
@@ -21,7 +21,7 @@
                             <ul>
                                 @if(auth()->check())
                                 <li>
-                                    <a href="page-account.html"><i class="fi fi-rs-user mr-10"></i>My Account</a>
+                                    <a href=""><i class="fi fi-rs-user mr-10"></i>My Account</a>
                                 </li>
                                 <li>
                                     <a href="page-account.html"><i class="fi fi-rs-location-alt mr-10"></i>Order Tracking</a>

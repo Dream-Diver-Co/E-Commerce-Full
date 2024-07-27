@@ -140,57 +140,16 @@
                 <h5 class="section-title position-relative text-uppercase mb-3"><span class="bg-secondary pr-3">Order Total</span></h5>
                 <div class="bg-light p-30 mb-5">
                     <div class="modal-content" style="display: flex; margin-top: 0">
-                        <!-- <div class="modal-header">
-                          <h5 class="modal-title" id="staticBackdropLabel"><b>Your All Order List</b></h5>
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
-                        </div> -->
                         <div class="modal-body-checkout">
-                          <table class="show-cart table">
-                          </table>
+                          <div class="grand-total total-price-checkout">Total Quantity: <span class="total-count"></span>ps</div>
                           <div class="grand-total total-price-checkout">Total price: $<span class="total-cart"></span></div>
                         </div>
-                        <!-- <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        </div> -->
                     </div>
-                    <!-- <div class="border-bottom">
-                        <h6 class="mb-3">Products</h6>
-                        <div class="d-flex justify-content-between">
-                            <p>Product Name 1</p>
-                            <p>$150</p>
-                        </div>
-                        <div class="d-flex justify-content-between">
-                            <p>Product Name 2</p>
-                            <p>$150</p>
-                        </div>
-                        <div class="d-flex justify-content-between">
-                            <p>Product Name 3</p>
-                            <p>$150</p>
-                        </div>
-                    </div>
-                    <div class="border-bottom pt-3 pb-2">
-                        <div class="d-flex justify-content-between mb-3">
-                            <h6>Subtotal</h6>
-                            <h6>$150</h6>
-                        </div>
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-medium">Shipping</h6>
-                            <h6 class="font-weight-medium">$10</h6>
-                        </div>
-                    </div> -->
-                    <!-- <div class="pt-2">
-                        <div class="d-flex justify-content-between mt-2">
-                            <h5>Total Price</h5>
-                            <h5>$<span class="total-cart"></span></h5>
-                        </div>
-                    </div> -->
                 </div>
                 <div class="mb-5">
                     <h5 class="section-title position-relative text-uppercase mb-3"><span class="bg-secondary pr-3">Payment</span></h5>
                     <div class="bg-light p-30">
-                        <img class="img-fluid" style="margin-bottom: 15px;" src="img/payments.png" alt="">
+                        <img class="img-fluid" style="margin-bottom: 15px;" src="{{ asset('frontend/img/payments.png') }}" alt="">
                         <div class="form-group">
                             <div class="custom-control custom-radio">
                                 <input type="radio" class="custom-control-input" name="payment" id="paypal">
