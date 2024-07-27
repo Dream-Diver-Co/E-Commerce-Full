@@ -1,193 +1,182 @@
 $(document).ready(function() {
     var shoppingCart = (function() {
-      var cart = [];
+        var cart = [];
 
-      function Item(name, price, count, image, size, color) {
-        this.name = name;
-        this.price = price;
-        this.count = count;
-        this.image = image;
-        this.size = size;
-        this.color = color;
-      }
-
-      function saveCart() {
-        localStorage.setItem('shoppingCart', JSON.stringify(cart));
-      }
-
-      function loadCart() {
-        cart = JSON.parse(localStorage.getItem('shoppingCart')) || [];
-      }
-
-      if (localStorage.getItem("shoppingCart") != null) {
-        loadCart();
-      }
-
-      var obj = {};
-
-      obj.addItemToCart = function(name, price, count, image, size, color) {
-        for (var item of cart) {
-          if (item.name === name && item.size === size && item.color === color) {
-            item.count += count;
-            saveCart();
-            return;
-          }
+        function Item(name, price, count, image, size, color) {
+            this.name = name;
+            this.price = price;
+            this.count = count;
+            this.image = image;
+            this.size = size;
+            this.color = color;
         }
-        var newItem = new Item(name, price, count, image, size, color);
-        cart.push(newItem);
-        saveCart();
-      };
 
-      obj.setCountForItem = function(name, size, color, count) {
-        for (var item of cart) {
-          if (item.name === name && item.size === size && item.color === color) {
-            item.count = count;
-            break;
-          }
+        function saveCart() {
+            localStorage.setItem('shoppingCart', JSON.stringify(cart));
         }
-        saveCart();
-      };
 
-      obj.removeItemFromCart = function(name, size, color) {
-        for (var item of cart) {
-          if (item.name === name && item.size === size && item.color === color) {
-            item.count--;
-            if (item.count === 0) {
-              cart = cart.filter(cartItem => !(cartItem.name === name && cartItem.size === size && cartItem.color === color));
+        function loadCart() {
+            cart = JSON.parse(localStorage.getItem('shoppingCart')) || [];
+        }
+
+        if (localStorage.getItem("shoppingCart") != null) {
+            loadCart();
+        }
+
+        var obj = {};
+
+        obj.addItemToCart = function(name, price, count, image, size, color) {
+            for (var item of cart) {
+                if (item.name === name && item.size === size && item.color === color) {
+                    item.count++;
+                    saveCart();
+                    return;
+                }
             }
-            break;
-          }
-        }
-        saveCart();
-      };
+            var newItem = new Item(name, price, count, image, size, color);
+            cart.push(newItem);
+            saveCart();
+        };
 
-      obj.removeItemFromCartAll = function(name, size, color) {
-        cart = cart.filter(item => !(item.name === name && item.size === size && item.color === color));
-        saveCart();
-      };
+        obj.setCountForItem = function(name, size, color, count) {
+            for (var item of cart) {
+                if (item.name === name && item.size === size && item.color === color) {
+                    item.count = count;
+                    break;
+                }
+            }
+            saveCart();
+        };
 
-      obj.clearCart = function() {
-        cart = [];
-        saveCart();
-      };
+        obj.removeItemFromCart = function(name, size, color) {
+            for (var item of cart) {
+                if (item.name === name && item.size === size && item.color === color) {
+                    item.count--;
+                    if (item.count === 0) {
+                        cart = cart.filter(cartItem => !(cartItem.name === name && cartItem.size === size && cartItem.color === color));
+                    }
+                    break;
+                }
+            }
+            saveCart();
+        };
 
-      obj.totalCount = function() {
-        return cart.reduce((total, item) => total + item.count, 0);
-      };
+        obj.removeItemFromCartAll = function(name, size, color) {
+            cart = cart.filter(item => !(item.name === name && item.size === size && item.color === color));
+            saveCart();
+        };
 
-      obj.totalCart = function() {
-        return cart.reduce((total, item) => total + item.price * item.count, 0).toFixed(2);
-      };
+        obj.clearCart = function() {
+            cart = [];
+            saveCart();
+        };
 
-      obj.listCart = function() {
-        return cart.map(item => {
-          var itemCopy = { ...item };
-          itemCopy.total = (item.price * item.count).toFixed(2);
-          return itemCopy;
-        });
-      };
+        obj.totalCount = function() {
+            return cart.reduce((total, item) => total + item.count, 0);
+        };
 
-      return obj;
+        obj.totalCart = function() {
+            return cart.reduce((total, item) => total + item.price * item.count, 0).toFixed(2);
+        };
+
+        obj.listCart = function() {
+            return cart.map(item => {
+                var itemCopy = { ...item };
+                itemCopy.total = (item.price * item.count).toFixed(2);
+                return itemCopy;
+            });
+        };
+
+        return obj;
     })();
 
     function displayCart() {
-      var cartArray = shoppingCart.listCart();
-      var output = "";
-      for (var item of cartArray) {
-        output += "<tr>"
-          + "<td><img src='" + item.image + "' alt='" + item.name + "' style='width: 50px; height: 50px;'></td>"
-          + "<td>" + item.name + "</td>"
-          + "<td>Size: " + item.size + "</td>"
-          + "<td>Color: " + item.color + "</td>"
-          + "<td>(" + item.price + ")</td>"
-          + "<td><div class='input-group'>"
-          + "<input type='number' class='item-count form-control' data-name='" + item.name + "' data-size='" + item.size + "' data-color='" + item.color + "' value='" + item.count + "'>"
-          + "</div></td>"
-          + "<td><button class='delete-item btn btn-danger' data-name='" + item.name + "' data-size='" + item.size + "' data-color='" + item.color + "'>X</button></td>"
-          + " = "
-          + "<td>" + item.total + "</td>"
-          + "</tr>";
-      }
-      $('.show-cart').html(output);
-      $('.total-cart').html(shoppingCart.totalCart());
-      $('.total-count').html(shoppingCart.totalCount());
+        var cartArray = shoppingCart.listCart();
+        var output = "";
+        for (var item of cartArray) {
+            output += "<tr>"
+                + "<td><img src='" + item.image + "' alt='" + item.name + "' style='width: 50px; height: 50px;'></td>"
+                + "<td>" + item.name + "</td>"
+                + "<td>" + item.size + "</td>"
+                + "<td>" + item.color + "</td>"
+                + "<td>" + item.price + "</td>"
+                + "<td><div class='input-group'>"
+                + "<input type='number' class='item-count form-control' data-name='" + item.name + "' data-size='" + item.size + "' data-color='" + item.color + "' value='" + item.count + "'>"
+                + "</div></td>"
+                + "<td>" + item.total + "</td>"
+                + "<td><button class='delete-item btn btn-danger' data-name='" + item.name + "' data-size='" + item.size + "' data-color='" + item.color + "'>X</button></td>"
+                + "</tr>";
+        }
+        $('.show-cart tbody').html(output);
+        $('.total-cart').html(shoppingCart.totalCart());
+        $('.total-count').html(shoppingCart.totalCount());
     }
 
     // Add to cart button functionality
     $('.add-to-cart-btn').click(function(event) {
-      event.preventDefault();
-      var name = $(this).data('name');
-      var price = Number($(this).data('price'));
-      var image = $(this).data('image');
-      var size = $(this).data('size');
-      var color = $(this).data('color');
-      shoppingCart.addItemToCart(name, price, 1, image, size, color);
-      displayCart();
+        event.preventDefault();
+        var name = $(this).data('name');
+        var price = Number($(this).data('price'));
+        var image = $(this).data('image');
+        var size = $(this).data('size'); // Assuming you have size data
+        var color = $(this).data('color'); // Assuming you have color data
+        shoppingCart.addItemToCart(name, price, 1, image, size, color);
+        displayCart();
     });
 
     // View item details in modal and handle add to cart from modal
     $('.view-item-btn').click(function(e) {
-      e.preventDefault();
+        e.preventDefault();
 
-      // Retrieve data attributes
-      var id = $(this).data('id');
-      var name = $(this).data('name');
-      var price = $(this).data('price');
-      var image = $(this).data('image');
-      var subtitle = $(this).data('subtitle');
-      var description = $(this).data('description');
-      var information = $(this).data('information');
+        // Retrieve data attributes
+        var id = $(this).data('id');
+        var name = $(this).data('name');
+        var price = $(this).data('price');
+        var image = $(this).data('image');
+        var subtitle = $(this).data('subtitle');
+        var description = $(this).data('description');
+        var information = $(this).data('information');
+        var size = $(this).data('size'); // Assuming you have size data
+        var color = $(this).data('color'); // Assuming you have color data
 
-      // Update modal content
-      $('#itemModalImage').attr('src', image);
-      $('#itemModalName').text(name);
-      $('#itemModalPrice').text(price);
-      $('#itemModalSubtitle').text(subtitle);
-      $('#itemModalDescription').text(description);
-      $('#itemModalInformation').text(information);
+        // Update modal content
+        $('#itemModalImage').attr('src', image);
+        $('#itemModalName').text(name);
+        $('#itemModalPrice').text(price);
+        $('#itemModalSubtitle').text(subtitle);
+        $('#itemModalDescription').text(description);
+        $('#itemModalInformation').text(information);
 
-      // Clear previous selections
-      $('#itemModalSizeForm input[type=radio]').prop('checked', false);
-      $('#itemModalColorForm input[type=radio]').prop('checked', false);
-      $('#itemModalQuantity').val('1');
+        // Open the modal
+        $('#itemModal').modal('show');
 
-      // Open the modal
-      $('#itemModal').modal('show');
-
-      // Add to cart from modal
-      $('.add-to-cart-from-modal-btn').off('click').on('click', function() {
-          var size = $('#itemModalSizeForm input[name=size]:checked').val();
-          var color = $('#itemModalColorForm input[name=color]:checked').val();
-          var quantity = Number($('#itemModalQuantity').val());
-
-          if (!size || !color) {
-              alert('Please select size and color.');
-              return;
-          }
-
-          shoppingCart.addItemToCart(name, price, quantity, image, size, color);
-          displayCart();
-          $('#itemModal').modal('hide');
-      });
+        // Add to cart from modal
+        $('.add-to-cart-from-modal-btn').off('click').on('click', function() {
+            var selectedSize = $('input[name="size"]:checked').val();
+            var selectedColor = $('input[name="color"]:checked').val();
+            shoppingCart.addItemToCart(name, Number(price), 1, image, selectedSize, selectedColor);
+            displayCart();
+            $('#itemModal').modal('hide');
+        });
     });
 
     // Shopping cart display and functionality
     $('.show-cart').on("click", ".delete-item", function(event) {
-      var name = $(this).data('name');
-      var size = $(this).data('size');
-      var color = $(this).data('color');
-      shoppingCart.removeItemFromCartAll(name, size, color);
-      displayCart();
+        var name = $(this).data('name');
+        var size = $(this).data('size');
+        var color = $(this).data('color');
+        shoppingCart.removeItemFromCartAll(name, size, color);
+        displayCart();
     });
 
     $('.show-cart').on("change", ".item-count", function(event) {
-      var name = $(this).data('name');
-      var size = $(this).data('size');
-      var color = $(this).data('color');
-      var count = Number($(this).val());
-      shoppingCart.setCountForItem(name, size, color, count);
-      displayCart();
+        var name = $(this).data('name');
+        var size = $(this).data('size');
+        var color = $(this).data('color');
+        var count = Number($(this).val());
+        shoppingCart.setCountForItem(name, size, color, count);
+        displayCart();
     });
 
     displayCart();
-  });
+});

@@ -22,7 +22,7 @@
     <div class="container-fluid">
         <div class="row px-xl-5">
             <div class="col-lg-8 table-responsive mb-5">
-                <table class="table table-light table-borderless table-hover text-center mb-0">
+                <table class="table table-light table-borderless table-hover text-center mb-0 show-cart table">
                     <thead class="thead-dark">
                         <tr>
                             <th>Image</th>
@@ -35,7 +35,7 @@
                             <th>Total</th>
                         </tr>
                     </thead>
-                    <tbody class="align-middle show-cart table">
+                    <tbody class="align-middle">
                         {{-- <table class="show-cart table"></table> --}}
                         {{-- <tr>
                             <td class="align-middle"><img src="img/product-1.jpg" alt="" style="width: 50px;"> Product Name</td>

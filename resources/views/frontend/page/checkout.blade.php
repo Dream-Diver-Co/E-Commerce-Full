@@ -149,6 +149,7 @@
                         <div class="modal-body-checkout">
                           <table class="show-cart table">
                           </table>
+                          <div class="grand-total total-price-checkout">Total Quantity: <span class="total-count"></span>ps</div>
                           <div class="grand-total total-price-checkout">Total price: $<span class="total-cart"></span></div>
                         </div>
                         <!-- <div class="modal-footer">

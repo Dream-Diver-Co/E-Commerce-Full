@@ -82,7 +82,7 @@
                                 </div>
                                 <small class="pt-1">(99 Reviews)</small>
                             </div>
-                            <h3 class="font-weight-semi-bold mb-4" id="itemModalPrice"></h3>
+                            <h3 class="font-weight-semi-bold mb-4">$<span id="itemModalPrice"></span></h3>
                             <p class="mb-4" id="itemModalSubtitle"></p>
                             <div class="d-flex mb-3">
                                 <strong class="text-dark mr-3">Sizes:</strong>
@@ -248,7 +248,7 @@
                 </button>
             </div>
             <div class="modal-body modal-pd">
-                <table class="">
+                <table class="show-cart table">
                     <thead class="card-th">
                         <tr>
                             <th>Image</th>
@@ -257,24 +257,28 @@
                             <th>Color</th>
                             <th>Price</th>
                             <th>Quantity</th>
-                            <th>Remove</th>
                             <th>Total</th>
+                            <th>Remove</th>
                         </tr>
                     </thead>
-                    <tbody class="show-cart table">
+                    <tbody>
                         <!-- Cart items will be dynamically added here -->
                     </tbody>
                 </table>
-                <div class="grand-total">Total price: $<span class="total-cart"></span></div>
+                <div class="grand-total">
+                    Total quantity: <span class="total-count"></span> &nbsp;&nbsp; Total price: $<span class="total-cart"></span>
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <a href="checkout.html" class="btn btn-primary">Checkout</a>
+                <a href="{{ route('cart') }}" class="btn btn-success">Cart View</a>
+                <a href="{{ route('checkout') }}" class="btn btn-primary">Checkout</a>
             </div>
         </div>
     </div>
 </div>
 <!-- Cart modal end -->
+
 
 
         <!-- Wishlist Modal start-->
