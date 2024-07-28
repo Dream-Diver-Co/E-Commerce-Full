@@ -35,6 +35,7 @@ use App\Http\Controllers\StrollerController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\FeaturedController;
 use App\Http\Controllers\RecentController;
+use App\Http\Controllers\CategoryController;
 
 
 
@@ -126,6 +127,10 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
         Route::resource('/client', ClientController::class);
         Route::resource('featured', FeaturedController::class);
         Route::resource('recent', RecentController::class);
+        Route::resource('/category', CategoryController::class);
+
+
+
         //offer route
         Route::resource('/summer', SummerController::class);
         Route::resource('winter', WinterController::class);
@@ -159,6 +164,9 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
 
     });
 });
+
+        // // Category Routes using slug
+        // Route::get('/category/{slug}', [CategoryController::class, 'show'])->name('category.show');
 
 // // Hero Routes
 // Route::middleware(['auth'])->group(function () {
