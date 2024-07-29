@@ -12,7 +12,6 @@ use App\Http\Controllers\UserContactController;
 use App\Http\Controllers\AdmincontactController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\PanjabiController;
-use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CshirtController;
 use App\Http\Controllers\FshirtController;
 use App\Http\Controllers\TshirtController;
@@ -36,6 +35,8 @@ use App\Http\Controllers\ClientController;
 use App\Http\Controllers\FeaturedController;
 use App\Http\Controllers\RecentController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\SubcategoryController;
+use App\Http\Controllers\ProductController;
 
 
 
@@ -127,7 +128,7 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
         Route::resource('/client', ClientController::class);
         Route::resource('featured', FeaturedController::class);
         Route::resource('recent', RecentController::class);
-        Route::resource('/category', CategoryController::class);
+
 
 
 
@@ -162,11 +163,19 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
         Route::resource('/newborn', NewbornController::class);
         Route::resource('/stroller', StrollerController::class);
 
+        Route::resource('categories', CategoryController::class);
+        Route::resource('subcategories', SubcategoryController::class);
+        Route::resource('products', ProductController::class);
+
+        Route::get('categories/{category}/subcategories', [CategoryController::class, 'showSubcategories'])->name('categories.subcategories');
+        Route::get('subcategories/{subcategory}/products', [SubcategoryController::class, 'showProducts'])->name('subcategories.products');
+        
+
+
     });
 });
 
-        // // Category Routes using slug
-        // Route::get('/category/{slug}', [CategoryController::class, 'show'])->name('category.show');
+
 
 // // Hero Routes
 // Route::middleware(['auth'])->group(function () {

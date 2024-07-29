@@ -21,5 +21,18 @@
 </div>
 <!-- end page title -->
 
+    <h1>Edit Category</h1>
+    <form action="{{ route('categories.update', $category) }}" method="POST" enctype="multipart/form-data">
+        @csrf
+        @method('PUT')
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" value="{{ $category->name }}" required>
+        <label for="image">Image</label>
+        <input type="file" name="image" id="image">
+        <label for="description">Description</label>
+        <textarea name="description" id="description">{{ $category->description }}</textarea>
+        <button type="submit">Update</button>
+    </form>
 @endsection
+
 

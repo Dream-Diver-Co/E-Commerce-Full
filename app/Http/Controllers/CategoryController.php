@@ -2,85 +2,78 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Category;
-use Illuminate\Support\Str;
-use Illuminate\Support\Facades\Storage;
+use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
     public function index()
     {
-        $categories = Category::all();
-        return view('admin.pages.home.category.index', compact('categories'));
+        $categories = Category::withCount('subcategories')->get();
+
+        return view('admin.pages.categories.index', compact('categories'));
     }
 
     public function create()
     {
-        return view('admin.pages.home.category.create');
+        return view('admin.pages.categories.create');
     }
 
     public function store(Request $request)
     {
-        $request->validate([
-            'title' => 'required|string|max:255',
-            'continuity' => 'required|string|max:255',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        $data = $request->validate([
+            'name' => 'required|string|max:255',
+            'image' => 'nullable|image|mimes:jpg,png,jpeg,gif',
+            'description' => 'nullable|string',
         ]);
 
-        $input = $request->all();
-        $input['slug'] = Str::slug($request->title);
-
         if ($request->hasFile('image')) {
-            $file = $request->file('image');
-            $path = $file->store('images', 'public');
-            $input['image'] = $path;
+            $data['image'] = $request->file('image')->store('categories');
         }
 
-        Category::create($input);
+        Category::create($data);
 
-        return redirect()->route('category.index')->with('success', 'Category created successfully.');
+        return redirect()->route('categories.index');
     }
 
     public function show(Category $category)
     {
-        return view('admin.pages.home.category.show', compact('category'));
+        $category->load('subcategories');
+        return view('admin.pages.categories.show', compact('category'));
+    }
+
+    public function showSubcategories(Category $category)
+    {
+        $subcategories = $category->subcategories()->withCount('products')->get();
+
+        return view('admin.pages.categories.subcategories', compact('category', 'subcategories'));
     }
 
     public function edit(Category $category)
     {
-        return view('admin.pages.home.category.edit', compact('category'));
+        return view('admin.pages.categories.edit', compact('category'));
     }
 
     public function update(Request $request, Category $category)
     {
-        $request->validate([
-            'title' => 'required|string|max:255',
-            'continuity' => 'required|string|max:255',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        $data = $request->validate([
+            'name' => 'required|string|max:255',
+            'image' => 'nullable|image|mimes:jpg,png,jpeg,gif',
+            'description' => 'nullable|string',
         ]);
 
-        $input = $request->all();
-        $input['slug'] = Str::slug($request->title);
-
         if ($request->hasFile('image')) {
-            $file = $request->file('image');
-            $path = $file->store('images', 'public');
-            $input['image'] = $path;
+            $data['image'] = $request->file('image')->store('categories');
         }
 
-        $category->update($input);
+        $category->update($data);
 
-        return redirect()->route('category.index')->with('success', 'Category updated successfully.');
+        return redirect()->route('categories.index');
     }
 
     public function destroy(Category $category)
     {
-        if ($category->image) {
-            Storage::delete('public/' . $category->image);
-        }
         $category->delete();
-
-        return redirect()->route('category.index')->with('success', 'Category deleted successfully.');
+        return redirect()->route('categories.index');
     }
 }
