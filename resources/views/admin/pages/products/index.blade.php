@@ -20,14 +20,15 @@
     </div>
 </div>
 <!-- end page title -->
-
     <h1>Products</h1>
     <a href="{{ route('products.create') }}">Create Product</a>
     <ul>
         @foreach($products as $product)
             <li>
-                <h5>{{ $product->name }}</h5>
-                <a href="{{ route('products.show', $product) }}">view</a>
+                <a href="{{ route('products.show', $product) }}">{{ $product->name }}</a>
+                <span>{{ $product->title }}</span> - <span>{{ $product->sub_title }}</span>
+                <span>{{ $product->size }}</span> - <span>{{ $product->color }}</span>
+                <span>{{ $product->price }}</span>
                 <a href="{{ route('products.edit', $product) }}">Edit</a>
                 <form action="{{ route('products.destroy', $product) }}" method="POST" style="display:inline-block;">
                     @csrf
@@ -38,5 +39,6 @@
         @endforeach
     </ul>
 @endsection
+
 
 

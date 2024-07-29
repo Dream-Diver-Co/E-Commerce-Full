@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\Category;
 use App\Models\Subcategory;
 use Illuminate\Http\Request;
 
@@ -10,36 +11,72 @@ class ProductController extends Controller
 {
     public function index()
     {
-        $products = Product::with('subcategory')->get();
+        $products = Product::with('subcategory', 'category')->get();
         return view('admin.pages.products.index', compact('products'));
     }
 
     public function create()
     {
+        $categories = Category::all();
         $subcategories = Subcategory::all();
-        return view('admin.pages.products.create', compact('subcategories'));
+        return view('admin.pages.products.create', compact('categories', 'subcategories'));
     }
 
     public function store(Request $request)
     {
-        $data = $request->validate([
-            'subcategory_id' => 'required|exists:subcategories,id',
+        $request->validate([
             'name' => 'required|string|max:255',
-            'image' => 'nullable|image|mimes:jpg,png,jpeg,gif',
+            'title' => 'required|string|max:255',
+            'sub_title' => 'required|string|max:255',
+            'size' => 'required|string|max:50',
+            'color' => 'required|string|max:50',
             'price' => 'required|numeric',
-            'old_price' => 'nullable|numeric',
-            'sub_description' => 'nullable|string',
-            'description' => 'nullable|string',
-            'information' => 'nullable|string',
+            'subcategory_id' => 'required|exists:subcategories,id',
+            'category_id' => 'required|exists:categories,id',
         ]);
 
+        $product = new Product($request->all());
+
         if ($request->hasFile('image')) {
-            $data['image'] = $request->file('image')->store('products');
+            $path = $request->file('image')->store('products', 'public');
+            $product->image = $path;
         }
 
-        Product::create($data);
+        $product->save();
 
-        return redirect()->route('products.index');
+        return redirect()->route('products.index')->with('success', 'Product created successfully.');
+    }
+
+    public function edit(Product $product)
+    {
+        $categories = Category::all();
+        $subcategories = Subcategory::all();
+        return view('admin.pages.products.edit', compact('product', 'categories', 'subcategories'));
+    }
+
+    public function update(Request $request, Product $product)
+    {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'title' => 'required|string|max:255',
+            'sub_title' => 'required|string|max:255',
+            'size' => 'required|string|max:50',
+            'color' => 'required|string|max:50',
+            'price' => 'required|numeric',
+            'subcategory_id' => 'required|exists:subcategories,id',
+            'category_id' => 'required|exists:categories,id',
+        ]);
+
+        $product->fill($request->all());
+
+        if ($request->hasFile('image')) {
+            $path = $request->file('image')->store('products', 'public');
+            $product->image = $path;
+        }
+
+        $product->save();
+
+        return redirect()->route('products.index')->with('success', 'Product updated successfully.');
     }
 
     public function show(Product $product)
@@ -47,37 +84,9 @@ class ProductController extends Controller
         return view('admin.pages.products.show', compact('product'));
     }
 
-    public function edit(Product $product)
-    {
-        $subcategories = Subcategory::all();
-        return view('admin.pages.products.edit', compact('product', 'subcategories'));
-    }
-
-    public function update(Request $request, Product $product)
-    {
-        $data = $request->validate([
-            'subcategory_id' => 'required|exists:subcategories,id',
-            'name' => 'required|string|max:255',
-            'image' => 'nullable|image|mimes:jpg,png,jpeg,gif',
-            'price' => 'required|numeric',
-            'old_price' => 'nullable|numeric',
-            'sub_description' => 'nullable|string',
-            'description' => 'nullable|string',
-            'information' => 'nullable|string',
-        ]);
-
-        if ($request->hasFile('image')) {
-            $data['image'] = $request->file('image')->store('products');
-        }
-
-        $product->update($data);
-
-        return redirect()->route('products.index');
-    }
-
     public function destroy(Product $product)
     {
         $product->delete();
-        return redirect()->route('products.index');
+        return redirect()->route('products.index')->with('success', 'Product deleted successfully.');
     }
 }

@@ -22,16 +22,26 @@
 <!-- end page title -->
 
     <h1>{{ $product->name }}</h1>
+    <p><strong>Title:</strong> {{ $product->title }}</p>
+    <p><strong>Sub Title:</strong> {{ $product->sub_title }}</p>
+    <p><strong>Size:</strong> {{ $product->size }}</p>
+    <p><strong>Color:</strong> {{ $product->color }}</p>
+    <p><strong>Price:</strong> ${{ $product->price }}</p>
+    <p><strong>Old Price:</strong> ${{ $product->old_price }}</p>
+    <p><strong>Sub Description:</strong> {{ $product->sub_description }}</p>
+    <p><strong>Description:</strong> {{ $product->description }}</p>
+    <p><strong>Information:</strong> {{ $product->information }}</p>
     @if($product->image)
-        <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}" width="200">
+        <img src="{{ asset('storage/' . $product->image) }}" alt="Product Image" width="300">
     @endif
-    <p>Price: ${{ $product->price }}</p>
-    <p>Old Price: ${{ $product->old_price }}</p>
-    <p>Sub Description: {{ $product->sub_description }}</p>
-    <p>Description: {{ $product->description }}</p>
-    <p>Information: {{ $product->information }}</p>
-    <p>Subcategory: {{ $product->subcategory->name }}</p>
-    
+    <a href="{{ route('products.edit', $product) }}">Edit</a>
+    <form action="{{ route('products.destroy', $product) }}" method="POST" style="display:inline-block;">
+        @csrf
+        @method('DELETE')
+        <button type="submit">Delete</button>
+    </form>
+    <a href="{{ route('products.index') }}">Back to Products</a>
 @endsection
+
 
 
