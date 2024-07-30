@@ -21,5 +21,15 @@
 </div>
 <!-- end page title -->
 
+    <h1>Create Category</h1>
+    <form action="{{ route('categories.store') }}" method="POST" enctype="multipart/form-data">
+        @csrf
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" required>
+        <label for="image">Image</label>
+        <input type="file" name="image" id="image">
+        <label for="description">Description</label>
+        <textarea name="description" id="description"></textarea>
+        <button type="submit">Create</button>
+    </form>
 @endsection
-

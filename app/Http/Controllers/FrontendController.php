@@ -26,6 +26,9 @@ use App\Models\Clothing;
 use App\Models\Food;
 use App\Models\Newborn;
 use App\Models\Stroller;
+use App\Models\Category;
+// use Illuminate\Support\Str;
+// use Illuminate\Support\Facades\Storage;
 
 
 use Illuminate\Http\Request;
@@ -34,10 +37,11 @@ class FrontendController extends Controller
 {
     public function index()
     {
+        $categories = Category::paginate(12);
         $summers = Summer::all();
         $winters = Winter::all();
         $heroes = Hero::all();
-        return view('frontend.index', compact('heroes', 'summers','winters'));
+        return view('frontend.index', compact('heroes', 'summers','winters','categories'));
     }
 
 

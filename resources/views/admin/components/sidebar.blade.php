@@ -28,6 +28,39 @@
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-mail-send-line"></i>
+                        <span>category</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('categories.create')}}">Create category</a></li>
+                        <li><a href="{{ route('categories.index') }}">category List</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-mail-send-line"></i>
+                        <span>Subcategory</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('subcategories.create')}}">Create Subcategory</a></li>
+                        <li><a href="{{ route('subcategories.index') }}">Subcategory List</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-mail-send-line"></i>
+                        <span>Product</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('products.create')}}">Create products</a></li>
+                        <li><a href="{{ route('products.index') }}">products List</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-share-line"></i>
                         <span>Home</span>
                     </a>
@@ -109,6 +142,17 @@
                                 <li><a href="{{ route('recent.index') }}">Recent List</a></li>
                             </ul>
                         </li>
+
+                        {{-- <li>
+                            <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                <i class="ri-mail-send-line"></i>
+                                <span>Product category</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="">Create category</a></li>
+                                <li><a href="">category List</a></li>
+                            </ul>
+                        </li> --}}
 
                     </ul>
                 </li>

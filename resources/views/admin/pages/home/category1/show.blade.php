@@ -21,5 +21,19 @@
 </div>
 <!-- end page title -->
 
+    <div class="card">
+        <div class="card-header">Category Details</div>
+        <div class="card-body">
+            <h5 class="card-title">Title: {{ $category->title }}</h5>
+            <p class="card-text">Slug: {{ $category->slug }}</p>
+            <p class="card-text">Continuity: {{ $category->continuity }}</p>
+            @if($category->image)
+                <p class="card-text">Image:</p>
+                <img src="{{ asset('storage/' . $category->image) }}" alt="{{ $category->title }}" width="200">
+            @endif
+            <a href="{{ route('category.index') }}" class="btn btn-primary mt-3">Back to List</a>
+        </div>
+    </div>
 @endsection
+
 
