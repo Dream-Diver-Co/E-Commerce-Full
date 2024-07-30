@@ -20,24 +20,46 @@
     </div>
 </div>
 <!-- end page title -->
+
     <h1>Products</h1>
-    <a href="{{ route('products.create') }}">Create Product</a>
-    <ul>
-        @foreach($products as $product)
-            <li>
-                <a href="{{ route('products.show', $product) }}">{{ $product->name }}</a>
-                <span>{{ $product->title }}</span> - <span>{{ $product->sub_title }}</span>
-                <span>{{ $product->size }}</span> - <span>{{ $product->color }}</span>
-                <span>{{ $product->price }}</span>
-                <a href="{{ route('products.edit', $product) }}">Edit</a>
-                <form action="{{ route('products.destroy', $product) }}" method="POST" style="display:inline-block;">
-                    @csrf
-                    @method('DELETE')
-                    <button type="submit">Delete</button>
-                </form>
-            </li>
-        @endforeach
-    </ul>
+    <a href="{{ route('products.create') }}">Add New Product</a>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Title</th>
+                <th>Category</th>
+                <th>Subcategory</th>
+                <th>Sizes</th>
+                <th>Colors</th>
+                <th>Price</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach($products as $product)
+                <tr>
+                    <td>{{ $product->name }}</td>
+                    <td>{{ $product->title }}</td>
+                    <td>{{ $product->category->name }}</td>
+                    <td>{{ $product->subcategory->name }}</td>
+                    <td>{{ implode(', ', $product->sizes) }}</td>
+                    <td>{{ implode(', ', $product->colors) }}</td>
+                    <td>${{ $product->price }}</td>
+                    <td>
+                        <a href="{{ route('products.show', $product) }}">View</a>
+                        <a href="{{ route('products.edit', $product) }}">Edit</a>
+                        <form action="{{ route('products.destroy', $product) }}" method="POST" style="display:inline-block;">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
+
 @endsection
 
 

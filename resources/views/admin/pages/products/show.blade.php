@@ -24,8 +24,10 @@
     <h1>{{ $product->name }}</h1>
     <p><strong>Title:</strong> {{ $product->title }}</p>
     <p><strong>Sub Title:</strong> {{ $product->sub_title }}</p>
-    <p><strong>Size:</strong> {{ $product->size }}</p>
-    <p><strong>Color:</strong> {{ $product->color }}</p>
+    <p><strong>Category:</strong> {{ $product->category->name }}</p>
+    <p><strong>Subcategory:</strong> {{ $product->subcategory->name }}</p>
+    <p><strong>Sizes:</strong> {{ implode(', ', $product->sizes) }}</p>
+    <p><strong>Colors:</strong> {{ implode(', ', $product->colors) }}</p>
     <p><strong>Price:</strong> ${{ $product->price }}</p>
     <p><strong>Old Price:</strong> ${{ $product->old_price }}</p>
     <p><strong>Sub Description:</strong> {{ $product->sub_description }}</p>
@@ -42,6 +44,3 @@
     </form>
     <a href="{{ route('products.index') }}">Back to Products</a>
 @endsection
-
-
-

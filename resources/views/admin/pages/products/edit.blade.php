@@ -49,11 +49,21 @@
         <label for="sub_title">Sub Title</label>
         <input type="text" name="sub_title" id="sub_title" value="{{ $product->sub_title }}" required>
 
-        <label for="size">Size</label>
-        <input type="text" name="size" id="size" value="{{ $product->size }}" required>
+        <label for="sizes">Sizes</label>
+        <div id="size-inputs">
+            @foreach($product->sizes as $size)
+                <input type="text" name="sizes[]" value="{{ $size }}" required>
+            @endforeach
+        </div>
+        <button type="button" id="add-size">Add Size</button>
 
-        <label for="color">Color</label>
-        <input type="text" name="color" id="color" value="{{ $product->color }}" required>
+        <label for="colors">Colors</label>
+        <div id="color-inputs">
+            @foreach($product->colors as $color)
+                <input type="text" name="colors[]" value="{{ $color }}" required>
+            @endforeach
+        </div>
+        <button type="button" id="add-color">Add Color</button>
 
         <label for="image">Image</label>
         <input type="file" name="image" id="image">
@@ -78,7 +88,28 @@
 
         <button type="submit">Update</button>
     </form>
-@endsection
 
+    <script>
+        document.getElementById('add-size').addEventListener('click', function() {
+            var sizeInputs = document.getElementById('size-inputs');
+            if (sizeInputs.children.length < 6) {
+                var newInput = document.createElement('input');
+                newInput.type = 'text';
+                newInput.name = 'sizes[]';
+                sizeInputs.appendChild(newInput);
+            }
+        });
+
+        document.getElementById('add-color').addEventListener('click', function() {
+            var colorInputs = document.getElementById('color-inputs');
+            if (colorInputs.children.length < 6) {
+                var newInput = document.createElement('input');
+                newInput.type = 'text';
+                newInput.name = 'colors[]';
+                colorInputs.appendChild(newInput);
+            }
+        });
+    </script>
+@endsection
 
 

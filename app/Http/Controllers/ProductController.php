@@ -28,8 +28,8 @@ class ProductController extends Controller
             'name' => 'required|string|max:255',
             'title' => 'required|string|max:255',
             'sub_title' => 'required|string|max:255',
-            'size' => 'required|string|max:50',
-            'color' => 'required|string|max:50',
+            'sizes' => 'required|array|min:1|max:6',
+            'colors' => 'required|array|min:1|max:6',
             'price' => 'required|numeric',
             'subcategory_id' => 'required|exists:subcategories,id',
             'category_id' => 'required|exists:categories,id',
@@ -41,6 +41,9 @@ class ProductController extends Controller
             $path = $request->file('image')->store('products', 'public');
             $product->image = $path;
         }
+
+        $product->sizes = $request->sizes;
+        $product->colors = $request->colors;
 
         $product->save();
 
@@ -60,8 +63,8 @@ class ProductController extends Controller
             'name' => 'required|string|max:255',
             'title' => 'required|string|max:255',
             'sub_title' => 'required|string|max:255',
-            'size' => 'required|string|max:50',
-            'color' => 'required|string|max:50',
+            'sizes' => 'required|array|min:1|max:6',
+            'colors' => 'required|array|min:1|max:6',
             'price' => 'required|numeric',
             'subcategory_id' => 'required|exists:subcategories,id',
             'category_id' => 'required|exists:categories,id',
@@ -73,6 +76,9 @@ class ProductController extends Controller
             $path = $request->file('image')->store('products', 'public');
             $product->image = $path;
         }
+
+        $product->sizes = $request->sizes;
+        $product->colors = $request->colors;
 
         $product->save();
 

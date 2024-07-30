@@ -11,8 +11,13 @@ class Product extends Model
 
     protected $fillable = [
         'subcategory_id', 'category_id', 'name', 'title', 'sub_title',
-        'size', 'color', 'image', 'price', 'old_price',
+        'sizes', 'colors', 'image', 'price', 'old_price',
         'sub_description', 'description', 'information'
+    ];
+
+    protected $casts = [
+        'sizes' => 'array',
+        'colors' => 'array',
     ];
 
     public function subcategory()

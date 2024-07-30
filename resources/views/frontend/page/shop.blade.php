@@ -16,11 +16,10 @@
     </div>
     <!-- Breadcrumb End -->
 
-
     <!-- Carousel Start -->
     <div class="container-fluid mb-3">
         <div class="row px-xl-5">
-            <div class="col-lg-6">
+            <div class="col-lg-6 mb-3">
                 <div class="carousel-item position-relative active" style="height: 430px;">
                     <img class="position-absolute w-100 h-100" src="{{ asset('frontend/img/men.gif') }}" style="object-fit: cover;">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
@@ -32,7 +31,25 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6">
+        </div>
+    </div>
+    <!-- Carousel End -->
+    {{-- <!-- Carousel Start -->
+    <div class="container-fluid mb-3">
+        <div class="row px-xl-5">
+            <div class="col-lg-6 mb-3">
+                <div class="carousel-item position-relative active" style="height: 430px;">
+                    <img class="position-absolute w-100 h-100" src="{{ asset('frontend/img/men.gif') }}" style="object-fit: cover;">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 700px;">
+                            <h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">Men Fashion</h1>
+                            <p class="mx-md-5 px-5 animate__animated animate__bounceIn">Men's fashion is a broad and dynamic field, encompassing a wide range of styles, trends, and influences. Here are some key elements and trends in men's fashion</p>
+                            <a class="btn btn-outline-light py-2 px-4 mt-3 animate__animated animate__fadeInUp" href="{{ route('men') }}">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-3">
                 <div class="carousel-item position-relative active" style="height: 430px;">
                     <img class="position-absolute w-100 h-100" src="{{ asset('frontend/img/women2.gif') }}" style="object-fit: cover;">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
@@ -46,7 +63,7 @@
             </div>
         </div>
     </div>
-    <!-- Carousel End -->
+    <!-- Carousel End --> --}}
 
 
     <div class="container-fluid mb-3">

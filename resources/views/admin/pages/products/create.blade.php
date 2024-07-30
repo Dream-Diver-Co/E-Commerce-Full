@@ -47,11 +47,17 @@
         <label for="sub_title">Sub Title</label>
         <input type="text" name="sub_title" id="sub_title" required>
 
-        <label for="size">Size</label>
-        <input type="text" name="size" id="size" required>
+        <label for="sizes">Sizes</label>
+        <div id="size-inputs">
+            <input type="text" name="sizes[]" required>
+        </div>
+        <button type="button" id="add-size">Add Size</button>
 
-        <label for="color">Color</label>
-        <input type="text" name="color" id="color" required>
+        <label for="colors">Colors</label>
+        <div id="color-inputs">
+            <input type="text" name="colors[]" required>
+        </div>
+        <button type="button" id="add-color">Add Color</button>
 
         <label for="image">Image</label>
         <input type="file" name="image" id="image">
@@ -73,7 +79,26 @@
 
         <button type="submit">Create</button>
     </form>
+
+    <script>
+        document.getElementById('add-size').addEventListener('click', function() {
+            var sizeInputs = document.getElementById('size-inputs');
+            if (sizeInputs.children.length < 6) {
+                var newInput = document.createElement('input');
+                newInput.type = 'text';
+                newInput.name = 'sizes[]';
+                sizeInputs.appendChild(newInput);
+            }
+        });
+
+        document.getElementById('add-color').addEventListener('click', function() {
+            var colorInputs = document.getElementById('color-inputs');
+            if (colorInputs.children.length < 6) {
+                var newInput = document.createElement('input');
+                newInput.type = 'text';
+                newInput.name = 'colors[]';
+                colorInputs.appendChild(newInput);
+            }
+        });
+    </script>
 @endsection
-
-
-

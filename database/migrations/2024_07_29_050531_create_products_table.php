@@ -13,10 +13,10 @@ class CreateProductsTable extends Migration
             $table->foreignId('subcategory_id')->constrained()->onDelete('cascade');
             $table->foreignId('category_id')->constrained()->onDelete('cascade');
             $table->string('name');
-            $table->string('title')->nullable();
-            $table->string('sub_title')->nullable();
-            $table->string('size');
-            $table->string('color');
+            $table->string('title');
+            $table->string('sub_title');
+            $table->json('sizes'); // Store sizes as JSON
+            $table->json('colors'); // Store colors as JSON
             $table->string('image')->nullable();
             $table->decimal('price', 8, 2);
             $table->decimal('old_price', 8, 2)->nullable();
