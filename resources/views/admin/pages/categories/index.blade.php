@@ -28,6 +28,7 @@
         <li>
             <a href="{{ route('categories.show', $category) }}">{{ $category->name }}</a>
             <span>{{ $category->subcategories_count }} Subcategories</span>
+            <a href="{{ route('categories.show', $category) }}">view</a>
             <a href="{{ route('categories.edit', $category) }}">Edit</a>
             <form action="{{ route('categories.destroy', $category) }}" method="POST" style="display:inline-block;">
                 @csrf
