@@ -60,6 +60,13 @@ Route::get('/', [FrontendController::class, 'index'])->name('index');
 Route::get('/contact', [FrontendController::class, 'contact'])->name('contact');
 Route::get('/about', [FrontendController::class, 'about'])->name('about');
 Route::get('/shop', [FrontendController::class, 'shop'])->name('shop');
+Route::get('/subcategories', [FrontendController::class, 'subcategory'])->name('subcategory');
+Route::get('/product', [FrontendController::class, 'product'])->name('product');
+Route::get('/categories/{category}/subcategories', [FrontendController::class, 'showSubcategories'])->name('categories.subcategories');
+Route::get('/subcategories/{subcategory}/products', [FrontendController::class, 'showProducts'])->name('subcategories.products');
+
+
+
 Route::get('/checkout', [FrontendController::class, 'checkout'])->name('checkout');
 Route::get('/cart', [FrontendController::class, 'cart'])->name('cart');
 Route::get('/men', [FrontendController::class, 'men'])->name('men');
@@ -167,9 +174,9 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
         Route::resource('subcategories', SubcategoryController::class);
         Route::resource('products', ProductController::class);
 
-        Route::get('categories/{category}/subcategories', [CategoryController::class, 'showSubcategories'])->name('categories.subcategories');
-        Route::get('subcategories/{subcategory}/products', [SubcategoryController::class, 'showProducts'])->name('subcategories.products');
-        
+        // Route::get('categories/{category}/subcategories', [CategoryController::class, 'showSubcategories'])->name('categories.subcategories');
+        // Route::get('subcategories/{subcategory}/products', [SubcategoryController::class, 'showProducts'])->name('subcategories.products');
+
 
 
     });

@@ -27,6 +27,8 @@ use App\Models\Food;
 use App\Models\Newborn;
 use App\Models\Stroller;
 use App\Models\Category;
+use App\Models\Subcategory;
+use App\Models\Product;
 // use Illuminate\Support\Str;
 // use Illuminate\Support\Facades\Storage;
 
@@ -60,7 +62,37 @@ class FrontendController extends Controller
 
     public function shop()
     {
-        return view('frontend.page.shop');
+        $categories = Category::withCount('subcategories')->get();
+        return view('frontend.page.shop',compact('categories'));
+    }
+
+    public function subcategory()
+    {
+        $subcategories = SubCategory::withCount('products')->get();
+        return view('frontend.page.subcategory', compact('subcategories'));
+    }
+
+    public function product()
+    {
+        $products = Product::with('subcategory', 'category')->get();
+        return view('frontend.page.product', compact('products'));
+    }
+
+    public function showSubcategories($categoryId)
+    {
+        $category = Category::with('subCategories')->findOrFail($categoryId);
+        return view('frontend.page.subcategory', compact('category'));
+    }
+
+    public function showProducts($subcategoryId)
+    {
+        // Find the subcategory
+        $subcategory = SubCategory::findOrFail($subcategoryId);
+
+        // Get paginated products for the subcategory
+        $products = $subcategory->products()->paginate(8); // Adjust the number per page as needed
+
+        return view('frontend.page.product', compact('subcategory', 'products'));
     }
 
     public function cart()
