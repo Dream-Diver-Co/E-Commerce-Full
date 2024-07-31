@@ -24,7 +24,7 @@
             <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
                 <div class="product-item bg-light mb-4">
                     <div class="product-img position-relative overflow-hidden">
-                        <img class="img-fluid w-100" style="height: 300px; width: 300px;"  src="{{ asset('frontend/img/women/tops/tops.jpg') }}" alt="">
+                        <img class="img-fluid w-100" style="height: 450px; width: 300px;"  src="{{ asset('frontend/img/women/tops/tops.jpg') }}" alt="">
                         <div class="product-action">
                             <a href="{{ route('women_tops') }}" class="btn btn-primary">Shop Now</a>
                         </div>
@@ -38,7 +38,7 @@
             <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
                 <div class="product-item bg-light mb-4">
                     <div class="product-img position-relative overflow-hidden">
-                        <img class="img-fluid w-100" style="height: 300px; width: 300px;"  src="{{ asset('frontend/img/women/dresses/Dresses.jpg') }}" alt="">
+                        <img class="img-fluid w-100" style="height: 450px; width: 300px;"  src="{{ asset('frontend/img/women/dresses/Dresses.jpg') }}" alt="">
                         <div class="product-action">
                             <a href="{{ route('women_dress') }}" class="btn btn-primary">Shop Now</a>
                         </div>
@@ -51,7 +51,7 @@
             <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
                 <div class="product-item bg-light mb-4">
                     <div class="product-img position-relative overflow-hidden">
-                        <img class="img-fluid w-100" style="height: 300px; width: 300px;"  src="{{ asset('frontend/img/women/bottom/Bottoms.jpg') }}" alt="">
+                        <img class="img-fluid w-100" style="height: 450px; width: 300px;"  src="{{ asset('frontend/img/women/bottom/Bottoms.jpg') }}" alt="">
                         <div class="product-action">
                             <a href="{{ route('women_bottom') }}" class="btn btn-primary">Shop Now</a>
                         </div>
@@ -64,7 +64,7 @@
             <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
                 <div class="product-item bg-light mb-4">
                     <div class="product-img position-relative overflow-hidden">
-                        <img class="img-fluid w-100" style="height: 300px; width: 300px;"  src="{{ asset('frontend/img/women/Kameez/Kameez.jpg') }}" alt="">
+                        <img class="img-fluid w-100" style="height: 450px; width: 300px;"  src="{{ asset('frontend/img/women/Kameez/Kameez.jpg') }}" alt="">
                         <div class="product-action">
                             <a href="{{ route('women_kameez') }}" class="btn btn-primary">Shop Now</a>
                         </div>
@@ -77,7 +77,7 @@
             <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
                 <div class="product-item bg-light mb-4">
                     <div class="product-img position-relative overflow-hidden">
-                        <img class="img-fluid w-100" style="height: 300px; width: 300px;"  src="{{ asset('frontend/img/women/Bags/Bags.jpg') }}" alt="">
+                        <img class="img-fluid w-100" style="height: 450px; width: 300px;"  src="{{ asset('frontend/img/women/Bags/Bags.jpg') }}" alt="">
                         <div class="product-action">
                             <a href="{{ route('women_bag') }}" class="btn btn-primary">Shop Now</a>
                         </div>
@@ -90,7 +90,7 @@
             <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
                 <div class="product-item bg-light mb-4">
                     <div class="product-img position-relative overflow-hidden">
-                        <img class="img-fluid w-100" style="height: 300px; width: 300px;"  src="{{ asset('frontend/img/women/Cosmetic/Cosmetic.jpg') }}" alt="">
+                        <img class="img-fluid w-100" style="height: 450px; width: 300px;"  src="{{ asset('frontend/img/women/Cosmetic/Cosmetic.jpg') }}" alt="">
                         <div class="product-action">
                             <a href="{{ route('women_cosmetic') }}" class="btn btn-primary">Shop Now</a>
                         </div>
@@ -103,7 +103,7 @@
             <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
                 <div class="product-item bg-light mb-4">
                     <div class="product-img position-relative overflow-hidden">
-                        <img class="img-fluid w-100" style="height: 300px; width: 300px;"  src="{{ asset('frontend/img/women/shoes/Shoes.jpg') }}" alt="">
+                        <img class="img-fluid w-100" style="height: 450px; width: 300px;"  src="{{ asset('frontend/img/women/shoes/Shoes.jpg') }}" alt="">
                         <div class="product-action">
                             <a href="{{ route('women_shoes') }}" class="btn btn-primary">Shop Now</a>
                         </div>
@@ -116,7 +116,7 @@
             <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
                 <div class="product-item bg-light mb-4">
                     <div class="product-img position-relative overflow-hidden">
-                        <img class="img-fluid w-100" style="height: 300px; width: 300px;"  src="{{ asset('frontend/img/product-2.jpg') }}" alt="">
+                        <img class="img-fluid w-100" style="height: 450px; width: 300px;"  src="{{ asset('frontend/img/product-2.jpg') }}" alt="">
                         <div class="product-action">
                             <a href="{{ route('juwalari') }}" class="btn btn-primary">Shop Now</a>
                         </div>
