@@ -30,6 +30,10 @@
                 <a href="{{ route('subcategories.products', $subcategory) }}">
                     {{ $subcategory->products_count }} Products
                 </a>
+                <td>
+                    <img src="{{ asset('storage/' . $subcategory->image) }}" alt="{{ $subcategory->name }}">
+                </td>
+                <td>{{ $subcategory->description }}</td>
                 <a href="{{ route('subcategories.edit', $subcategory) }}">Edit</a>
                 <form action="{{ route('subcategories.destroy', $subcategory) }}" method="POST" style="display:inline-block;">
                     @csrf
