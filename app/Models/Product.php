@@ -15,21 +15,6 @@ class Product extends Model
         'sub_description', 'description', 'information'
     ];
 
-    // protected $casts = [
-    //     'sizes' => 'array',
-    //     'colors' => 'array',
-    // ];
-
-    // public function subcategory()
-    // {
-    //     return $this->belongsTo(Subcategory::class);
-    // }
-
-    // public function category()
-    // {
-    //     return $this->belongsTo(Category::class);
-    // }
-
     protected $casts = [
         'sizes' => 'array',
         'colors' => 'array',
@@ -44,5 +29,5 @@ class Product extends Model
     {
         return $this->belongsTo(Subcategory::class);
     }
-    
+
 }
