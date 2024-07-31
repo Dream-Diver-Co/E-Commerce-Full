@@ -19,6 +19,7 @@ class ProductController extends Controller
     {
         $categories = Category::all();
         $subcategories = Subcategory::all();
+
         return view('admin.pages.products.create', compact('categories', 'subcategories'));
     }
 
