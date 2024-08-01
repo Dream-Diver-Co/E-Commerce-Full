@@ -52,6 +52,18 @@
                             <input type="text" name="sizes[]" class="form-control" required>
                         </div><br>
                     </div>
+                    {{-- <div class="form-group">
+                        <label for="sizes">Sizes</label><br>
+                        <div class="input-group" id="size-inputs">
+                            <input type="text" name="sizes[]" class="form-control" required>
+                            <span>
+                                <button type="button" id="add-size" class="btn btn-primary">
+                                    <i class="fa-solid fa-square-plus"></i>
+                                </button>
+                            </span>
+                        </div><br>
+                    </div> --}}
+
 
                     <label for="description">Description</label><br>
                     <textarea name="description" id="description" class="form-control"></textarea><br>
@@ -85,6 +97,29 @@
         </form>
     </div>
 </div>
+
+
+{{-- <script>
+    document.getElementById('add-size').addEventListener('click', function() {
+        var sizeInputs = document.getElementById('size-inputs');
+        if (sizeInputs.children.length < 12) { // Considering input and span as children
+            var newInputGroup = document.createElement('div');
+            newInputGroup.className = 'input-group mb-2'; // Add class for spacing
+
+            var newInput = document.createElement('input');
+            newInput.type = 'text';
+            newInput.name = 'sizes[]';
+            newInput.className = 'form-control';
+            newInput.required = true;
+
+            // Append the new input and button to the new input group
+            newInputGroup.appendChild(newInput);
+
+            // Insert the new input group before the button span
+            sizeInputs.insertBefore(newInputGroup, sizeInputs.lastElementChild);
+        }
+    });
+</script> --}}
 
 <script>
     document.getElementById('add-size').addEventListener('click', function() {
