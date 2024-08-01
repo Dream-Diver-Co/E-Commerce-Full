@@ -20,7 +20,12 @@
     </div>
 </div>
 <!-- end page title -->
+<div class="card">
+    <div class="card-header">Create New Hero</div>
+    <div class="card-body">
 
+    </div>
+</div>
     <h1>Create Subcategory</h1>
     <form action="{{ route('subcategories.store') }}" method="POST" enctype="multipart/form-data">
         @csrf

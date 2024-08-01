@@ -19,6 +19,12 @@
     </div>
 </div>
 
+<div class="card">
+    <div class="card-header">Create New Hero</div>
+    <div class="card-body">
+
+    </div>
+</div>
 <h1>Create Product</h1>
 <form action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data">
     @csrf

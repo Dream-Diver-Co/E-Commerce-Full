@@ -27,9 +27,10 @@
         @foreach($subcategories as $subcategory)
             <li>
                 <a href="{{ route('subcategories.show', $subcategory) }}">{{ $subcategory->name }}</a>
-                <a href="{{ route('subcategories.products', $subcategory) }}">
-                    {{ $subcategory->products_count }} Products
-                </a>
+                <span>{{ $subcategory->products_count }} Products</span>
+                {{-- <a href="{{ route('subcategories.products', $subcategory) }}">
+
+                </a> --}}
                 <td>
                     <img src="{{ asset('storage/' . $subcategory->image) }}" alt="{{ $subcategory->name }}">
                 </td>

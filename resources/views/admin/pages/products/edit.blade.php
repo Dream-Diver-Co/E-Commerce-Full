@@ -21,6 +21,13 @@
 </div>
 <!-- end page title -->
 
+<div class="card">
+    <div class="card-header">Create New Hero</div>
+    <div class="card-body">
+
+    </div>
+</div>
+
     <h1>Edit Product</h1>
     <form action="{{ route('products.update', $product) }}" method="POST" enctype="multipart/form-data">
         @csrf
