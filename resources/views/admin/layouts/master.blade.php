@@ -30,6 +30,8 @@
         <link href="{{ asset('/admin/assets/css/style.css') }}" rel="stylesheet" type="text/css" />
         {{-- Toastr --}}
         <link rel="stylesheet" href="{{ asset('/admin/assets/libs/toastr/build/toastr.min.css') }}">
+        {{-- font awesome cdn --}}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
 
         @stack('head')
 

@@ -67,7 +67,7 @@
                                     <td>{{ $category->name }}</td>
                                     <td>{{ $category->subcategories_count }} Subcategories</td>
                                     <td>
-                                        <img style="height: 50px"; width="70px" src="{{ asset('storage/' . $category->image) }}" alt="{{ $category->name }}">
+                                        <img style="height: 50px; width: 80px;" src="{{ asset('storage/' . $category->image) }}" alt="{{ $category->name }}">
                                     </td>
                                     <td>{{ $category->description }}</td>
                                     <td>
