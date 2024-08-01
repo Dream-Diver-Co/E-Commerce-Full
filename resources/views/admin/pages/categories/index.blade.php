@@ -53,7 +53,7 @@
                             <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th>Name</th>
+                                    <th>Category Name</th>
                                     <th>Total Subcategory</th>
                                     <th>Image</th>
                                     <th>Description</th>
