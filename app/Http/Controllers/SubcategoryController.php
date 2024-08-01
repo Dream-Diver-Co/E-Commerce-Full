@@ -36,7 +36,7 @@ class SubcategoryController extends Controller
 
         Subcategory::create($data);
 
-        return redirect()->route('subcategories.index');
+        return redirect()->back()->with('success', 'SubCategory created successfully!');
     }
 
     public function show(Subcategory $subcategory)
@@ -74,7 +74,7 @@ class SubcategoryController extends Controller
 
         $subcategory->update($data);
 
-        return redirect()->route('subcategories.index');
+        return redirect()->route('subcategories.index')->with('success', 'SubCategory Update successfully!');
     }
 
     public function destroy(Subcategory $subcategory)

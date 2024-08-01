@@ -33,7 +33,7 @@ class CategoryController extends Controller
 
         Category::create($data);
 
-        return redirect()->route('categories.index');
+        return redirect()->back()->with('success', 'Category created successfully!');
     }
 
     public function show(Category $category)
@@ -69,7 +69,7 @@ class CategoryController extends Controller
 
         $category->update($data);
 
-        return redirect()->route('categories.index');
+        return redirect()->route('categories.index')->with('success', 'Category Update successfully!');
     }
 
     public function destroy(Category $category)

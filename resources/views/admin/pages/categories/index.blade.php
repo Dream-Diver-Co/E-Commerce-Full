@@ -1,18 +1,18 @@
 @extends('admin.layouts.master')
 
-@section('title', 'Profile')
+@section('title', 'Categories List')
 @section('content')
 
 <!-- start page title -->
 <div class="row">
     <div class="col-12">
         <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-            <h4 class="mb-sm-0">Profile</h4>
+            <h4 class="mb-sm-0">Categories List</h4>
 
             <div class="page-title-right">
                 <ol class="breadcrumb m-0">
-                    <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">{{ env('APP_NAME') }}</a></li>
-                    <li class="breadcrumb-item active">Profile</li>
+                    <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
+                    <li class="breadcrumb-item active">Categories List</li>
                 </ol>
             </div>
 
@@ -21,27 +21,85 @@
 </div>
 <!-- end page title -->
 
-<h1>Categories</h1>
-<a href="{{ route('categories.create') }}">Create Category</a>
-<ul>
-    @foreach($categories as $category)
-        <li>
-            <a href="{{ route('categories.show', $category) }}">{{ $category->name }}</a>
-            <span>{{ $category->subcategories_count }} Subcategories</span>
-            <td>
-                <img src="{{ asset('storage/' . $category->image) }}" alt="{{ $category->name }}">
-            </td>
-            <td>{{ $category->description }}</td>
-            <a href="{{ route('categories.show', $category) }}">view</a>
-            <a href="{{ route('categories.edit', $category) }}">Edit</a>
-            <form action="{{ route('categories.destroy', $category) }}" method="POST" style="display:inline-block;">
-                @csrf
-                @method('DELETE')
-                <button type="submit">Delete</button>
-            </form>
-        </li>
-    @endforeach
-</ul>
+<!-- success message -->
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <!-- Check for success message -->
+            @if(session('success'))
+                <div id="success-message" class="alert alert-success">
+                    {{ session('success') }}
+                </div>
+            @endif
+        </div>
+    </div>
+</div>
+<!-- success message -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h2>Categories List</h2>
+                </div>
+                <div class="card-body">
+                    <a href="{{ route('categories.create') }}" class="btn btn-success btn-sm" title="Add New Hero">
+                        Create Category
+                    </a>
+                    <br/><br/>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Category Name</th>
+                                    <th>Total Subcategory</th>
+                                    <th>Image</th>
+                                    <th>Description</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach($categories as $category)
+                                <tr>
+                                    <td>{{ $loop->iteration }}</td>
+                                    <td>{{ $category->name }}</td>
+                                    <td>{{ $category->subcategories_count }} Subcategories</td>
+                                    <td>
+                                        <img style="height: 50px; width: 80px;" src="{{ asset('storage/' . $category->image) }}" alt="{{ $category->name }}">
+                                    </td>
+                                    <td>{{ $category->description }}</td>
+                                    <td>
+                                        <a href="{{ route('categories.edit', $category) }}" title="Edit" class="btn btn-primary btn-sm">Edit</a>
+                                        <form method="POST" action="{{ route('categories.destroy', $category) }}" accept-charset="UTF-8" style="display:inline">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-danger btn-sm" title="Delete Category" onclick="return confirm('Are you sure you want to delete this Category?')"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Auto-hide the success message after 5 seconds
+    document.addEventListener('DOMContentLoaded', function () {
+        const successMessage = document.getElementById('success-message');
+        if (successMessage) {
+            setTimeout(() => {
+                successMessage.style.display = 'none';
+            }, 5000); // 5000 milliseconds = 5 seconds
+        }
+    });
+</script>
 @endsection
 
 
