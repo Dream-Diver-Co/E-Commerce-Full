@@ -76,7 +76,7 @@
                                         <form method="POST" action="{{ route('subcategories.destroy', $subcategory) }}" accept-charset="UTF-8" style="display:inline">
                                             @csrf
                                             @method('DELETE')
-                                            <button type="submit" class="btn btn-danger btn-sm" title="Delete Category" onclick="return confirm('Are you sure you want to delete this Category?')"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</button>
+                                            <button type="submit" class="btn btn-danger btn-sm" title="Delete Category" onclick="return confirm('Are you sure you want to delete this SubCategory?')"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</button>
                                         </form>
                                     </td>
                                 </tr>
