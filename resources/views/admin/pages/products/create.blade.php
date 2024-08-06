@@ -1,17 +1,18 @@
+
 @extends('admin.layouts.master')
 
-@section('title', 'Profile')
+@section('title', 'Product')
 @section('content')
 
 <div class="row">
     <div class="col-12">
         <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-            <h4 class="mb-sm-0">Profile</h4>
+            <h4 class="mb-sm-0">Product</h4>
 
             <div class="page-title-right">
                 <ol class="breadcrumb m-0">
-                    <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">{{ env('APP_NAME') }}</a></li>
-                    <li class="breadcrumb-item active">Profile</li>
+                    <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
+                    <li class="breadcrumb-item active">Product</li>
                 </ol>
             </div>
 
@@ -34,16 +35,12 @@
                     </select><br>
                     <label for="name">Name</label>
                     <input type="text" name="name" id="name" class="form-control" required><br>
+
                     <label for="image">Image</label><br>
                     <input type="file" name="image" id="image" class="form-control"><br>
+
                     <label for="price">Price</label><br>
                     <input type="number" name="price" id="price" step="0.01" class="form-control" required><br>
-
-                    {{-- <label for="sizes">Sizes</label><br>
-                    <div id="size-inputs">
-                        <input type="text" name="sizes[]" class="form-control" required>
-                    </div>
-                    <button type="button" id="add-size">Add Size</button><br><br> --}}
 
                     <div class="form-group">
                         <label for="sizes">Sizes</label><br>
@@ -52,18 +49,6 @@
                             <input type="text" name="sizes[]" class="form-control" required>
                         </div><br>
                     </div>
-                    {{-- <div class="form-group">
-                        <label for="sizes">Sizes</label><br>
-                        <div class="input-group" id="size-inputs">
-                            <input type="text" name="sizes[]" class="form-control" required>
-                            <span>
-                                <button type="button" id="add-size" class="btn btn-primary">
-                                    <i class="fa-solid fa-square-plus"></i>
-                                </button>
-                            </span>
-                        </div><br>
-                    </div> --}}
-
 
                     <label for="description">Description</label><br>
                     <textarea name="description" id="description" class="form-control"></textarea><br>
@@ -83,65 +68,64 @@
                     <input type="text" name="sub_title" id="sub_title" class="form-control" required><br>
                     <label for="old_price">Old Price</label><br>
                     <input type="number" name="old_price" id="old_price" step="0.01" class="form-control"><br>
-                    <label for="colors">Colors</label><br>
-                    <div id="color-inputs">
-                        <input type="text" name="colors[]" class="form-control" required>
+
+
+                    <div class="form-group">
+                        <label for="colors">Colors</label><br>
+                        <div class="input-group" id="color-inputs">
+                            <span><button type="button" id="add-color" class="btn btn-primary"><i class="fa-solid fa-square-plus"></i></button></span>
+                            <input type="text" name="colors[]" class="form-control" required>
+                        </div><br>
                     </div>
-                    <button type="button" id="add-color">Add Color</button><br><br>
                     <label for="sub_description">Sub Description</label><br>
                     <textarea name="sub_description" id="sub_description" class="form-control"></textarea><br>
-
                 </div>
             </div>
-            <button type="submit">Create</button>
+            <button type="submit" class="btn btn-success">Save</button>
         </form>
     </div>
 </div>
 
 
-{{-- <script>
-    document.getElementById('add-size').addEventListener('click', function() {
-        var sizeInputs = document.getElementById('size-inputs');
-        if (sizeInputs.children.length < 12) { // Considering input and span as children
-            var newInputGroup = document.createElement('div');
-            newInputGroup.className = 'input-group mb-2'; // Add class for spacing
-
-            var newInput = document.createElement('input');
-            newInput.type = 'text';
-            newInput.name = 'sizes[]';
-            newInput.className = 'form-control';
-            newInput.required = true;
-
-            // Append the new input and button to the new input group
-            newInputGroup.appendChild(newInput);
-
-            // Insert the new input group before the button span
-            sizeInputs.insertBefore(newInputGroup, sizeInputs.lastElementChild);
-        }
-    });
-</script> --}}
-
+{{-- size and color script --}}
 <script>
-    document.getElementById('add-size').addEventListener('click', function() {
-        var sizeInputs = document.getElementById('size-inputs');
-        if (sizeInputs.children.length < 6) {
+    // Function to add new input fields
+    function addInput(containerId, inputName, limit) {
+        var container = document.getElementById(containerId);
+        // Calculate current input fields (ignoring the span/button)
+        var inputCount = (container.children.length - 1);
+        if (inputCount < limit) {
             var newInput = document.createElement('input');
             newInput.type = 'text';
-            newInput.name = 'sizes[]';
+            newInput.name = inputName;
             newInput.className = 'form-control'; // Add class for consistent styling and spacing
             newInput.required = true; // Ensure it's marked as required
-            sizeInputs.appendChild(newInput);
+            container.insertBefore(newInput, container.lastElementChild);
         }
+    }
+
+    // Event listener for adding size inputs
+    document.getElementById('add-size').addEventListener('click', function() {
+        addInput('size-inputs', 'sizes[]', 6);
     });
 
+    // Event listener for adding color inputs
     document.getElementById('add-color').addEventListener('click', function() {
-        var colorInputs = document.getElementById('color-inputs');
-        if (colorInputs.children.length < 6) {
-            var newInput = document.createElement('input');
-            newInput.type = 'text';
-            newInput.name = 'colors[]';
-            colorInputs.appendChild(newInput);
+        addInput('color-inputs', 'colors[]', 6);
+    });
+</script>
+
+{{-- success message --}}
+<script>
+    // Auto-hide the success message after 5 seconds
+    document.addEventListener('DOMContentLoaded', function () {
+        const successMessage = document.getElementById('success-message');
+        if (successMessage) {
+            setTimeout(() => {
+                successMessage.style.display = 'none';
+            }, 5000); // 5000 milliseconds = 5 seconds
         }
     });
 </script>
+
 @endsection
