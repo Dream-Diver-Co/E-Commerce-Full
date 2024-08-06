@@ -9,8 +9,8 @@
             <nav class="breadcrumb bg-light mb-30">
                 <a class="breadcrumb-item text-dark" href="{{ route('index') }}">Home</a>
                 <a class="breadcrumb-item text-dark" href="{{ route('shop') }}">Shop</a>
-                <a class="breadcrumb-item text-dark" href="{{ route('men') }}">Men</a>
-                <span class="breadcrumb-item active">Pnajabi List</span>
+                <a class="breadcrumb-item text-dark" href="">Products Items</a>
+                <span class="breadcrumb-item active">Products List</span>
             </nav>
         </div>
     </div>
@@ -19,7 +19,7 @@
 
 <!-- Products Start -->
 <div class="container-fluid">
-    <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Panjabi Featured Products</span></h2>
+    <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">New Featured Products</span></h2>
     <div class="row px-xl-5">
         @foreach($subcategory->products as $product)
         <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
