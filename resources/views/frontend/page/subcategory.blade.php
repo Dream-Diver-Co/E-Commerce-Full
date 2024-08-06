@@ -9,7 +9,7 @@
             <nav class="breadcrumb bg-light mb-30">
                 <a class="breadcrumb-item text-dark" href="{{ route('index') }}">Home</a>
                 <a class="breadcrumb-item text-dark" href="{{ route('shop') }}">Shop</a>
-                <span class="breadcrumb-item active">Subcategory Shop List</span>
+                <span class="breadcrumb-item active">Products Items List</span>
             </nav>
         </div>
     </div>
