@@ -30,3 +30,9 @@ label.required::after{
     margin: 2px;
 }
 
+.action-btn{
+    height: 30px;
+    width: 60px;
+    margin-bottom: 5px;
+   }
+

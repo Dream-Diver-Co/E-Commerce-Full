@@ -27,13 +27,13 @@
                         <div class="p-3" style="max-width: 700px;">
                             <h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">{{ $category->name }}</h1>
                             <p class="mx-md-5 px-5 animate__animated animate__bounceIn">{{ $category->description }}</p>
-                            <p>
+                            {{-- <p>
                                 Subcategories:
                                 <a href="{{ route('categories.subcategories', $category->id) }}">
                                     {{ $category->subcategories_count }}
                                 </a>
-                            </p>
-                            <a class="btn btn-outline-light py-2 px-4 mt-3 animate__animated animate__fadeInUp" href="{{ route('men') }}">Shop Now</a>
+                            </p> --}}
+                            <a class="btn btn-outline-light py-2 px-4 mt-3 animate__animated animate__fadeInUp" href="{{ route('categories.subcategories', $category->id) }}">Shop Now</a>
                         </div>
                     </div>
                 </div>

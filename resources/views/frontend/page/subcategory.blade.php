@@ -27,17 +27,17 @@
                 <div class="product-img position-relative overflow-hidden">
                     <img class="img-fluid w-100" style="height: 300px; width: 300px;"  src="{{ asset('storage/' . $subCategory->image) }}" alt="{{ $subCategory->name }}">
                     <div class="product-action">
-                        <a href="" class="btn btn-primary">Shop Now</a>
-                        <p>
+                        <a href="{{ route('subcategories.products', $subCategory->id) }}" class="btn btn-primary">Shop Now</a>
+                        {{-- <p>
                             Products:
                             <a href="{{ route('subcategories.products', $subCategory->id) }}">
                                 Products{{ $subCategory->products_count }}
                             </a>
-                        </p>
+                        </p> --}}
                     </div>
                 </div>
                 <div class="text-center py-4">
-                    <a class="h6 text-decoration-none text-truncate" href="">{{ $subCategory->name }}</a>
+                    <a class="h6 text-decoration-none text-truncate" href="{{ route('subcategories.products', $subCategory->id) }}">{{ $subCategory->name }}</a>
                 </div>
             </div>
         </div>
