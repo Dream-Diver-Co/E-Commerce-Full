@@ -49,7 +49,7 @@
                             <label for="sizes">Sizes</label><br>
                             <div class="input-group" id="size-inputs">
                                 @foreach($product->sizes as $size)
-                                <input class="form-control" type="text" name="sizes[]" class="form-control" value="{{ $size }}" required>
+                                <input class="form-control" type="text" name="sizes[]" class="form-control" value="{{ $size }}">
                                 @endforeach
                                 <span>
                                     <button type="button" id="add-size" class="btn btn-primary">
@@ -80,7 +80,7 @@
                             <label for="colors">Colors</label><br>
                             <div class="input-group" id="color-inputs">
                                 @foreach($product->colors as $color)
-                                <input class="form-control" type="text" name="colors[]" value="{{ $color }}" required>
+                                <input class="form-control" type="text" name="colors[]" value="{{ $color }}">
                                 @endforeach
                                 <span>
                                     <button type="button" id="add-color" class="btn btn-primary">

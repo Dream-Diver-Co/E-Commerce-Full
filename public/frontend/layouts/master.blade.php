@@ -38,6 +38,9 @@
 
     @yield("content")
 
+    <div id="successMessage" style="display:none; position: fixed; top: 10px; right: 10px; background-color: green; color: white; padding: 10px; border-radius: 5px;"></div>
+
+
     <!-- Modal start -->
     <section>
         <!-- Product view modal start -->

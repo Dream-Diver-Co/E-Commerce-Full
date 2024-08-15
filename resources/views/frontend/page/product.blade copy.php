@@ -28,21 +28,17 @@
                     <img class="img-fluid w-100" style="height: 300px; width: 300px;" src="{{ asset('storage/'. $product->image) }}" alt="">
                     <div class="product-action">
                         <a href="#" class="btn btn-outline-dark btn-square view-item-btn"
-                        data-toggle="modal"
-                        data-target="#itemModal"
-                        data-id="{{ $product->id }}"
-                        data-name="{{ $product->name }}"
-                        data-price="{{ $product->price }}"
-                        data-image="{{ asset('storage/'. $product->image) }}"
-                        data-subtitle="{{ $product->subtitle }}"
-                        data-description="{{ $product->description }}"
-                        data-information="{{ $product->information }}"
-                        data-sizes="{{ json_encode($product->sizes) }}"
-                        data-colors="{{ json_encode($product->colors) }}">
-                        <i class="fa fa-eye" aria-hidden="true"></i>
-                    </a>
-
-
+                            data-toggle="modal"
+                            data-target="#itemModal"
+                            data-id="{{ $product->id }}"
+                            data-name="{{ $product->name }}"
+                            data-price="{{ $product->price }}"
+                            data-image="{{ asset('storage/'. $product->image) }}"
+                            data-subtitle="{{ $product->subtitle }}"
+                            data-description="{{ $product->description }}"
+                            data-information="{{ $product->information }}">
+                            <i class="fa fa-eye" aria-hidden="true"></i>
+                        </a>
                         <a class="btn btn-outline-dark btn-square product-heart-btn" data-name="{{ $product->name }}" data-price="{{ $product->price }}" data-image="{{ asset('storage/'. $product->image) }}" href="#"><i class="far fa-heart"></i></a>
                     </div>
                 </div>

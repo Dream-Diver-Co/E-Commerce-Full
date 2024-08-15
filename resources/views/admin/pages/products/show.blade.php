@@ -44,13 +44,13 @@
         @endif
         </p>
 
-        <a href="{{ route('products.edit', $product) }}" class="btn btn-warning">Edit</a>
-        <form action="{{ route('products.destroy', $product) }}" method="POST" style="display:inline-block;">
-            @csrf
-            @method('DELETE')
-            <button type="submit" class="btn btn-danger">Delete</button>
+        <a href="{{ route('products.edit', $product) }}" class="btn btn-warning btn-sm action-btn">Edit</a>
+        <form action="{{ route('products.destroy', $product) }}" method="POST" style="display:inline">
+            {{ method_field('DELETE') }}
+            {{ csrf_field() }}
+            <button type="submit" class="btn btn-danger btn-sm action-btn" title="Delete product" onclick="return confirm('Confirm delete?')">Delete</button>
         </form>
-        <a href="{{ route('products.index') }}" class="btn btn-secondary">Back to Products</a>
+        <a href="{{ route('products.index') }}" class="btn btn-secondary btn-sm action-btn" style="width: 114px">Back to Products</a>
     </div>
 </div>
 

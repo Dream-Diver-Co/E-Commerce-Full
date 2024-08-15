@@ -84,7 +84,7 @@
                             </div>
                             <h3 class="font-weight-semi-bold mb-4">$<span id="itemModalPrice"></span></h3>
                             <p class="mb-4" id="itemModalSubtitle"></p>
-                            {{-- <div class="d-flex mb-3">
+                            <div class="d-flex mb-3">
                                 <strong class="text-dark mr-3">Sizes:</strong>
                                 <form id="itemModalSizeForm">
                                     <div class="custom-control custom-radio custom-control-inline">
@@ -133,27 +133,7 @@
                                         <label class="custom-control-label" for="color-5">Green</label>
                                     </div>
                                 </form>
-                            </div> --}}
-
-                            {{-- <div class="d-flex mb-3" id="itemModalSizesContainer" style="display: none;">
-                                <strong class="text-dark mr-3">Sizes:</strong>
-                                <form id="itemModalSizeForm"></form>
                             </div>
-                            <div class="d-flex mb-4" id="itemModalColorsContainer" style="display: none;">
-                                <strong class="text-dark mr-3">Colors:</strong>
-                                <form id="itemModalColorForm"></form>
-                            </div> --}}
-
-                            <div id="itemModalSizeForm" class="mb-3">
-                                <label>Size:</label>
-                                <div id="size-options"></div>
-                            </div>
-
-                            <div id="itemModalColorForm" class="mb-3">
-                                <label>Color:</label>
-                                <div id="color-options"></div>
-                            </div>
-
                             <div class="d-flex align-items-center mb-4 pt-2">
                                 <div class="input-group quantity mr-3" style="width: 130px;">
                                     <div class="input-group-btn">
