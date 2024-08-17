@@ -69,41 +69,12 @@ Route::get('/subcategories/{subcategory}/products', [FrontendController::class, 
 
 Route::get('/checkout', [FrontendController::class, 'checkout'])->name('checkout');
 Route::get('/cart', [FrontendController::class, 'cart'])->name('cart');
-Route::get('/men', [FrontendController::class, 'men'])->name('men');
-Route::get('/women', [FrontendController::class, 'women'])->name('women');
-Route::get('/baby', [FrontendController::class, 'baby'])->name('baby');
 Route::get('/faq', [FrontendController::class, 'faq'])->name('faq');
 Route::get('/review', [FrontendController::class, 'review'])->name('review');
 
 
-Route::get('/men_blazer', [FrontendController::class, 'men_blazer'])->name('men_blazer');
-Route::get('/men_bottom', [FrontendController::class, 'men_bottom'])->name('men_bottom');
-Route::get('/men_casul_shirt', [FrontendController::class, 'men_casul_shirt'])->name('men_casul_shirt');
-Route::get('/men_formal_shirt', [FrontendController::class, 'men_formal_shirt'])->name('men_formal_shirt');
-Route::get('/men_panjabi', [FrontendController::class, 'men_panjabi'])->name('men_panjabi');
-Route::get('/men_polo', [FrontendController::class, 'men_polo'])->name('men_polo');
-Route::get('/men_shoes', [FrontendController::class, 'men_shoes'])->name('men_shoes');
-Route::get('/men_t_shirt', [FrontendController::class, 'men_t_shirt'])->name('men_t_shirt');
-
-Route::get('/women_bag', [FrontendController::class, 'women_bag'])->name('women_bag');
-Route::get('/women_bottom', [FrontendController::class, 'women_bottom'])->name('women_bottom');
-Route::get('/women_cosmetic', [FrontendController::class, 'women_cosmetic'])->name('women_cosmetic');
-Route::get('/women_dress', [FrontendController::class, 'women_dress'])->name('women_dress');
-Route::get('/women_kameez', [FrontendController::class, 'women_kameez'])->name('women_kameez');
-Route::get('/women_shoes', [FrontendController::class, 'women_shoes'])->name('women_shoes');
-Route::get('/women_tops', [FrontendController::class, 'women_tops'])->name('women_tops');
-Route::get('/juwalari', [FrontendController::class, 'juwalari'])->name('juwalari');
-
-Route::get('/baby_clothing', [FrontendController::class, 'baby_clothing'])->name('baby_clothing');
-Route::get('/baby_foods', [FrontendController::class, 'baby_foods'])->name('baby_foods');
-Route::get('/baby_newborn', [FrontendController::class, 'baby_newborn'])->name('baby_newborn');
-Route::get('/baby_strollers', [FrontendController::class, 'baby_strollers'])->name('baby_strollers');
-
-
 Route::get('/offer', [FrontendController::class, 'offer'])->name('offer');
 Route::get('/product_details/{id}', [FrontendController::class, 'product_details'])->name('product_details');
-
-
 
 
 
