@@ -175,6 +175,12 @@ $(document).ready(function() {
             displayCart();
             $('#itemModal').modal('hide');
         });
+
+
+
+
+
+
     });
 
     // Shopping cart display and functionality
