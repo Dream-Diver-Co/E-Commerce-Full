@@ -42,14 +42,14 @@
                         <i class="fa fa-eye" aria-hidden="true"></i>
                     </a> --}}
 
-                    <a href="#" class="btn btn-outline-dark btn-square view-item-btn"
+                        <a href="#" class="btn btn-outline-dark btn-square view-item-btn"
                             data-toggle="modal"
                             data-target="#itemModal"
                             data-id="{{ $product->id }}"
                             data-name="{{ $product->name }}"
                             data-price="{{ $product->price }}"
                             data-image="{{ asset('storage/'. $product->image) }}"
-                            data-subtitle="{{ $product->subtitle }}"
+                            data-subtitle="{{ $product->sub_title }}"
                             data-description="{{ $product->description }}"
                             data-information="{{ $product->information }}"
                             data-sizes="{{ json_encode($product->sizes) }}"
