@@ -96,65 +96,6 @@
                                     </div>
                                     <h3 class="font-weight-semi-bold mb-4">$<span id="itemModalPrice"></span></h3>
                                     <p class="mb-4" id="itemModalSubtitle"></p>
-                                    {{-- <div class="d-flex mb-3">
-                                        <strong class="text-dark mr-3">Sizes:</strong>
-                                        <form id="itemModalSizeForm">
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" class="custom-control-input" id="size-1" name="size" value="XS">
-                                                <label class="custom-control-label" for="size-1">XS</label>
-                                            </div>
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" class="custom-control-input" id="size-2" name="size" value="S">
-                                                <label class="custom-control-label" for="size-2">S</label>
-                                            </div>
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" class="custom-control-input" id="size-3" name="size" value="M">
-                                                <label class="custom-control-label" for="size-3">M</label>
-                                            </div>
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" class="custom-control-input" id="size-4" name="size" value="L">
-                                                <label class="custom-control-label" for="size-4">L</label>
-                                            </div>
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" class="custom-control-input" id="size-5" name="size" value="XL">
-                                                <label class="custom-control-label" for="size-5">XL</label>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <div class="d-flex mb-4">
-                                        <strong class="text-dark mr-3">Colors:</strong>
-                                        <form id="itemModalColorForm">
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" class="custom-control-input" id="color-1" name="color" value="Black">
-                                                <label class="custom-control-label" for="color-1">Black</label>
-                                            </div>
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" class="custom-control-input" id="color-2" name="color" value="White">
-                                                <label class="custom-control-label" for="color-2">White</label>
-                                            </div>
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" class="custom-control-input" id="color-3" name="color" value="Red">
-                                                <label class="custom-control-label" for="color-3">Red</label>
-                                            </div>
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" class="custom-control-input" id="color-4" name="color" value="Blue">
-                                                <label class="custom-control-label" for="color-4">Blue</label>
-                                            </div>
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" class="custom-control-input" id="color-5" name="color" value="Green">
-                                                <label class="custom-control-label" for="color-5">Green</label>
-                                            </div>
-                                        </form>
-                                    </div> --}}
-
-                                    {{-- <div class="d-flex mb-3" id="itemModalSizesContainer" style="display: none;">
-                                        <strong class="text-dark mr-3">Sizes:</strong>
-                                        <form id="itemModalSizeForm"></form>
-                                    </div>
-                                    <div class="d-flex mb-4" id="itemModalColorsContainer" style="display: none;">
-                                        <strong class="text-dark mr-3">Colors:</strong>
-                                        <form id="itemModalColorForm"></form>
-                                    </div> --}}
 
                                     <div id="itemModalSizeForm" class="mb-3">
                                         <label>Size:</label>

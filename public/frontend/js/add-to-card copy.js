@@ -136,26 +136,62 @@ $(document).ready(function() {
         e.preventDefault();
 
         // Retrieve data attributes
-        var id = $(this).data('id');
         var name = $(this).data('name');
         var price = $(this).data('price');
         var image = $(this).data('image');
         var subtitle = $(this).data('subtitle');
         var description = $(this).data('description');
         var information = $(this).data('information');
+        var sizes = $(this).data('sizes') || [];  // Ensure it's an array
+        var colors = $(this).data('colors') || [];  // Ensure it's an array
 
         // Update modal content
         $('#itemModalImage').attr('src', image);
         $('#itemModalName').text(name);
-        $('#itemModalPrice').text(price);
+        $('#itemModalPrice').text(`${price}`);
         $('#itemModalSubtitle').text(subtitle);
         $('#itemModalDescription').text(description);
         $('#itemModalInformation').text(information);
 
         // Clear previous selections
-        $('#itemModalSizeForm input[type=radio]').prop('checked', false);
-        $('#itemModalColorForm input[type=radio]').prop('checked', false);
-        $('#itemModalQuantity').val('1');
+        $('#itemModalSizeForm').empty();
+        $('#itemModalColorForm').empty();
+
+        // Handle sizes
+        if (sizes.length > 0) {
+            $('#itemModalSizesContainer').show();
+            sizes.slice(0, 6).forEach((size, index) => {
+                if (size) {
+                    var sizeInput = `
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="size-${index + 1}" name="size" value="${size}">
+                            <label class="custom-control-label" for="size-${index + 1}">${size}</label>
+                        </div>
+                    `;
+                    $('#itemModalSizeForm').append(sizeInput);
+                }
+            });
+        } else {
+            $('#itemModalSizesContainer').hide();
+        }
+
+        // Handle colors
+        if (colors.length > 0) {
+            $('#itemModalColorsContainer').show();
+            colors.slice(0, 6).forEach((color, index) => {
+                if (color) {
+                    var colorInput = `
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="color-${index + 1}" name="color" value="${color}">
+                            <label class="custom-control-label" for="color-${index + 1}">${color}</label>
+                        </div>
+                    `;
+                    $('#itemModalColorForm').append(colorInput);
+                }
+            });
+        } else {
+            $('#itemModalColorsContainer').hide();
+        }
 
         // Open the modal
         $('#itemModal').modal('show');
@@ -174,12 +210,15 @@ $(document).ready(function() {
             shoppingCart.addItemToCart(name, price, quantity, image, size, color);
             displayCart();
             $('#itemModal').modal('hide');
+
+            // Show success message modal
+            $('#successModal').modal('show');
+
+            // Auto-hide the success modal after 5 seconds
+            setTimeout(function() {
+                $('#successModal').modal('hide');
+            }, 3000);
         });
-
-
-
-
-
 
     });
 
