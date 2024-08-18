@@ -152,7 +152,7 @@
             {{ $categories->links('pagination::bootstrap-4') }}
         </div> --}}
         <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-            <a class="text-decoration-none" href="{{ route('men') }}">
+            <a class="text-decoration-none" href="">
                 <div class="cat-item d-flex align-items-center mb-4">
                     <div class="overflow-hidden" style="width: 100px; height: 100px;">
                         <img class="img-fluid" style="height: 100%; width: 100%;" src="{{ asset('frontend/img/men.gif') }}" alt="">
@@ -165,7 +165,7 @@
             </a>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-            <a class="text-decoration-none" href="{{ route('men_panjabi') }}">
+            <a class="text-decoration-none" href="">
                 <div class="cat-item img-zoom d-flex align-items-center mb-4">
                     <div class="overflow-hidden" style="width: 100px; height: 100px;">
                         <img class="img-fluid" src="{{ asset('frontend/img/men/panjabi/Panjabi.jpg') }}" alt="">
@@ -178,7 +178,7 @@
             </a>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-            <a class="text-decoration-none" href="{{ route('men_shoes') }}">
+            <a class="text-decoration-none" href="">
                 <div class="cat-item img-zoom d-flex align-items-center mb-4">
                     <div class="overflow-hidden" style="width: 100px; height: 100px;">
                         <img class="img-fluid" src="{{ asset('frontend/img/cat-3.jpg') }}" alt="">
@@ -191,7 +191,7 @@
             </a>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-            <a class="text-decoration-none" href="{{ route('men_casul_shirt') }}">
+            <a class="text-decoration-none" href="">
                 <div class="cat-item img-zoom d-flex align-items-center mb-4">
                     <div class="overflow-hidden" style="width: 100px; height: 100px;">
                         <img class="img-fluid" src="{{ asset('frontend/img/men/c-shirt/Casual.jpg') }}" alt="">
@@ -204,7 +204,7 @@
             </a>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-            <a class="text-decoration-none" href="{{ route('women') }}">
+            <a class="text-decoration-none" href="">
                 <div class="cat-item img-zoom d-flex align-items-center mb-4">
                     <div class="overflow-hidden" style="width: 100px; height: 100px;">
                         <img class="img-fluid" style="height: 100%; width: 100%;" src="{{ asset('frontend/img/women2.gif') }}" alt="">
@@ -217,7 +217,7 @@
             </a>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-            <a class="text-decoration-none" href="{{ route('women_dress') }}">
+            <a class="text-decoration-none" href="">
                 <div class="cat-item img-zoom d-flex align-items-center mb-4">
                     <div class="overflow-hidden" style="width: 100px; height: 100px;">
                         <img class="img-fluid" src="{{ asset('frontend/img/women/dresses/Dresses.jpg') }}" alt="">
@@ -230,7 +230,7 @@
             </a>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-            <a class="text-decoration-none" href="{{ route('women_cosmetic') }}">
+            <a class="text-decoration-none" href="">
                 <div class="cat-item img-zoom d-flex align-items-center mb-4">
                     <div class="overflow-hidden" style="width: 100px; height: 100px;">
                         <img class="img-fluid" style="height: 100%; width: 100%;" src="{{ asset('frontend/img/women/Cosmetic/Cosmetic.jpg') }}" alt="">
@@ -243,7 +243,7 @@
             </a>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-            <a class="text-decoration-none" href="{{ route('women_bag') }}">
+            <a class="text-decoration-none" href="">
                 <div class="cat-item img-zoom d-flex align-items-center mb-4">
                     <div class="overflow-hidden" style="width: 100px; height: 100px;">
                         <img class="img-fluid" src="{{ asset('frontend/img/women/Bags/Bags.jpg') }}" alt="">
@@ -256,7 +256,7 @@
             </a>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-            <a class="text-decoration-none" href="{{ route('baby') }}">
+            <a class="text-decoration-none" href="">
                 <div class="cat-item img-zoom d-flex align-items-center mb-4">
                     <div class="overflow-hidden" style="width: 100px; height: 100px;">
                         <img class="img-fluid" style="height: 100%; width: 100%;" src="{{ asset('frontend/img/baby.gif') }}" alt="">
@@ -269,7 +269,7 @@
             </a>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-            <a class="text-decoration-none" href="{{ route('baby_foods') }}">
+            <a class="text-decoration-none" href="">
                 <div class="cat-item img-zoom d-flex align-items-center mb-4">
                     <div class="overflow-hidden" style="width: 100px; height: 100px;">
                         <img class="img-fluid" src="{{ asset('frontend/img/baby.png') }}" alt="">
@@ -282,7 +282,7 @@
             </a>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-            <a class="text-decoration-none" href="{{ route('baby_clothing') }}">
+            <a class="text-decoration-none" href="">
                 <div class="cat-item img-zoom d-flex align-items-center mb-4">
                     <div class="overflow-hidden" style="width: 100px; height: 100px;">
                         <img class="img-fluid" src="{{ asset('frontend/img/baby2.jpg') }}" alt="">
@@ -295,7 +295,7 @@
             </a>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-            <a class="text-decoration-none" href="{{ route('baby_strollers') }}">
+            <a class="text-decoration-none" href="">
                 <div class="cat-item img-zoom d-flex align-items-center mb-4">
                     <div class="overflow-hidden" style="width: 100px; height: 100px;">
                         <img class="img-fluid" src="{{ asset('frontend/img/baby4.png') }}" alt="">

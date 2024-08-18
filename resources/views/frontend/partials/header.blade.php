@@ -137,20 +137,20 @@
                         <div class="nav-item dropdown dropright">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Dresses <i class="fa fa-angle-right float-right mt-1"></i></a>
                             <div class="dropdown-menu position-absolute rounded-0 border-0 m-0">
-                                <a href="{{ route('men') }}" class="dropdown-item">Men's Dresses</a>
-                                <a href="{{ route('women') }}" class="dropdown-item">Women's Dresses</a>
-                                <a href="{{ route('baby') }}" class="dropdown-item">Baby's Dresses</a>
+                                <a href="" class="dropdown-item">Men's Dresses</a>
+                                <a href="" class="dropdown-item">Women's Dresses</a>
+                                <a href="" class="dropdown-item">Baby's Dresses</a>
                             </div>
                         </div>
-                        <a href="{{ route('men_casul_shirt') }}" class="nav-item nav-link">Shirts</a>
-                        <a href="{{ route('men_bottom') }}" class="nav-item nav-link">Jeans</a>
-                        <a href="{{ route('men_panjabi') }}" class="nav-item nav-link">Panjabi</a>
-                        <a href="{{ route('women_kameez') }}" class="nav-item nav-link">Kameez</a>
-                        <a href="{{ route('women_cosmetic') }}" class="nav-item nav-link">Cosmetic</a>
-                        <a href="{{ route('baby_clothing') }}" class="nav-item nav-link">Baby Clothing</a>
-                        <a href="{{ route('men_blazer') }}" class="nav-item nav-link">Blazers</a>
-                        <a href="{{ route('women_bag') }}" class="nav-item nav-link">Bags</a>
-                        <a href="{{ route('men_shoes') }}" class="nav-item nav-link">Shoes</a>
+                        <a href="" class="nav-item nav-link">Shirts</a>
+                        <a href="" class="nav-item nav-link">Jeans</a>
+                        <a href="" class="nav-item nav-link">Panjabi</a>
+                        <a href="" class="nav-item nav-link">Kameez</a>
+                        <a href="" class="nav-item nav-link">Cosmetic</a>
+                        <a href="" class="nav-item nav-link">Baby Clothing</a>
+                        <a href="" class="nav-item nav-link">Blazers</a>
+                        <a href="" class="nav-item nav-link">Bags</a>
+                        <a href="" class="nav-item nav-link">Shoes</a>
                     </div>
                 </nav>
             </div>
