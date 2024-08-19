@@ -147,7 +147,8 @@
         </div>
     @endforeach --}}
 
-      <!-- Pagination Links -->
+
+      <!-- Pagination Categories Links -->
         {{-- <div class="d-flex justify-content-center">
             {{ $categories->links('pagination::bootstrap-4') }}
         </div> --}}
