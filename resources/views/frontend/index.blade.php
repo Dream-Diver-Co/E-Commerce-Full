@@ -147,8 +147,7 @@
         </div>
     @endforeach --}}
 
-
-      <!-- Pagination Categories Links -->
+      <!-- Categories Links -->
         {{-- <div class="d-flex justify-content-center">
             {{ $categories->links('pagination::bootstrap-4') }}
         </div> --}}
@@ -160,7 +159,7 @@
                     </div>
                     <div class="flex-fill pl-3">
                         <h6>Mens Item</h6>
-                        <small class="text-body">100 Products</small>
+                        <small class="text-body">110 Products</small>
                     </div>
                 </div>
             </a>
